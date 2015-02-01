@@ -1,0 +1,7 @@
+date	time	subject	trialcode	trialnum	values.trialcurrenttime	latency	values.response	values.stimulusitem	values.stimulusnumber	values.currentinstrtype	values.currentjitter	values.currentinterjitter
+010915	22:35:57	1	welcomet	1	22:36:02	909	0	0	0	0	0	0
+010915	22:35:57	1	trigger	2	22:36:03	500	0	0	0	0	0	0
+010915	22:35:57	1	get_readyt	3	22:36:03	1017	0	0	0	0	0	0
+010915	22:35:57	1	storynegative	4	22:36:03	517	0	In one of my graduate classes	1	0	0	0
+010915	22:35:57	1	storynegative	5	22:36:03	517	0	we were assigned a group presentation	2	0	0	0
+010915	22:35:57	1	storynegative	6	22:36:03	0	0	I was given a part that I did not understand	3	0	0	0

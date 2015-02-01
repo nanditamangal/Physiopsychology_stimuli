@@ -1,0 +1,30 @@
+date	time	subject	trialcode	trialnum	values.trialcurrenttime	latency	values.response	values.stimulusitem	values.stimulusnumber	values.currentinstrtype	values.currentjitter	values.currentinterjitter
+010915	22:37:19	1	welcomet	1	22:37:23	894	0	0	0	0	0	0
+010915	22:37:19	1	trigger	2	22:37:24	500	0	0	0	0	0	0
+010915	22:37:19	1	get_readyt	3	22:37:25	1017	0	0	0	0	0	0
+010915	22:37:19	1	storynegative	4	22:37:25	517	0	In one of my graduate classes	1	0	0	0
+010915	22:37:19	1	storynegative	5	22:37:25	517	0	we were assigned a group presentation	2	0	0	0
+010915	22:37:19	1	storynegative	6	22:37:25	517	0	I was given a part that I did not understand	3	0	0	0
+010915	22:37:19	1	storynegative	7	22:37:25	517	0	This was very worrisome for me	4	0	0	0
+010915	22:37:19	1	storynegative	8	22:37:25	517	0	I got very hot and uncomfortable	5	0	0	0
+010915	22:37:19	1	storynegative	9	22:37:25	517	0	I stumbled over my words	6	0	0	0
+010915	22:37:19	1	storynegative	10	22:37:25	517	0	I went through things as quickly as I could	7	0	0	0
+010915	22:37:19	1	storynegative	11	22:37:25	517	0	I tried to hide how nervous I was	8	0	0	0
+010915	22:37:19	1	ratestory	12	22:38:06	4000	-1	I tried to hide how nervous I was	8	0	0	0
+010915	22:37:19	1	NSBstoryinstr	13	22:38:10	1767	-1	N/A	8	REACT	0	1750
+010915	22:37:19	1	NSBstory	14	22:38:14	7984	-1	I CAN'T DO THIS	1	REACT	0	1750
+010915	22:37:19	1	rateAAT	15	22:38:22	3057	2	I CAN'T DO THIS	1	REACT	0	1750
+010915	22:37:19	1	itistory	16	22:38:26	3984	2	I CAN'T DO THIS	1	REACT	4000	1750
+010915	22:37:19	1	NSBstoryinstr	17	22:38:30	2017	2	N/A	1	REFRAME	4000	2000
+010915	22:37:19	1	NSBstory	18	22:38:34	7984	2	I CAN'T DO THIS	1	REFRAME	4000	2000
+010915	22:37:19	1	rateAAT	19	22:38:42	1518	2	I CAN'T DO THIS	1	REFRAME	4000	2000
+010915	22:37:19	1	itistory	20	22:38:46	2984	2	I CAN'T DO THIS	1	REFRAME	3000	2000
+010915	22:37:19	1	NSBstoryinstr	21	22:38:50	2267	2	N/A	1	REACT	3000	2250
+010915	22:37:19	1	NSBstory	22	22:38:54	7984	2	OTHERS WILL JUDGE ME	2	REACT	3000	2250
+010915	22:37:19	1	rateAAT	23	22:39:02	462	4	OTHERS WILL JUDGE ME	2	REACT	3000	2250
+010915	22:37:19	1	itistory	24	22:39:06	3984	4	OTHERS WILL JUDGE ME	2	REACT	4000	2250
+010915	22:37:19	1	NSBstoryinstr	25	22:39:10	2017	4	N/A	2	REFRAME	4000	2000
+010915	22:37:19	1	NSBstory	26	22:39:14	7984	4	I LOOK LIKE AN IDIOT	3	REFRAME	4000	2000
+010915	22:37:19	1	rateAAT	27	22:39:22	1331	1	I LOOK LIKE AN IDIOT	3	REFRAME	4000	2000
+010915	22:37:19	1	itistory	28	22:39:26	984	1	I LOOK LIKE AN IDIOT	3	REFRAME	1000	2000
+010915	22:37:19	1	NSBstoryinstr	29	22:39:27	53	1	N/A	3	REACT	1000	1500

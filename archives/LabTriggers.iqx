@@ -1,0 +1,96 @@
+﻿###0###
+<port trigger_startrun>
+/items=("00000000")
+/port=lpt1
+</port>
+
+###111###
+<port trigger_endcross>
+/items = ("01101111")
+/port=lpt1
+</port>
+
+###251###
+<port trigger_startcross>
+/items=("11111011")
+/port=lpt1
+</port>
+
+###247###
+<port trigger_lookinstr>
+/items=("11110111")
+/port=lpt1
+</port>
+
+###239###
+<port trigger_decreaseinstr>
+/items=("11101111")
+/port=lpt1
+</port>
+
+###231###
+<port trigger_lookneg>
+/items=("11100111")
+/port=lpt1
+</port>
+
+###183###
+<port trigger_decreaseneg>
+/items=("10110111")
+/port=lpt1
+</port>
+
+###175###
+<port trigger_lookneu>
+/items=("10101111")
+/port=lpt1
+</port>
+
+###187###
+<port trigger_rate>
+/items=("10111011")
+/port=lpt1
+</port>
+
+###255###
+<port trigger_iti>
+/items=("11111111")
+/port=lpt1
+</port>
+
+###219###
+<port trigger_practicestart>
+/items=("11011011")
+/port=lpt1
+</port>
+
+###207###
+<port trigger_practiceend>
+/items=("11001111")
+/port=lpt1
+</port>
+
+###215###
+<port trigger_practicelookneg>
+/items=("11010111")
+/port=lpt1
+</port>
+
+###221###
+<port trigger_practicedecneg>
+/items=("11011101")
+/port=lpt1
+</port>
+
+###242###
+<port trigger_practicelookneu>
+/items=("11110010")
+/port=lpt1
+</port>
+
+###249###
+<port trigger_practicecross>
+/items=("11111001")
+/port=lpt1
+</port>
+

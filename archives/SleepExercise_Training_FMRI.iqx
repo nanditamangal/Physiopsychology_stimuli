@@ -1,0 +1,770 @@
+﻿
+*******************************************************************************************************
+*******************************************************************************************************
+***********                                                                             ***************
+***********   S L E E P    E X E R C I S E                                              ***************
+***********                                                                             ***************
+***********   																		    ***************
+***********   based on: Rethinking Feelings: An fMRI Study of the                       ***************
+***********   Cognitive Regulation of Emotion 											***************
+***********   J Cogn Neurosci. 2002 Nov 15;14(8):1215-29.                               ***************
+***********                                                                             ***************
+***********  The journal describes a test which studies the brain                       ***************
+***********  functions and activations to draw interferences about                      ***************
+***********  the mechanisms supporting cognitive reappraisal. In                        ***************
+***********  the test participants are shown images, autobiographical					***************
+***********  texts as well as  with varyling levels of negativity (M). 					***************
+***********	 This script attempts to re-enact the test in inquisit.	                    ***************
+***********                                                                             ***************
+
+last updated by Nandita Mangal
+Copyright ©  2014,2015 Stanford University
+
+*******************************************************************************************************
+*******************************************************************************************************
+
+
+
+*******************************************************************************************************************
+*******************************************************************************************************************
+INCLUDE: Common texts, shapes and images used across all training, lab and fmri scripts.
+*******************************************************************************************************************
+*******************************************************************************************************************
+
+<include>
+/file = "include/data_training_autobio_input.iqx"
+/file = "include/images_shapes.iqx"
+/file = "include/text_instructions.iqx"
+/file = "include/sequences_settings.iqx"
+</include>
+
+
+*******************************************************************************************************************
+*******************************************************************************************************************
+DATA: this section contains data output file information
+*******************************************************************************************************************
+*******************************************************************************************************************
+
+********************
+raw data
+********************
+date, time, subject:			date and time script was run with the current subjectnumber 
+blockcode, blocknum:			the name and number of the current block
+trialcode, trialnum: 			the name and number of the currently recorded trial
+trialcurrenttime,trialelapsedtime:			time trial was run and the elapsed time at end of trial
+latency:						response latency during questions or stimulus frames time during trials	
+picturename:					name of the image/stimuli in trial exercise
+neglevel:					    the originally set value for an image's negative level
+response1:						the participant's response (rate image response)
+
+
+<data >
+/ separatefiles = true
+/ file = "SleepExercise_training_rawdata.iqdat"
+/ columns = [date, time, subject,  trialcode, trialnum, values.trialcurrenttime, values.scriptelaspedtime; values.trialelapsedtime, latency, values.response, , values.currentinstrtype;values.currentjitter,values.currentinterjitter]
+</data>
+
+
+********************
+summary data
+********************
+script.startdate:				date script was run
+script.starttime:				time script was started
+script.subjectid:				subject id number
+script.groupid:					group id number
+script.elapsedtime:				time it took to run script (in ms)
+/completed:						0 = script was not completed; 1 = script was completed (all conditions run)
+
+
+<summarydata >
+/ file = "SleepExercise_training_summary.iqdat"
+/columns = [script.startdate, script.currenttime, script.subjectid, script.groupid, script.elapsedtime, values.completed]
+</summarydata>
+
+
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+TRIALS
+**************************************************************************************************************
+**************************************************************************************************************
+
+
+#fixation cross : before each run
+<trial preruncross>
+/stimulusframes = [ 1= cross1,cross2]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.negcounter=0;values.neucounter=0;values.trialcount=0; values.attcounter=0;values.deccounter=0 ;]
+/trialduration = 4000
+/showmousecursor = false
+/ontrialend= [ values.trialelapsedtime = trial.preruncross.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
+</trial>1
+
+
+
+#iti or jitter is chosen afer a user has rated an image i.e provided the response from negative pic or neutral pic trials. It's
+duration is set to 3 seconds.
+<trial iti>
+/stimulusframes = [ 1=rectangle_black1;2=cross1,cross2]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime;  values.currentjitter = 3 * 1000 ]
+/timeout = values.currentjitter 
+/ontrialend = [values.trialelapsedtime = trial.iti.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
+/showmousecursor = false
+</trial>
+
+#trial which shows a "LOOK" instruction for 2 seconds and calls the picneutral trial.
+<trial lookneutral>
+/pretrialpause = 16.6666666667 * 3
+/stimulusframes = [1=look;120=rectangle_black1;]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter2.nextvalue * 1000]
+/timeout = 2000 + values.currentinterjitter + (16.6666666667 * 3 )
+/ontrialend = [values.trialelapsedtime = trial.lookneutral.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
+/showmousecursor = false
+/branch = [trial.picneutral]
+</trial>
+
+#trial which shows a "LOOK" instruction and upon a SPACE response calls the picneutral_wait trial.
+<trial lookneutral_wait>
+/pretrialpause = 16.6666666667 * 3
+/stimulusframes = [1=look]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/ontrialend = [values.trialelapsedtime = trial.lookneutral.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
+/showmousecursor = false
+/branch = [trial.picneutral_wait]
+</trial>
+
+#trial which displays the neutral image for 10 seconds.
+<trial picneutral>
+/pretrialpause = 16.6666666667 * 3
+/stimulusframes = [1=rectangle_green;2=neu]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; ]
+/timeout = 10000 +  (16.6666666667 * 3 )
+/ontrialend = [values.trialelapsedtime = trial.picneutral.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
+/showmousecursor = false
+</trial>
+
+#trial which displays the neutral image untile a SPACe response is received.
+<trial picneutral_wait>
+/pretrialpause = 16.6666666667 * 3
+/stimulusframes = [1=rectangle_green;2=neu]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/ontrialend = [values.trialelapsedtime = trial.picneutral.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
+/showmousecursor = false
+</trial>
+
+#trial which shows a "LOOK" instruction for 2 seconds and calls the picnegative trial.
+<trial looknegative>
+/pretrialpause = 16.666666666766666667 * 3
+/stimulusframes = [1=look;120=rectangle_black1;]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter2.nextvalue * 1000]
+/timeout = 2000 + values.currentinterjitter + (16.6666666667 * 3 )
+/ontrialend = [values.trialelapsedtime = trial.looknegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.currentinstrtype = "look"]
+/showmousecursor = false
+/branch = [trial.picnegative]
+</trial>
+
+#trial which shows a "LOOK" instruction and upon a SPACE response calls the picnegative_wait trial.
+<trial looknegative_wait>
+/pretrialpause = 16.666666666766666667 * 3
+/stimulusframes = [1=look]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/ontrialend = [values.trialelapsedtime = trial.looknegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.currentinstrtype = "look"]
+/showmousecursor = false
+/branch = [trial.picnegative_wait]
+</trial>
+
+#trial which shows a "DECREASE" instruction for 2 seconds and calls the picnegative trial.
+<trial decnegative>
+/pretrialpause = 16.6666666667 * 3
+/stimulusframes = [1=decrease;120=rectangle_black1;]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter2.nextvalue * 1000]
+/timeout = 2000 + values.currentinterjitter + (16.6666666667 * 3 )
+/ontrialend = [values.trialelapsedtime = trial.decnegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.currentinstrtype = "decrease"]
+/showmousecursor = false
+/branch = [trial.picnegative]
+</trial>
+
+#trial which shows a "DECREASE" instruction untile a SPACE response is received.
+<trial decnegative_wait>
+/pretrialpause = 16.6666666667 * 3
+/stimulusframes = [1=decrease]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/ontrialend = [values.trialelapsedtime = trial.decnegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.currentinstrtype = "decrease"]
+/showmousecursor = false
+/branch = [trial.picnegative_wait]
+</trial>
+
+#trial which displays the negative image for 10 seconds.
+<trial picnegative>
+/pretrialpause = 16.6666666667 * 3
+/stimulusframes = [2=neg;]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; ]
+/ontrialbegin = [ if (values.currentinstrtype == "decrease") trial.picnegative.insertstimulusframe(shape.rectangle_blue,1) ]
+/ontrialbegin = [ if (values.currentinstrtype == "look") trial.picnegative.insertstimulusframe(shape.rectangle_green,1) ]
+/timeout = 10000 +  (16.6666666667 * 3 )
+/ontrialend = [values.trialelapsedtime = trial.picnegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
+/showmousecursor = false
+</trial>
+
+#trial which displays the negative image until a SPACE response is received.
+<trial picnegative_wait>
+/pretrialpause = 16.6666666667 * 3
+/stimulusframes = [2=neg;]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; ]
+/ontrialbegin = [ if (values.currentinstrtype == "decrease") trial.picnegative_wait.insertstimulusframe(shape.rectangle_blue,1) ]
+/ontrialbegin = [ if (values.currentinstrtype == "look") trial.picnegative_wait.insertstimulusframe(shape.rectangle_green,1) ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/ontrialend = [values.trialelapsedtime = trial.picnegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
+/showmousecursor = false
+</trial>
+
+#trial allows user to rate with a time-limit of 4 seconds.
+<trial rateimage>
+/ pretrialpause = 16.6666666667 * 2
+/ stimulusframes = [1= scale_original]
+/ ontrialbegin = [values.trialcurrenttime = script.currenttime]
+/ beginresponsetime = 0
+/ responsemode = free
+/ responsemessage = ("1",scale_1,0)
+/ responsemessage = ("2",scale_2,0)
+/ responsemessage = ("3",scale_3,0)
+/ responsemessage = ("4",scale_4,0)
+/ responsemessage = ("5",scale_5,0)
+/ inputdevice= keyboard
+/ validresponse = ("1","2","3","4","5")
+/ trialduration = 4000 + ( 16.6666666667 * 2)
+/ ontrialend = [values.trialelapsedtime = trial.rateimage.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.response = trial.rateimage.response - 1 ; values.trialcount = values.trialcount + 1]
+/ branch = [ if ( values.trialcount < 24 ) trial.iti]
+/ showmousecursor = false
+</trial>
+
+#trial allows user to rate with no time limit.
+<trial rateimage_wait>
+/ pretrialpause = 16.6666666667 * 2
+/ stimulusframes = [1= scale_original]
+/ ontrialbegin = [values.trialcurrenttime = script.currenttime]
+/ responsemessage = ("1",scale_1,1500)
+/ responsemessage = ("2",scale_2,1500)
+/ responsemessage = ("3",scale_3,1500)
+/ responsemessage = ("4",scale_4,1500)
+/ responsemessage = ("5",scale_5,1500)
+/ inputdevice= keyboard
+/ validresponse = ("1","2","3","4","5")
+/ ontrialend = [values.trialelapsedtime = trial.rateimage.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.response = trial.rateimage_wait.response - 1 ; ]
+/ showmousecursor = false
+</trial>
+
+<trial try_1>
+/stimulusframes = [ 1 = trynegatives]
+/ ontrialbegin = [values.trialcurrenttime = script.currenttime]
+/inputdevice = keyboard
+/validresponse = (" ", 28)
+/showmousecursor = false
+</trial>
+
+#ready to start run screen. waits for space response to move on to the next trial
+<trial welcomet>
+/ stimulusframes = [1=welcome]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/showmousecursor = false
+/ ontrialend = [values.trialelapsedtime = trial.welcomet.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
+</trial>
+
+#mid-training message.
+<trial welcomet_1>
+/ stimulusframes = [1=welcome_1]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/showmousecursor = false
+/ ontrialend = [values.trialelapsedtime = trial.welcomet.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
+</trial>
+
+#mid-training message.
+<trial welcomet_2>
+/ stimulusframes = [1=welcome_2]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/showmousecursor = false
+/ ontrialend = [values.trialelapsedtime = trial.welcomet.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
+</trial>
+
+#training reminder
+<trial instructions1t>
+/ stimulusframes = [ 1=instructions1]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/showmousecursor = false
+</trial>
+
+#training reminder
+<trial instructions2t>
+/ stimulusframes = [1=look;2=instructions2]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/showmousecursor = false
+</trial>
+
+#training reminder
+<trial instructions3t>
+/ stimulusframes = [1=decrease;2=instructions3]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/showmousecursor = false
+</trial>
+
+#training reminder
+<trial instructions4t>
+/ stimulusframes = [1=instructions4]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/showmousecursor = false
+</trial>
+
+#training reminder
+<trial instructions5t>
+/ stimulusframes = [1=instructions5]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/showmousecursor = false
+</trial>
+
+#training reminder
+<trial instructions6t>
+/ stimulusframes = [1=autobio_text_read;2=instructions6]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/showmousecursor = false
+</trial>
+
+#training reminder
+<trial instructions7t>
+/ stimulusframes = [1=autobio_text_react;2=instructions7]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/showmousecursor = false
+</trial>
+
+#training reminder
+<trial instructions8t>
+/ stimulusframes = [1=autobio_text_reframe;2=instructions8]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/showmousecursor = false
+</trial>
+
+
+#thanks for particpation in experiment screen
+<trial thankst>
+/ stimulusframes = [1=thanks]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/inputdevice = keyboard
+/validresponse = (" ")
+/showmousecursor = false
+/ ontrialend = [values.trialelapsedtime = trial.thankst.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
+</trial>
+
+#mid-training message.
+<trial thankst_1>
+/ stimulusframes = [1=thanks_1]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/inputdevice = keyboard
+/validresponse = (" ")
+/showmousecursor = false
+/ ontrialend = [values.trialelapsedtime = trial.thankst.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
+</trial>
+
+#trial to warn the user to start reading the story.
+<trial get_readyt>
+/ stimulusframes = [1=get_ready;240=rectangle_black1]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/showmousecursor = false
+/ ontrialend = [values.trialelapsedtime = trial.thankst.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
+/ timeout = 5000;
+</trial>
+
+#trial to warn the user to start reading the story and continue once SPACe is received
+<trial get_readyt_wait>
+/ stimulusframes = [1=get_ready]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; values.storycounter = 0 ]
+/showmousecursor = false
+/ ontrialend = [values.trialelapsedtime = trial.thankst.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+</trial>
+
+#trial to show negative story lines, one sentence at a time. There are 8 negative story lines.
+<trial storynegative>
+/stimulusframes = [1=run_story_negative_text;240=rectangle_black1]
+/ontrialbegin = [values.storycounter = values.storycounter  + 1 ]
+/timeout = 4500
+/branch = [ if (values.storycounter < 8 ) trial.storynegative else trial.rateimagestory]
+</trial>
+
+#trial to show negative story lines, one sentence at a time as a SPACE response is received . There are 8 negative story lines.
+<trial storynegative_wait>
+/stimulusframes = [1=run_story_negative_text]
+/ontrialbegin = [values.storycounter = values.storycounter  + 1 ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/branch = [ if (values.storycounter < 8 ) trial.storynegative_wait]
+</trial>
+
+
+#trial to show neural story lines, one sentence at a time as a SPACE response is received . There are 3 neutral story lines.
+<trial storyneutral_wait>
+/stimulusframes = [1=run_story_neutral_text]
+/ontrialbegin = [values.storycounter = values.storycounter  + 1 ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/branch = [ if (values.storycounter < 3 ) trial.storyneutral_wait]
+</trial>
+
+#trial to allow user to rate the story.
+<trial rateimagestory>
+/ pretrialpause = 16.6666666667 * 2
+/ stimulusframes = [1= scale_original]
+/ ontrialbegin = [values.trialcurrenttime = script.currenttime; values.storycounter=0]
+/ beginresponsetime = 0
+/ responsemode = free
+/ responsemessage = ("1",scale_1,0)
+/ responsemessage = ("2",scale_2,0)
+/ responsemessage = ("3",scale_3,0)
+/ responsemessage = ("4",scale_4,0)
+/ responsemessage = ("5",scale_5,0)
+/ inputdevice= keyboard
+/ validresponse = ("1","2","3","4","5")
+/ trialduration = 4000 + ( 16.6666666667 * 2)
+/ ontrialend = [values.trialelapsedtime = trial.rateimage.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.response = trial.rateimage.response - 1 ; ]
+/ showmousecursor = false
+</trial>
+
+#trial to allow user to rate the story with no time limits. 
+<trial rateimagestory_wait>
+/ pretrialpause = 16.6666666667 * 2
+/ stimulusframes = [1= scale_original]
+/ ontrialbegin = [values.trialcurrenttime = script.currenttime; values.storycounter=0]
+/ beginresponsetime = 0
+/ responsemode = free
+/ responsemessage = ("1",scale_1,0)
+/ responsemessage = ("2",scale_2,0)
+/ responsemessage = ("3",scale_3,0)
+/ responsemessage = ("4",scale_4,0)
+/ responsemessage = ("5",scale_5,0)
+/ inputdevice= keyboard
+/ validresponse = ("1","2","3","4","5")
+/ trialduration = 4000 + ( 16.6666666667 * 2)
+/ ontrialend = [values.trialelapsedtime = trial.rateimage.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.response = trial.rateimage.response - 1 ; ]
+/ showmousecursor = false
+</trial>
+
+#trial to provie Negative Self Belief (NSB) instruction. There are 8 negative self belief options in a single story.
+<trial NSBstoryinstr>
+/pretrialpause = 16.6666666667 * 3
+/stimulusframes = [120=rectangle_black1]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter2.nextvalue * 1000; if(list.autobio_instr.nextvalue == "REACT") values.instrtype = "REACT" else values.instrtype ="REFRAME"]
+/ontrialbegin = [ if (values.instrtype == "REFRAME") trial.NSBstoryinstr.insertstimulusframe(text.autobio_text_reframe,1) ]
+/ontrialbegin = [ if (values.instrtype == "REACT") trial.NSBstoryinstr.insertstimulusframe(text.autobio_text_react,1) ]
+/timeout = 2000 + values.currentinterjitter + (16.6666666667 * 3 )
+/showmousecursor = false
+/branch = [trial.NSBstory]
+</trial>
+
+
+#trial to provie Negative Self Belief (NSB) instructions with no time limits (Press Space to continue). There are 8 negative self belief options in a single story.
+<trial NSBstoryinstr_wait>
+/pretrialpause = 16.6666666667 * 3
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter2.nextvalue * 1000; if(list.autobio_instr.nextvalue == "REACT") values.instrtype = "REACT" else values.instrtype ="REFRAME"]
+/ontrialbegin = [ if (values.instrtype == "REFRAME") trial.NSBstoryinstr_wait.insertstimulusframe(text.autobio_text_reframe,1) ]
+/ontrialbegin = [ if (values.instrtype == "REACT") trial.NSBstoryinstr_wait.insertstimulusframe(text.autobio_text_react,1) ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/showmousecursor = false
+/branch = [trial.NSBstory_wait]
+</trial>
+
+
+#trial to provie Negative Self Belief (NSB). There are 8 negative self belief options in a single story.
+<trial NSBstory>
+/pretrialpause = 16.6666666667 * 3
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/ontrialbegin = [ if (values.instrtype == "REFRAME") trial.NSBstory.insertstimulusframe(picture.rectangle_blue_side,1) ]
+/ontrialbegin = [ if (values.instrtype == "REACT") trial.NSBstory.insertstimulusframe(picture.rectangle_green_side,1) ]
+/ontrialbegin = [ trial.NSBstory.insertstimulusframe(text.run_story_negative_options_text,2) ]
+/timeout = 10000 + (16.6666666667 * 3 )
+/showmousecursor = false
+/branch = [trial.NSBrating]
+</trial>
+
+
+
+#trial to provie Negative Self Belief (NSB) with no time limits. There are 8 negative self belief options in a single story.
+<trial NSBstory_wait>
+/pretrialpause = 16.6666666667 * 3
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/ontrialbegin = [ if (values.instrtype == "REFRAME") trial.NSBstory_wait.insertstimulusframe(picture.rectangle_blue_side,1) ]
+/ontrialbegin = [ if (values.instrtype == "REACT") trial.NSBstory_wait.insertstimulusframe(picture.rectangle_green_side,1) ]
+/ontrialbegin = [ trial.NSBstory_wait.insertstimulusframe(text.run_story_negative_options_text,2) ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/showmousecursor = false 
+</trial>
+
+#trial to allow rating of a NSB (negative or neutral)
+<trial NSBrating>
+/ pretrialpause = 16.6666666667 * 2
+/ stimulusframes = [1= scale_original]
+/ ontrialbegin = [values.trialcurrenttime = script.currenttime]
+/ beginresponsetime = 0
+/ responsemode = free
+/ responsemessage = ("1",scale_1,0)
+/ responsemessage = ("2",scale_2,0)
+/ responsemessage = ("3",scale_3,0)
+/ responsemessage = ("4",scale_4,0)
+/ responsemessage = ("5",scale_5,0)
+/ inputdevice= keyboard
+/ validresponse = ("1","2","3","4","5")
+/ trialduration = 4000 + ( 16.6666666667 * 2)
+/ ontrialend = [values.trialelapsedtime = trial.rateimage.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.response = trial.rateimage.response - 1 ; values.trialcount = values.trialcount + 1]
+/ branch = [ if ( values.trialcount < 24 ) trial.iti]
+/ showmousecursor = false
+</trial>
+
+#trial to allow rating of a NSB (negative or neutral) with no time limits.
+<trial NSBrating_wait>
+/ pretrialpause = 16.6666666667 * 2
+/ stimulusframes = [1= scale_original]
+/ ontrialbegin = [values.trialcurrenttime = script.currenttime]
+/ beginresponsetime = 0
+/ responsemode = free
+/ responsemessage = ("1",scale_1,1500)
+/ responsemessage = ("2",scale_2,1500)
+/ responsemessage = ("3",scale_3,1500)
+/ responsemessage = ("4",scale_4,1500)
+/ responsemessage = ("5",scale_5,1500)
+/ inputdevice= keyboard
+/ validresponse = ("1","2","3","4","5")
+/ ontrialend = [values.trialelapsedtime = trial.rateimage.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.response = trial.rateimage.response - 1 ; values.trialcount = values.trialcount + 1]
+/ showmousecursor = false
+</trial>
+
+
+#trial to provie Netural instructions with no time limits (Press Space to continue). There are 4 negative self belief options in a single story.
+<trial Neustoryinstr>
+/pretrialpause = 16.6666666667 * 3
+/stimulusframes = [1=autobio_text_read;120=rectangle_black1]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter2.nextvalue * 1000]
+/timeout = 1000 + values.currentinterjitter + (16.6666666667 * 3 )
+/showmousecursor = false
+/branch = [trial.Neustory]
+</trial>
+
+#trial to provide Netural story. There are 4 neutral story options in a single story
+<trial Neustory>
+/pretrialpause = 16.6666666667 * 3
+/stimulusframes = [1=rectangle_green_side;2=run_story_neutral_options_text]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/timeout = 2000 + (16.6666666667 * 3 )
+/showmousecursor = false
+/branch = [trial.NSBrating]
+</trial>
+
+
+#trial to provie Neutral instructions with no time limits (Press Space to continue). There are 4 neutral options in a single story.
+<trial Neustoryinstr_wait>
+/pretrialpause = 16.6666666667 * 3
+/stimulusframes = [1=autobio_text_read]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter2.nextvalue * 1000]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/showmousecursor = false
+/branch = [trial.Neustory_wait]
+</trial>
+
+#trial to provide Netural story with no time limits. There are 4 neutral story options in a single story
+<trial Neustory_wait>
+/pretrialpause = 16.6666666667 * 3
+/stimulusframes = [1=rectangle_green_side;2=run_story_neutral_options_text]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/showmousecursor = false
+/branch = [trial.NSBrating_wait]
+</trial>
+
+#end training message
+<trial thanksp>
+/ stimulusframes = [1=thankstraining]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/inputdevice = keyboard
+/validresponse = (" ", 28)
+/showmousecursor = false
+/ ontrialend = [values.trialelapsedtime = trial.thankst.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
+</trial>
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	BLOCKS
+**************************************************************************************************************
+**************************************************************************************************************
+
+Train1 presents the stimuli in 3 parts for picture training. Re-run of training is allowed by user (press ENTER).
+
+Part1: 
+Waits for user to press space bar to move to the next screen and doesn't have rating scales.
+It consists of 2 images.
+
+Part2:
+Consists of a rating scale. Waits for the user to press space bar to move to the next screen 
+for images as well as the rating scale. It consists of 3 images.
+
+Part3:
+Simulates a regular experiment with 3 timed images and 3 timed rating scales.
+
+
+
+
+<block Train1>
+/trials = [ 1 = instructions1t ; 2 = instructions2t ; 3 = instructions3t; 4 = instructions4t;
+
+5=welcomet_1; 
+6= preruncross;
+
+7 = looknegative_wait;
+8 = decnegative_wait;
+9 = decnegative_wait;
+10 = thankst_1;
+
+11 = welcomet_1;
+
+12 = lookneutral_wait;
+13 = decnegative_wait;
+15 = looknegative_wait;
+17 = decnegative_wait;
+19 = decnegative_wait;
+
+12, 14, 16, 18, 20= rateimage_wait;
+21 = try_1;
+
+]
+/onblockend = [ values.train_negatives = 0 ]
+
+</block>
+
+
+
+<block Train2>
+
+/ trials = [1,3=decnegative_wait; 2,4=rateimage_wait]
+</block>
+Train4 presents the stimuli in 3 parts for auto-bio training. Re-run of training is allowed by user (press ENTER).
+
+Part1: 
+Waits for user to press space bar to move to the next screen and doesn't have rating scales.
+It consists of 1 negtive story.
+
+Part2:
+Consists of a rating scale. Waits for the user to press space bar to move to the next screen 
+for story as well as the rating scale. It consists of 1 neutral story.
+
+Part3:
+Simulates a regular experiment with 1 timed negative story and timed rating scale.
+
+<block Train3>
+/ trials = [1=welcomet_2;
+
+2 = decnegative;
+4 = looknegative;
+6 = decnegative;
+8 = decnegative;
+10 = lookneutral;
+12 = decnegative;
+
+3,5,7,9,11,13 = rateimage;
+
+14= thanksp;
+
+]
+</block>
+
+<block Train4>
+/trials = [ 1 = instructions5t ; 2 = instructions6t ; 3 = instructions7t; 4 = instructions8t;
+
+5=welcomet_1;
+6=get_readyt_wait;7=storynegative_wait; 8-15= NSBstoryinstr_wait; 
+
+16=thankst_1;
+17=welcomet_1;
+
+18=get_readyt_wait; 19=storyneutral_wait; 20=NSBRating_wait; 21,22,23 =Neustoryinstr_wait;
+
+24= welcomet_2;
+
+25=get_readyt_wait;26=storynegative; 27-34= NSBstoryinstr; 
+
+35 = thankst;]
+
+</block>
+
+<block thanksb>
+/ trials = [1=thankst]
+</block>
+
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EXPERIMENT
+**************************************************************************************************************
+**************************************************************************************************************
+<expt trainexpt1>
+/blocks = [ 1 = Train1]
+/onexptend = [values.completed = 1]
+</expt>
+
+
+<expt trainexpt2>
+/skip=[ trial.try_1.response == 57]
+/blocks = [ 1 = Train2]
+/onexptend = [values.completed = 1]
+</expt>
+
+<expt trainexpt3>
+/blocks = [ 1 = Train3]
+/onexptend = [values.completed = 1]
+/branch = [ if ( trial.thanksp.response == 28 ) expt.trainexpt3]
+</expt>
+
+<expt trainexpt4>
+/blocks = [ 1 = Train4]
+/onexptend = [values.completed = 1]
+/branch = [ if ( trial.thanksp.response == 28 ) expt.trainexpt4]
+</expt>
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+												End of Script
+**************************************************************************************************************
+**************************************************************************************************************

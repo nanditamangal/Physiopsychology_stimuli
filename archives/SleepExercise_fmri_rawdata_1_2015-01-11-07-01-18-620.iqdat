@@ -1,0 +1,18 @@
+date	time	subject	blockcode	blocknum	trialcode	trialnum	values.trialcurrenttime	latency	values.response	values.stimulusitem	values.stimulusnumber	values.currentinstrtype	values.currentjitter	values.currentinterjitter
+011015	23:01:18	1	AUTOBIO	1	welcomet	1	23:01:24	1054	0	*WELCOME MESSAGE*	0	0	0	0
+011015	23:01:18	1	AUTOBIO	1	trigger	2	23:01:25	500	0	*N/A*	0	0	0	0
+011015	23:01:18	1	AUTOBIO	1	getreadystory	3	23:01:26	1017	0	*GET READY*	0	0	0	0
+011015	23:01:18	1	AUTOBIO	1	storynegative	4	23:01:26	517	0	In one of my graduate classes	1	0	0	0
+011015	23:01:18	1	AUTOBIO	1	storynegative	5	23:01:26	517	0	we were assigned a group presentation	2	0	0	0
+011015	23:01:18	1	AUTOBIO	1	storynegative	6	23:01:26	517	0	I was given a part that I did not understand	3	0	0	0
+011015	23:01:18	1	AUTOBIO	1	storynegative	7	23:01:26	517	0	This was very worrisome for me	4	0	0	0
+011015	23:01:18	1	AUTOBIO	1	storynegative	8	23:01:26	517	0	I got very hot and uncomfortable	5	0	0	0
+011015	23:01:18	1	AUTOBIO	1	storynegative	9	23:01:26	517	0	I stumbled over my words	6	0	0	0
+011015	23:01:18	1	AUTOBIO	1	storynegative	10	23:01:26	517	0	I went through things as quickly as I could	7	0	0	0
+011015	23:01:18	1	AUTOBIO	1	storynegative	11	23:01:26	517	0	I tried to hide how nervous I was	8	0	0	0
+011015	23:01:18	1	AUTOBIO	1	ratestory	12	23:02:08	1052	2	*RATING SCALE*	0	0	0	0
+011015	23:01:18	1	AUTOBIO	1	AATnegativeinstr	13	23:02:12	2017	2	*INSTRUCTION*	0	REACT	0	2000
+011015	23:01:18	1	AUTOBIO	1	AATnegativestatement	14	23:02:16	7984	2	I CAN'T DO THIS	1	REACT	0	2000
+011015	23:01:18	1	AUTOBIO	1	rateAAT	15	23:02:24	1051	1	*RATING SCALE*	0	REACT	0	2000
+011015	23:01:18	1	AUTOBIO	1	itiAAT	16	23:02:28	6984	1	*ITI-CROSS*	0	REACT	7000	2000
+011015	23:01:18	1	AUTOBIO	1	AATnegativeinstr	17	23:02:35	0	1	*INSTRUCTION*	0	REFRAME	7000	1750

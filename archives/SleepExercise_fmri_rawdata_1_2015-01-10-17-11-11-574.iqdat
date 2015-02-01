@@ -1,0 +1,12 @@
+date	time	subject	blockcode	blocknum	trialcode	trialnum	values.trialcurrenttime	latency	values.response	values.stimulusitem	values.stimulusnumber	values.currentinstrtype	values.currentjitter	values.currentinterjitter
+011015	09:11:11	1	PICTURERUN1	1	welcomet	1	09:11:17	1055	0	0	0	0	0	0
+011015	09:11:11	1	PICTURERUN1	1	trigger	2	09:11:18	500	0	0	0	0	0	0
+011015	09:11:11	1	PICTURERUN1	1	preruncross	3	09:11:19	12000	0	0	0	0	0	0
+011015	09:11:11	1	PICTURERUN1	1	looknegative	4	09:11:31	2267	0	0	0	LOOK	0	2250
+011015	09:11:11	1	PICTURERUN1	1	picnegative	5	09:11:35	9984	0	0	0	LOOK	0	2250
+011015	09:11:11	1	PICTURERUN1	1	rateimage	6	09:11:45	1051	3	0	0	LOOK	0	2250
+011015	09:11:11	1	PICTURERUN1	1	iti	7	09:11:49	3984	3	0	0	LOOK	4000	2250
+011015	09:11:11	1	PICTURERUN1	1	lookneutral	8	09:11:53	2017	3	0	0	LOOK	4000	2000
+011015	09:11:11	1	PICTURERUN1	1	picneutral	9	09:11:57	9984	3	0	0	LOOK	4000	2000
+011015	09:11:11	1	PICTURERUN1	1	rateimage	10	09:12:07	1051	2	0	0	LOOK	4000	2000
+011015	09:11:11	1	PICTURERUN1	1	iti	11	09:12:11	1064	2	0	0	LOOK	3000	2000

@@ -1,0 +1,429 @@
+﻿
+***************************************************************************************
+***************************************************************************************
+Editable Stimuli: Negative and Neutral images
+***************************************************************************************
+***************************************************************************************
+
+#CNI Images
+
+<item neupics>
+/1 = "images_neu/cni/109.jpg"
+/2 = "images_neu/cni/124.jpg"
+/3 = "images_neu/cni/141.jpg"
+/4 = "images_neu/cni/168.jpg"
+/5 = "images_neu/cni/171.jpg"
+/6 = "images_neu/cni/172.jpg"
+/7 = "images_neu/cni/187.jpg"
+/8 = "images_neu/cni/350.jpg"
+/9 = "images_neu/cni/373.jpg"
+/10 = "images_neu/cni/7006.bmp"
+/11 = "images_neu/cni/7034.jpg"
+/12 = "images_neu/cni/7038.jpg"
+/13 = "images_neu/cni/7080.jpg"
+/14 = "images_neu/cni/7090.jpg"
+/15 = "images_neu/cni/7185.jpg"
+/16 = "images_neu/cni/Faces_216_h.jpg"
+/17 = "images_neu/cni/neu_7003_Disk.jpg"
+/18 = "images_neu/cni/neu_7014_Scissors.jpg"
+/19 = "images_neu/cni/neu_7045_Zipper.jpg"
+/20 = "images_neu/cni/neu_7077_Stove.jpg"
+/21 = "images_neu/cni/Objects_089_h.jpg"
+/22 = "images_neu/cni/Objects_210_h.jpg"
+/23 = "images_neu/cni/Objects_247_h.jpg"
+/24 = "images_neu/cni/Objects_296_h.jpg"
+</item>
+
+<item decnegpics>
+/1 = "images_neg/cni/dec/209.jpg"
+/2 = "images_neg/cni/dec/222.jpg"
+/3 = "images_neg/cni/dec/241.jpg"
+/4 = "images_neg/cni/dec/1050.bmp"
+/5 = "images_neg/cni/dec/9341.jpg"
+/6 = "images_neg/cni/dec/9810.jpg"
+/7 = "images_neg/cni/dec/Animals_013_h.jpg"
+/8 = "images_neg/cni/dec/Animals_019_h.jpg"
+/9 = "images_neg/cni/dec/Animals_024_h.jpg"
+/10 = "images_neg/cni/dec/Animals_042_h.jpg"
+/11 = "images_neg/cni/dec/Faces_011_h.jpg"
+/12 = "images_neg/cni/dec/Faces_028_h.jpg"
+/13 = "images_neg/cni/dec/Faces_170_h.jpg"
+/14 = "images_neg/cni/dec/Faces_287_h.jpg"
+/15 = "images_neg/cni/dec/Landscapes_002_h.jpg"
+/16 = "images_neg/cni/dec/neg_PAER_PeopleWall.jpg"
+/17 = "images_neg/cni/dec/neg_PAER_TankFire.jpg"
+/18 = "images_neg/cni/dec/Objects_003_h.jpg"
+/19 = "images_neg/cni/dec/Objects_013_h.jpg"
+/20 = "images_neg/cni/dec/People_071_h.jpg"
+/21 = "images_neg/cni/dec/People_124_h.jpg"
+/22 = "images_neg/cni/dec/People_143_h.jpg"
+/23 = "images_neg/cni/dec/People_197_h.jpg"
+/24 = "images_neg/cni/dec/People_223_h.jpg"
+</item>
+
+<item looknegpics>
+/1 = "images_neg/cni/look/213.jpg"
+/2 = "images_neg/cni/look/228.jpg"
+/3 = "images_neg/cni/look/9440.jpg"
+/4 = "images_neg/cni/look/Animals_012_h.jpg"
+/5 = "images_neg/cni/look/Animals_038_h.jpg"
+/6 = "images_neg/cni/look/Animals_041_h.jpg"
+/7 = "images_neg/cni/look/Animals_063_h.jpg"
+/8 = "images_neg/cni/look/Animals_075_h.jpg"
+/9 = "images_neg/cni/look/Faces_271_h.jpg"
+/10 = "images_neg/cni/look/Faces_283_h.jpg"
+/11 = "images_neg/cni/look/neg_PAER_WorldTrade.jpg"
+/12 = "images_neg/cni/look/Objects_004_h.jpg"
+/13 = "images_neg/cni/look/Objects_006_h.jpg"
+/14 = "images_neg/cni/look/Objects_007_h.jpg"
+/15 = "images_neg/cni/look/Objects_132_h.jpg"
+/16 = "images_neg/cni/look/Objects_153_h.jpg"
+/17 = "images_neg/cni/look/People_001_h.jpg"
+/18 = "images_neg/cni/look/People_017_h.jpg"
+/19 = "images_neg/cni/look/Animals_038_h.jpg"
+/20 = "images_neg/cni/look/People_085_h.jpg"
+/21 = "images_neg/cni/look/People_140_h.jpg"
+/22 = "images_neg/cni/look/People_142_h.jpg"
+/23 = "images_neg/cni/look/People_212_h.jpg"
+/24 = "images_neg/cni/look/People_215_h.jpg"
+</item>
+
+
+#Lab images
+
+
+<item neupicslab>
+/1 = "images_neu/spl/114.jpg"
+/2 = "images_neu/spl/138.jpg"
+/3 = "images_neu/spl/142.jpg"
+/4 = "images_neu/spl/162.jpg"
+/5 = "images_neu/spl/177.jpg"
+/6 = "images_neu/spl/186.jpg"
+/7 = "images_neu/spl/356.jpg"
+/8 = "images_neu/spl/6150.jpg"
+/9 = "images_neu/spl/7000.jpg"
+/10 = "images_neu/spl/7002.jpg"
+/11 = "images_neu/spl/7009.bmp"
+/12 = "images_neu/spl/7041.jpg"
+/13 = "images_neu/spl/7211.jpg"
+/14 = "images_neu/spl/7233.jpg"
+/15 = "images_neu/spl/LA_Neu_Objects_Spoon_7004.jpg"
+/16 = "images_neu/spl/Landscapes_091_h.jpg"
+/17 = "images_neu/spl/Objects_189_h.jpg"
+/18 = "images_neu/spl/Objects_196_h.jpg"
+/19 = "images_neu/spl/Objects_204_h.jpg"
+/20 = "images_neu/spl/Objects_208_h.jpg"
+/21 = "images_neu/spl/Objects_211_h.jpg"
+/22 = "images_neu/spl/Objects_244_h.jpg"
+/23 = "images_neu/spl/Objects_245_h.jpg"
+/24 = "images_neu/spl/Objects_308_h.jpg"
+</item>
+
+<item looknegpicslab>
+/1 = "images_neg/spl/look/215.jpg"
+/2 = "images_neg/spl/look/227.jpg"
+/3 = "images_neg/spl/look/232.jpg"
+/4 = "images_neg/spl/look/254.jpg"
+/5 = "images_neg/spl/look/2683.jpg"
+/6 = "images_neg/spl/look/2751.jpg"
+/7 = "images_neg/spl/look/2981.jpg"
+/8 = "images_neg/spl/look/3160.jpg"
+/9 = "images_neg/spl/look/9561.jpg"
+/10 = "images_neg/spl/look/Animals_060_h.jpg"
+/11 = "images_neg/spl/look/Faces_164_h.jpg"
+/12 = "images_neg/spl/look/Faces_284_h.jpg"
+/13 = "images_neg/spl/look/LA_Neg_Animals_SpiderCloseUp_1205.jpg"
+/14 = "images_neg/spl/look/Objects_001_h.jpg"
+/15 = "images_neg/spl/look/Objects_011_h.jpg"
+/16 = "images_neg/spl/look/Objects_120_h.jpg"
+/17 = "images_neg/spl/look/Objects_157_h.jpg"
+/18 = "images_neg/spl/look/Objects_283_h.jpg"
+/19 = "images_neg/spl/look/People_003_h.jpg"
+/20 = "images_neg/spl/look/People_058_h.jpg"
+/21 = "images_neg/spl/look/People_147_h.jpg"
+/22 = "images_neg/spl/look/People_214_h.jpg"
+/23 = "images_neg/spl/look/People_217_h.jpg"
+/24 = "images_neg/spl/look/People_240_h.jpg"
+</item>
+
+<item decnegpicslab>
+/1 = "images_neg/spl/dec/214.jpg"
+/2 = "images_neg/spl/dec/219.jpg"
+/3 = "images_neg/spl/dec/2095.jpg"
+/4 = "images_neg/spl/dec/8485.jpg"
+/5 = "images_neg/spl/dec/9041.jpg"
+/6 = "images_neg/spl/dec/9253.jpg"
+/7 = "images_neg/spl/dec/9571.jpg"
+/8 = "images_neg/spl/dec/9592.jpg"
+/9 = "images_neg/spl/dec/Animals_001_h.jpg"
+/10 = "images_neg/spl/dec/Animals_025_h.jpg"
+/11 = "images_neg/spl/dec/Faces_172_h.jpg"
+/12 = "images_neg/spl/dec/Faces_174_h.jpg"
+/13 = "images_neg/spl/dec/Faces_366_h.jpg"
+/14 = "images_neg/spl/dec/HA_Neg_Animals_SnakeJaws_1120.jpg"
+/15 = "images_neg/spl/dec/HA_Neg_Animals_SpiderOnShoulder_1201.jpg"
+/16 = "images_neg/spl/dec/People_206_h.jpg"
+/17 = "images_neg/spl/dec/HA_Neg_FightFlight_SkimaskGun_6231.jpg"
+/18 = "images_neg/spl/dec/HA_Neg_Food_Liver.jpg"
+/19 = "images_neg/spl/dec/People_086_h.jpg"
+/20 = "images_neg/spl/dec/Objects_125_h.jpg"
+/21 = "images_neg/spl/dec/Objects_139_h.jpg"
+/22 = "images_neg/spl/dec/People_016_h.jpg"
+/23 = "images_neg/spl/dec/People_202_h.jpg"
+/24 = "images_neg/spl/dec/People_118_h.jpg"
+</item>
+
+#Practice images.
+<item negpicspractice>
+/1 = "images_neg/practice/233.jpg"
+/2 = "images_neg/practice/Animals_045_h.jpg"
+/3 = "images_neg/practice/Objects_285_h.jpg"
+</item>
+
+#Practice images.
+<item neupicspractice>
+/1 = "images_neu/practice/5870.jpg"
+</item>
+
+#Training images.
+<item neupicstrainspl>
+/1 = "images_neu/train/spl/5020.jpg"
+/2 = "images_neu/train/spl/5711.jpg"
+/3 = "images_neu/train/spl/1602.jpg"
+</item>
+
+#Training images.
+<item negpicstrainspl>
+/1 = "images_neg/train/spl/2683.jpg"
+/2 = "images_neg/train/spl/3300.jpg"
+/3 = "images_neg/train/spl/8485.jpg"
+/4 = "images_neg/train/spl/7359.jpg"
+/5 = "images_neg/train/spl/9290.jpg"
+</item>
+
+#Training images.
+<item neupicstraincni>
+/1 = "images_neu/train/cni/5020.jpg"
+/2 = "images_neu/train/cni/5711.jpg"
+/3 = "images_neu/train/cni/1602.jpg"
+</item>
+
+#Training images.
+<item negpicstraincni>
+/1 = "images_neg/train/cni/2683.jpg"
+/2 = "images_neg/train/cni/3300.jpg"
+/3 = "images_neg/train/cni/8485.jpg"
+/4 = "images_neg/train/cni/7359.jpg"
+/5 = "images_neg/train/cni/9290.jpg"
+</item>
+
+
+<item scales>
+/1 = "images_shapes/scale_1.png"
+/2 = "images_shapes/scale_2.png"
+/3 = "images_shapes/scale_3.png"
+/4 = "images_shapes/scale_4.png"
+/5 = "images_shapes/scale_5.png"
+/6 = "images_shapes/scale_original.png"
+</item>
+
+<item shapes>
+/1 = "images_shapes/rectangle_blue_side.png"
+/2 = "images_shapes/rectangle_green_side.png"
+</item>
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+Picture STIMULI look and feel
+**************************************************************************************************************
+**************************************************************************************************************
+
+Note: these picture elements (neg,neu) control the selection of the to be presented picture
+/select = noreplace => selects the pictures randomly without replacement
+
+<picture lookneg>
+/items = looknegpics
+/select  = noreplacenorepeat
+/position = (50%, 50%)
+/resetinterval = 3
+</picture>
+
+<picture decneg>
+/items = decnegpics
+/select  = noreplacenorepeat
+/position = (50%, 50%)
+/resetinterval = 3
+</picture>
+
+<picture negtrainspl>
+/items = negpicstrainspl
+/select  = noreplacenorepeat
+/position = (50%, 50%)
+/resetinterval = 3
+</picture>
+
+
+<picture negtraincni>
+/items = negpicstraincni
+/select  = noreplacenorepeat
+/position = (50%, 50%)
+/resetinterval = 3
+</picture>
+
+<picture lookneglab>
+/items = looknegpicslab
+/select  = noreplacenorepeat
+/position = (50%, 50%)
+/resetinterval = 3
+</picture>
+
+<picture decneglab>
+/items = decnegpicslab
+/select  = noreplacenorepeat
+/position = (50%, 50%)
+/resetinterval = 3
+</picture>
+
+
+<picture neu>
+/items = neupics
+/select  = noreplacenorepeat
+/position = (50%, 50%)
+/resetinterval = 3
+</picture>
+
+<picture neutrainspl>
+/items = neupicstrainspl
+/select  = noreplacenorepeat
+/position = (50%, 50%)
+/resetinterval = 3
+</picture>
+
+
+<picture neutraincni>
+/items = neupicstraincni
+/select  = noreplacenorepeat
+/position = (50%, 50%)
+/resetinterval = 3
+</picture>
+
+<picture neulab>
+/items = neupicslab
+/select  = noreplacenorepeat
+/position = (50%, 50%)
+/resetinterval = 3
+</picture>
+
+
+Note: image based scale and scale_1 to scale_5 response messages.
+<picture scale_original>
+/items = scales
+/select = 6
+/position = (50%, 50%)
+/erase = false
+</picture>
+
+<picture scale_1>
+/items = scales
+/select = 1
+/position = (50%, 50%)
+</picture>
+
+<picture scale_2>
+/items = scales
+/select = 2
+/position = (50%, 50%)
+</picture>
+
+<picture scale_3>
+/items = scales
+/select = 3
+/position = (50%, 50%)
+</picture>
+
+<picture scale_4>
+/items = scales
+/select = 4
+/position = (50%, 50%)
+</picture>
+
+<picture scale_5>
+/items = scales
+/select = 5
+/position = (50%, 50%)
+</picture>
+
+<picture rectangle_blue_side>
+/items = shapes
+/position = (50%, 50%)
+/select = 1
+</picture>
+
+<picture rectangle_green_side>
+/items = shapes
+/position = (50%, 50%)
+/select = 2
+</picture>
+
+#Fixation cross stimuli
+<shape cross1>
+/color = (255, 255, 255)
+/ shape = rectangle
+/ size = (100, 5)
+/ position = (50%,50%)
+</shape>
+
+<shape cross2>
+/color = (255, 255, 255)
+/ shape = rectangle
+/ size = (5, 100)
+/ position = (50%,50%)
+</shape>
+
+
+#Used to achieve erase feature in trials
+<shape rectangle_black1>
+/ color = (0,0,0)
+/ shape = rectangle
+/ size = (2000, 1000)
+</shape>
+
+<shape rectangle_blue>
+/ color =(0, 76, 153)
+/ shape = rectangle
+/ size = (1075, 768)
+/ position = (50%, 50%)
+</shape>
+
+<shape rectangle_green>
+/ color = (0, 153, 0)
+/ shape = rectangle
+/ size = (1075, 768)
+/ position = (50%, 50%)
+</shape>
+
+<shape PPTmark>
+/color = (255,255,255)
+/shape = rectangle
+/size = (55,55)
+/position = (100%,0%)
+/erase = true(0,0,0)
+</shape>
+
+
+<picture negpractice>
+/items = negpicspractice
+/select  = noreplacenorepeat
+/position = (50%, 50%)
+/resetinterval = 1
+</picture>
+
+<picture neupractice>
+/items = neupicspractice
+/select  = noreplacenorepeat
+/position = (50%, 50%)
+/resetinterval = 1
+</picture>
+
+

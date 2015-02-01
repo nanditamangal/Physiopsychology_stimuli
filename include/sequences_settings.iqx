@@ -1,0 +1,110 @@
+﻿***************************************************************************************
+***************************************************************************************
+Editable Sequences
+***************************************************************************************
+***************************************************************************************
+
+#used for jitter (post rating) as a pre-assigned skewed distribution
+<list curentjitter1>
+/ items = (1,1,1,1, 2,2,2, 3,3,3,3,3,  4,4,4,4,4,4, 6,7,8,10,12)
+/ selectionmode = random
+/ resetinterval = 3
+</list>
+
+#used for inter-jitter as a pre-assigned skewed distribution for images
+<list curentjitter2>
+/ items = (0.5, 1, 1.5, 1.75,1.75,1.75, 2,2,2,2,2,2,2,2,2, 2.25,2.25,2.25,2.25,2.25,2.25,2.25,2.25,3)
+/ selectionmode = random
+/ resetinterval = 3
+</list>
+
+#used for inter-jitter as a pre-assigned skewed distribution for auto-bio
+<list curentjitter3>
+/ items = (0.5, 1, 1.5, 1.75,1.75,1.75, 2,2,2,2,2,2,2,2,2, 2.25,2.25,2.25,2.25,2.25,2.25,2.25,2.25,3)
+/ selectionmode = random
+/ resetinterval = 1
+</list>
+
+#used for jitter (post rating) as a pre-assigned skewed distribution for auto-bio
+<list curentjitter4>
+/ items = (1,1,1,1, 2,2,2, 3,3,3,3,3,  4,4,4,4,4,4, 6,7,8,10,12)
+/ selectionmode = random
+/ resetinterval = 1
+</list>
+
+#sequence for negative self instructions
+<list autobio_instr>
+/ items = ("REACT","REFRAME","REACT","REFRAME","REACT","REFRAME","REACT","REFRAME")
+/ selectionmode = sequence
+/ resetinterval = 1
+</list>
+
+
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	DEFAULT SCREEN SETTING
+**************************************************************************************************************
+**************************************************************************************************************
+requires Inquisit 4.0.4.0
+resetinterval is zero: wait for all items to be selected before a reset.
+
+<defaults setting>
+/minimumversion = "4.0.4.0"
+/canvasaspectratio = (16,9)
+/ txcolor = (255, 255, 255)
+/ screencolor = (0, 0, 0)
+/ fontstyle = ("Courier New", 1.75%, false, false, false, false, 5, 1)
+/ resetinterval = 0
+</defaults>
+
+*******************************************************************************************************************
+*******************************************************************************************************************
+	VALUES: 	`automatically updated
+*******************************************************************************************************************
+*******************************************************************************************************************
+/completed:				0 = script was not completed; 1 = script was completed (all conditions run)
+/trialcurrentime:       stores the start time of a trial  (used for data file)
+/trialelapsedtime:      stores the elapsed time at the end of the trial (used for data file)
+/scriptelapsedtime:	    stores the cumulative script time elapsed thus far (used for data file)
+/repsonse1:				stores the rate reponse
+/trialcount:            stores the current trial count (total 24). We skip iti on 24th trial
+/currentpictype:		stores the current trial's image action  look or decrease.
+/attcounter:			stores the number of times "attend" has been shown in the 18 trials for each run.
+/deccounter:			stores the number of timse "decrease" has been shown in the 18 trials for each run.
+/negcounter:			stores the number of times negative images have been shown in the 18 trials for each run.
+/neucounter:            stores the number of times neutral images have been shown in the 18 trials for each run.
+/currentjitter:			stores the current random jitter/iti chosen. Total 23 itis for 24 trials for each run.
+/currentinterjitter:	stores the current random inter-jitter/iti chosen. Total 24 inter-itis for 24 trials for each run.
+/storycounter:			stores the count for negative,neutral story lines.
+/instrtype: 			stores the current type of instruction "REACT" or "REFRAME" in auto-bio trials.
+
+<values>
+/completed = 0
+/trialcurrenttime = 0
+/trialelapsedtime = 0
+/scriptelaspedtime = 0
+/response = 0
+/trialcount = 0
+/currentinstrtype = 0
+/attcounter = 0
+/deccounter = 0
+/negcounter = 0
+/neucounter = 0
+/currentjitter = 0
+/currentinterjitter = 0
+/storycounter = 0
+/instrtype=0
+/stimulusitem=0
+/stimulusnumber=0
+/train_negatives=0
+</values>
+
+
+
+<monkey>
+/ latencydistribution = constant(550)
+/ percentcorrect = 100
+</monkey>
+

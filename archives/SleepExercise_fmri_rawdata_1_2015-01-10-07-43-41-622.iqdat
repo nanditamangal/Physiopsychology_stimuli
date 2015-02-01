@@ -1,0 +1,10 @@
+date	time	subject	blockcode	blocknum	trialcode	trialnum	values.trialcurrenttime	latency	values.response	values.stimulusitem	values.stimulusnumber	values.currentinstrtype	values.currentjitter	values.currentinterjitter
+010915	23:43:41	1	bio1	1	welcomet	1	23:43:47	447	0	0	0	0	0	0
+010915	23:43:41	1	bio1	1	trigger	2	23:43:48	500	0	0	0	0	0	0
+010915	23:43:41	1	bio1	1	get_readyt	3	23:43:48	1017	0	0	0	0	0	0
+010915	23:43:41	1	bio1	1	storynegative	4	23:43:48	517	0	In one of my graduate classes	1	0	0	0
+010915	23:43:41	1	bio1	1	storynegative	5	23:43:48	517	0	we were assigned a group presentation	2	0	0	0
+010915	23:43:41	1	bio1	1	storynegative	6	23:43:48	517	0	I was given a part that I did not understand	3	0	0	0
+010915	23:43:41	1	bio1	1	storynegative	7	23:43:48	517	0	This was very worrisome for me	4	0	0	0
+010915	23:43:41	1	bio1	1	storynegative	8	23:43:48	517	0	I got very hot and uncomfortable	5	0	0	0
+010915	23:43:41	1	bio1	1	storynegative	9	23:43:48	0	0	I stumbled over my words	6	0	0	0

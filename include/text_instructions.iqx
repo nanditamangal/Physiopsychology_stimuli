@@ -1,0 +1,428 @@
+﻿
+
+***************************************************************************************
+*********************************************
+Editable Instructions
+*********************************************
+***************************************************************************************
+
+<item directions>
+/1 =  "LOOK"
+/2 = "Ready to begin.~n~nPress SPACE to start.~n~nPress SPACE to go to next step."
+/3 = "DECREASE"
+/4 = "Rate the negative effect you felt from the image:"
+/5 = "PRACTICE~n~nReady to begin. Press SPACE to start"
+/6 = "Thanks for your participation! Press SPACE to end."
+/7 = "Ready to begin. Press SPACE to start~n~nRemember all pictures,ratings are now timed."
+/8 = "Great Job!~n~nPress ENTER to try again.~n~nPress SPACE to continue."
+/9 = "Ready to begin. Press SPACE to start."
+/10 = "In this task you are going to see a series of pictures. Some pictures might make you feel quite 
+negative, while others won't make you feel much at all.~nBefore each picture, you will see an instruction that tells you what we want you 
+to do while you are viewing the picture.~n~nPress SPACE to continue"
+/11 = "Look at the picture and allow yourself to respond to it naturally.~n~nPress SPACE to continue"
+/12 = "Think of something to tell yourself about the picture that makes you feel less negative.~n~nPress SPACE to continue"
+/13 = "After each picture is presented, please rate how negative you feel on a 1-5 scale.~n~nYou have only 4 seconds to rate a picture.~n~nPress SPACE to continue"
+/14 = "Great Job!~n~nNow you will see a rating scale in addition to instructions and pictures."
+/15 = "In this task you will be presented with descriptions of your life situations, one sentence at a time.~n~nDo your best to RE-EXPERIENCE thoughts and feelings related to the situaion.~n~n Really see the situation in your mind's eye and connect with what happened to you at the time of the situation."
+/16 = "Just read the statement"
+/17 = "Let yourself feel the sting of the negative belief. Consider how this statement reflects something true about you.~n~nDo not try to control, regulate or change anything about your experience."
+/18 = "Actively re-interpet the BELIEF in a way that helps you to decrease any negative emotions or reactions."
+/19 = "Great Job!~n~nPress ENTER to try a few more negatives.~n~nPRESS SPACE to continue."
+/20 = "Ready to move to next step. Please wait for the experimenter before you begin."
+/21 = "Thanks for your participation. Please wait for the experimenter"
+</item>
+
+
+
+<text look>
+/ items = directions
+/ position = (50%, 50%)
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1366, 768)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (0, 153, 0)
+/ fontstyle = ("Arial", 45pt, true)
+/select = 1
+</text>
+
+
+<text decrease>
+/ items = directions
+/ position = (50%, 50%)
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1366, 768)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (0, 76, 153)
+/ fontstyle = ("Arial", 45pt, true)
+/select = 3
+</text>
+
+
+<text thanks>
+/ items = directions
+/ position = (50%, 50%)
+/ halign = center
+/ valign = center
+/ area = (1000, 25)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 25pt, true)
+/select = 6
+</text>
+
+<text thankslab>
+/ items = directions
+/ position = (50%, 50%)
+/ halign = center
+/ valign = center
+/ area = (1000, 25)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 25pt, true)
+/select = 21
+</text>
+
+<text welcome>
+/ items = directions
+/ position = (50%, 50%)
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 25pt, true)
+/ size = (500,600)
+/select = 9
+</text>
+
+<text welcomelab>
+/ items = directions
+/ position = (50%, 50%)
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 25pt, true)
+/ size = (500,600)
+/select = 20
+</text>
+
+
+
+<text welcomepractice>
+/ items = directions
+/ position = (50%, 50%)
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 25pt, true)
+/select = 5
+/ size = (500,600)
+</text>
+
+<text thankspractice>
+/ items = directions
+/ position = (50%, 50%)
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 25pt, true)
+/select = 8
+/ size = (500,600)
+</text>
+
+
+
+<text run_story_negative_text>
+/ items = run_story_negative
+/ position = (50%, 50%)
+/ select  = sequence
+/ resetinterval = 3
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1000, 768)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 35pt, true)
+</text>
+
+<text run_story_negative_options_text>
+/ items = run_story_negative_options
+/ position = (50%, 50%)
+/ select  = sequence
+/ resetinterval = 3
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1000, 768)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 35pt, true)
+</text>
+
+<text autobio_text_react>
+/ items = ("REACT")
+/ position = (50%, 50%)
+/ select  = sequence
+/ resetinterval = 1
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1000, 768)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (0, 153, 0)
+/ fontstyle = ("Arial", 45pt, true)
+</text>
+
+<text autobio_text_reframe>
+/ items = ("REFRAME")
+/ position = (50%, 50%)
+/ select  = sequence
+/ resetinterval = 1
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1000, 768)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (0, 76, 153)
+/ fontstyle = ("Arial", 45pt, true)
+</text>
+
+
+<text autobio_text_read>
+/ items = ("READ")
+/ position = (50%, 50%)
+/ select  = sequence
+/ resetinterval = 1
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1000, 768)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (0, 153, 0)
+/ fontstyle = ("Arial", 45pt, true)
+</text>
+
+<text get_ready>
+/ items = ("GET READY")
+/ position = (50%, 50%)
+/ select  = sequence
+/ resetinterval = 1
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1000, 768)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 35pt, true)
+</text>
+
+<text run_story_neutral_text>
+/ items = run_story_neutral
+/ position = (50%, 50%)
+/ select  = sequence
+/ resetinterval = 3
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1000, 768)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 35pt, true)
+</text>
+
+<text run_story_neutral_options_text>
+/ items = run_story_neutral_options
+/ position = (50%, 50%)
+/ select  = sequence
+/ resetinterval = 3
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1000, 768)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 35pt, true)
+</text>
+
+
+<text instructions1>
+/ items = directions
+/ position = (50%, 50%)
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 19pt, true)
+/ select = 10
+/ area = (700,700)
+</text>
+
+<text instructions2>
+/ items = directions
+/ position = (50%, 85%)
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (500,300)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 19pt, true)
+/select = 11
+
+</text>
+
+<text instructions3>
+/ items = directions
+/ position = (50%, 85%)
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (500,300)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 19pt, true)
+/select = 12
+</text>
+
+<text instructions4>
+/ items = directions
+/ position = (50%, 50%)
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (500,700)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 19pt, true)
+/select = 13
+</text>
+
+<text instructions5>
+/ items = directions
+/ position = (50%, 50%)
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1000, 768)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 19pt, true)
+/select = 15
+</text>
+
+<text instructions6>
+/ items = directions
+/ position = (50%, 65%)
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1000, 25)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 19pt, true)
+/select = 16
+</text>
+
+<text instructions7>
+/ items = directions
+/ position = (50%, 65%)
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1000, 25)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 19pt, true)
+/select = 17
+</text>
+
+<text instructions8>
+/ items = directions
+/ position = (50%, 65%)
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1000, 25)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 19pt, true)
+/select = 18
+</text>
+
+<text thankstraining>
+/ items = directions
+/ position = (50%, 40%)
+/ halign = center
+/ valign = center
+/ area = (1000, 25)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 25pt, true)
+/select = 8
+</text>
+
+
+<text thanks_1>
+/ items = directions
+/ position = (50%, 30%)
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (600, 250)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 25pt, true)
+/select = 14
+</text>
+
+<text welcome_1>
+/ items = directions
+/ position = (50%, 50%)
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (600, 250)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 25pt, true)
+/select = 2
+</text>
+
+<text welcome_2>
+/ items = directions
+/ position = (50%, 50%)
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (600, 250)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 25pt, true)
+/select = 7
+</text>
+
+
+<text trynegatives>
+/ items = directions
+/ position = (50%, 50%)
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (600, 250)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 25pt, true)
+/select = 19
+</text>

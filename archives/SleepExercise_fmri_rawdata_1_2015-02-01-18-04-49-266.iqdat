@@ -1,0 +1,6 @@
+date	time	subject	blockcode	blocknum	trialcode	trialnum	values.trialcurrenttime	latency	values.response	values.stimulusitem	values.stimulusnumber	values.currentinstrtype	values.currentjitter	values.currentinterjitter
+020115	10:04:49	1	PICTURERUN1	1	welcomet	1	10:05:01	1222	0	*WELCOME MESSAGE*	0	0	0	0
+020115	10:04:49	1	PICTURERUN1	1	trigger	2	10:05:02	500	0	*N/A*	0	0	0	0
+020115	10:04:49	1	PICTURERUN1	1	ratepicture	3	10:05:03	885	5	*RATING SCALE*	0	0	0	0
+020115	10:04:49	1	PICTURERUN1	1	ratepicturetry2	4	10:05:04	1459	3	*RATING SCALE*	0	0	0	0
+020115	10:04:49	1	PICTURERUN1	1	itipicture	5	10:05:07	1133	0	*ITI-CROSS*	0	0	4000	0

@@ -1,0 +1,3 @@
+date	time	subject	trialcode	trialnum	values.trialcurrenttime	values.scriptelaspedtime	values.trialelapsedtime	latency	values.response	values.currentinstrtype	values.currentjitter	values.currentinterjitter
+020115	11:09:50	1	instructions1t	1	11:10:02	0	0	995	0	0	0	0
+020115	11:09:50	1	instructions2t	2	11:10:03	0	0	657	0	0	0	0

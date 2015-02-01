@@ -1,0 +1,7 @@
+date	time	subject	trialcode	trialnum	values.trialcurrenttime	latency	values.response1	values.stimulusitem	values.currentinstrtype	values.currentjitter	values.currentinterjitter
+010915	22:15:27	1	welcomet	1	22:15:33	573	0	0	0	0	0
+010915	22:15:27	1	trigger	2	22:15:34	500	0	0	0	0	0
+010915	22:15:27	1	get_readyt	3	22:15:34	1017	0	0	0	0	0
+010915	22:15:27	1	storynegative	4	22:15:34	517	0		0	0	0
+010915	22:15:27	1	storynegative	5	22:15:34	517	0		0	0	0
+010915	22:15:27	1	storynegative	6	22:15:34	0	0		0	0	0

@@ -1,0 +1,9 @@
+date	time	subject	blockcode	blocknum	trialcode	trialnum	values.trialcurrenttime	latency	values.response	values.stimulusitem	values.stimulusnumber	values.currentinstrtype	values.currentjitter	values.currentinterjitter
+011015	23:27:49	1	PRACTICE	1	welcometp	1	23:27:54	1052	0	*WELCOME PRACTICE MESSAGE*	0	0	0	0
+011015	23:27:49	1	PRACTICE	1	practicecross	2	23:27:55	4000	0	*PRACTICE CROSS*	0	0	0	0
+011015	23:27:49	1	PRACTICE	1	decnegativepractice	3	23:27:59	10834	0	images_neg/practice/7380.jpg	3	DECREASE-NEGATIVE-PRACTICE	0	1000
+011015	23:27:49	1	PRACTICE	1	lookneutralpractice	6	23:28:20	10834	0	images_neu/practice/5870.jpg	1	LOOK-NEUTRAL-PRACTICE	4000	1000
+011015	23:27:49	1	PRACTICE	1	decnegativepractice	9	23:28:42	10834	0	images_neg/practice/1090.jpg	2	DECREASE-NEGATIVE-PRACTICE	4000	1000
+011015	23:27:49	1	PRACTICE	1	looknegativepractice	12	23:29:03	10834	0	images_neg/practice/6200.jpg	1	LOOK-NEGATIVE-PRACTICE	4000	1000
+011015	23:27:49	1	PRACTICE	1	thanksp	15	23:29:24	1051	0	*THANKS PRACTICE MESSAGE*	0	LOOK-NEGATIVE-PRACTICE	4000	1000
+011015	23:27:49	1	THANKSB	2	thankst	1	23:29:25	1051	0	*THANKS MESSAGE*	0	LOOK-NEGATIVE-PRACTICE	4000	1000

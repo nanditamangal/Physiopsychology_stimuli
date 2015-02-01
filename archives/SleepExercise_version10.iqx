@@ -1,0 +1,1093 @@
+﻿
+*******************************************************************************************************
+*******************************************************************************************************
+***********                                                                             ***************
+***********   SLEEEP  E X E R C I S E                                                   ***************
+***********                                                                             ***************
+***********   																		    ***************
+***********   based on: Rethinking Feelings: An fMRI Study of the                       ***************
+***********   Cognitive Regulation of Emotion 											***************
+***********   J Cogn Neurosci. 2002 Nov 15;14(8):1215-29.                               ***************
+***********                                                                             ***************
+***********  The journal describes a test which studies the brain                       ***************
+***********  functions and activations to draw interferences about                      ***************
+***********  the mechanisms supporting cognitive reappraisal. In                        ***************
+***********  the test participants are shown neutral images as well as                  ***************
+***********  images with varyling levels of negativity (M). This script                 ***************
+***********  attempts to re-enact the test in inquisit.	                                ***************
+***********                                                                             ***************
+
+last updated: 12-18-2014 by Nandita Mangal
+Copyright ©  10-31-2014 Stanford University
+
+*******************************************************************************************************
+*******************************************************************************************************
+
+<include>
+/file = "data_autobio_input_pilot_8.iqx"
+</include>
+
+*******************************************************************************************************************
+*******************************************************************************************************************
+EDITABLE CODE: The code in this section can be easily altered for varying script behavior
+*******************************************************************************************************************
+*******************************************************************************************************************
+
+***************************************************************************************
+*********************************************
+Editable Values
+*********************************************
+***************************************************************************************
+
+<list curentjitter1>
+/ items = (1,1,1,1, 2,2,2, 3,3,3,3,3,  4,4,4,4,4,4, 6,7,8,10,12)
+/ selectionmode = random
+/ resetinterval = 3
+</list>
+
+<list curentjitter2>
+/ items = (0.5, 1, 1.5, 1.75,1.75,1.75, 2,2,2,2,2,2,2,2,2, 2.25,2.25,2.25,2.25,2.25,2.25,2.25,2.25,3)
+/ selectionmode = random
+/ resetinterval = 3
+</list>
+
+<list autobio_instr>
+/ items = ("REACT","REFRAME","REACT","REFRAME","REACT","REFRAME","REACT","REFRAME")
+/ selectionmode = sequence
+/ resetinterval = 1
+</list>
+
+
+***************************************************************************************
+****************************************************
+Editable Stimuli : Pictures and their negative level
+****************************************************
+***************************************************************************************
+
+<item neupics>
+/1 = "images_neu/2200.jpg"
+/2 = "images_neu/2235.jpg"
+/3 = "images_neu/2270.jpg"
+/4 = "images_neu/2493.jpg"
+/5 = "images_neu/2514.jpg"
+/6 = "images_neu/2515.jpg"
+/7 = "images_neu/2575.jpg"
+/8 = "images_neu/2840.jpg"
+/9 = "images_neu/5395.jpg"
+/10 = "images_neu/5720.jpg"
+/11 = "images_neu/5800.jpg"
+/12 = "images_neu/5849.jpg"
+/13 = "images_neu/6150.jpg"
+/14 = "images_neu/7000.jpg"
+/15 = "images_neu/7002.jpg"
+/16 = "images_neu/7004.jpg"
+/17 = "images_neu/7006.jpg"
+/18 = "images_neu/7009.jpg"
+/19 = "images_neu/7010.jpg"
+/20 = "images_neu/7040.jpg"
+/21 = "images_neu/7050.jpg"
+/22 = "images_neu/7060.jpg"
+/23 = "images_neu/7080.jpg"
+/24 = "images_neu/7090.jpg"
+</item>
+
+<item negpics>
+/1 = "images_neg/1050.jpg"
+/2 = "images_neg/1930.jpg"
+/3 = "images_neg/2053.jpg"
+/4 = "images_neg/2205.jpg"
+/5 = "images_neg/2800.jpg"
+/6 = "images_neg/3030.jpg"
+/7 = "images_neg/3051.jpg"
+/8 = "images_neg/3100.jpg"
+/9 = "images_neg/3102.jpg"
+/10 = "images_neg/3110.jpg"
+/11 = "images_neg/3120.jpg"
+/12 = "images_neg/3140.jpg"
+/13 = "images_neg/3160.jpg"
+/14 = "images_neg/3170.jpg"
+/15 = "images_neg/3180.jpg"
+/16 = "images_neg/3230.jpg"
+/17 = "images_neg/3350.jpg"
+/18 = "images_neg/3500.jpg"
+/19 = "images_neg/3530.jpg"
+/20 = "images_neg/6210.jpg"
+/21 = "images_neg/6211.jpg"
+/22 = "images_neg/6212.jpg"
+/23 = "images_neg/6250.jpg"
+/24 = "images_neg/6260.jpg"
+/25 = "images_neg/6312.jpg"
+/26 = "images_neg/6510.jpg"
+/27 = "images_neg/6550.jpg"
+/28 = "images_neg/6838.jpg"
+/29 = "images_neg/9040.jpg"
+/30 = "images_neg/9050.jpg"
+/31 = "images_neg/9140.jpg"
+/32 = "images_neg/9181.jpg"
+/33 = "images_neg/9250.jpg"
+/34 = "images_neg/9300.jpg"
+/35 = "images_neg/9320.jpg"
+/36 = "images_neg/9400.jpg"
+/37 = "images_neg/9410.jpg"
+/38 = "images_neg/9420.jpg"
+/39 = "images_neg/9421.jpg"
+/40 = "images_neg/9440.jpg"
+/41 = "images_neg/9490.jpg"
+/42 = "images_neg/9570.jpg"
+/43 = "images_neg/9571.jpg"
+/44 = "images_neg/9600.jpg"
+/45 = "images_neg/9800.jpg"
+/46 = "images_neg/9810.jpg"
+/47 = "images_neg/9910.jpg"
+/48 = "images_neg/9921.jpg"
+</item>
+
+
+<item negpicsprerun>
+/1 = "images_neg/prerun/6200.jpg"
+/2 = "images_neg/prerun/1090.jpg"
+/3 = "images_neg/prerun/7380.jpg"
+</item>
+
+<item neupicsprerun>
+/1 = "images_neu/prerun/5870.jpg"
+</item>
+
+<item scales>
+/1 = "images_shapes/scale_1.png"
+/2 = "images_shapes/scale_2.png"
+/3 = "images_shapes/scale_3.png"
+/4 = "images_shapes/scale_4.png"
+/5 = "images_shapes/scale_5.png"
+/6 = "images_shapes/scale_original.png"
+</item>
+
+<item shapes>
+/1 = "images_shapes/rectangle_blue_side.png"
+/2 = "images_shapes/rectangle_green_side.png"
+</item>
+
+
+
+***************************************************************************************
+*********************************************
+Editable Instructions
+*********************************************
+***************************************************************************************
+
+<item directions>
+/1 =  "LOOK"
+/2 = "N/A"
+/3 = "DECREASE"
+/4 = "Rate the negative effect you felt from the image:"
+/5 = "PRACTICE~n~nReady to begin. Press SPACE to start"
+/6 = "Thanks for your participation! Press SPACE to end."
+/7 = "Time is almost up.  Please prepare to provide response."
+/8 = "Great Job!~n~nPress ENTER to try again.~n~nPress SPACE to continue."
+/9 = "Ready to begin. Press SPACE to start."
+</item>
+
+
+
+
+*******************************************************************************************************************
+*******************************************************************************************************************
+	DATA: this section contains data file information
+*******************************************************************************************************************
+*******************************************************************************************************************
+
+********************
+raw data
+********************
+date, time, subject:			date and time script was run with the current subjectnumber 
+blockcode, blocknum:			the name and number of the current block
+trialcode, trialnum: 			the name and number of the currently recorded trial
+trialcurrenttime,trialelapsedtime:			time trial was run and the elapsed time at end of trial
+latency:						response latency during questions or stimulus frames time during trials	
+picturename:					name of the image/stimuli in trial exercise
+neglevel:					    the originally set value for an image's negative level
+response1:						the participant's response (rate image response)
+
+
+<data >
+/ separatefiles = true
+/ file = "ImageEffectExercise_rawdata.iqdat"
+/ columns = [date, time, subject,  trialcode, trialnum, values.trialcurrenttime, values.scriptelaspedtime; values.trialelapsedtime, latency, values.response1, , values.currentpictype;values.currentjitter,values.currentinterjitter]
+</data>
+
+
+********************
+summary data
+********************
+script.startdate:				date script was run
+script.starttime:				time script was started
+script.subjectid:				subject id number
+script.groupid:					group id number
+script.elapsedtime:				time it took to run script (in ms)
+/completed:						0 = script was not completed; 1 = script was completed (all conditions run)
+
+
+<summarydata >
+/ file = "ImageEffectExercise_summary.iqdat"
+/columns = [script.startdate, script.currenttime, script.subjectid, script.groupid, script.elapsedtime, values.completed]
+</summarydata>
+
+*******************************************************************************************************************
+*******************************************************************************************************************
+							REMAINING CODE: Can be also customized
+*******************************************************************************************************************
+*******************************************************************************************************************
+
+**************************************************************************************************************
+**************************************************************************************************************
+	DEFAULT SCREEN SETTING
+**************************************************************************************************************
+**************************************************************************************************************
+requires Inquisit 4.0.4.0
+resetinterval is zero: wait for all items to be selected before a reset.
+
+<defaults setting>
+/minimumversion = "4.0.4.0"
+/canvasaspectratio = (16,9)
+/ txcolor = (255, 255, 255)
+/ screencolor = (0, 0, 0)
+/ fontstyle = ("Courier New", 1.75%, false, false, false, false, 5, 1)
+/ resetinterval = 0
+</defaults>
+
+*******************************************************************************************************************
+*******************************************************************************************************************
+	VALUES: 	`automatically updated
+*******************************************************************************************************************
+*******************************************************************************************************************
+/completed:				0 = script was not completed; 1 = script was completed (all conditions run)
+/trialcurrentime:       stores the start time of a trial  (used for data file)
+/trialelapsedtime:      stores the elapsed time at the end of the trial (used for data file)
+/scriptelapsedtime:	    stores the cumulative script time elapsed thus far (used for data file)
+/repsonse1:				stores the rate reponse
+/trialcount:            stores the current trial count (total 18). We skip iti on 18th trial
+/currentpictype:		stores the current trial's image action : neutral/view , attend or decrease.
+/attcounter:			stores the number of times "attend" has been shown in the 18 trials for each run.
+/deccounter:			stores the number of timse "decrease" has been shown in the 18 trials for each run.
+/negcounter:			stores the number of times negative images have been shown in the 18 trials for each run.
+/neucounter:            stores the number of times neutral images have been shown in the 18 trials for each run.
+/currentjitter:			stores the current random jitter/iti chosen. Total 17 itis for 18 trials for each run.
+
+<values>
+/completed = 0
+/trialcurrenttime = 0
+/trialelapsedtime = 0
+/scriptelaspedtime = 0
+/response1 = 0
+/trialcount = 0
+/currentpictype = 0
+/attcounter = 0
+/deccounter = 0
+/negcounter = 0
+/neucounter = 0
+/currentjitter = 0
+/currentinterjitter = 0
+/storycounter = 0
+/instrtype=0;
+</values>
+
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	TRIGGERS : Issue a trigger to the scanner to mark the onset of the run. 
+**************************************************************************************************************
+**************************************************************************************************************
+
+
+Note: The start scanner command is [t] at baud rate 57600. The following 3 trigger_usb sections together send a [t]
+to COM4
+
+<port trigger_usb1>
+/port = com3
+/subport = data
+/items = ("01011011")
+</port>
+
+<port trigger_usb2>
+/port = com3
+/subport = data
+/items = ("01110100")
+</port>
+
+<port trigger_usb3>
+/port = com3
+/subport = data
+/items = ("01011101")
+</port>
+
+
+
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	STIMULI
+**************************************************************************************************************
+**************************************************************************************************************
+
+Note: these picture elements (neg,neu) control the selection of the to be presented picture
+/select = noreplace => selects the pictures randomly without replacement
+
+<picture neg>
+/items = negpics
+/select  = noreplacenorepeat
+/position = (50%, 50%)
+/resetinterval = 3
+</picture>
+
+<picture neu>
+/items = neupics
+/select  = noreplacenorepeat
+/position = (50%, 50%)
+/resetinterval = 3
+</picture>
+
+
+Note: this picture element stores the trial presentation image through remaining trials
+<picture currentimage>
+/items = negpics
+/ select = current(neg)
+/position = (50%, 50%)
+</picture>
+
+Note: image based scale and scale_1 to scale_5 response messages.
+<picture scale_original>
+/items = scales
+/select = 6
+/position = (50%, 50%)
+</picture>
+
+<picture scale_1>
+/items = scales
+/select = 1
+/position = (50%, 50%)
+</picture>
+
+<picture scale_2>
+/items = scales
+/select = 2
+/position = (50%, 50%)
+</picture>
+
+<picture scale_3>
+/items = scales
+/select = 3
+/position = (50%, 50%)
+</picture>
+
+<picture scale_4>
+/items = scales
+/select = 4
+/position = (50%, 50%)
+</picture>
+
+<picture scale_5>
+/items = scales
+/select = 5
+/position = (50%, 50%)
+</picture>
+
+<picture rectangle_blue_side>
+/items = shapes
+/position = (50%, 50%)
+/select = 1
+</picture>
+
+<picture rectangle_green_side>
+/items = shapes
+/position = (50%, 50%)
+/select = 2
+</picture>
+
+<text look>
+/ items = directions
+/ position = (50%, 50%)
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1366, 768)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (0, 153, 0)
+/ fontstyle = ("Arial", 45pt, true)
+/select = 1
+</text>
+
+
+<text decrease>
+/ items = directions
+/ position = (50%, 50%)
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1366, 768)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (0, 76, 153)
+/ fontstyle = ("Arial", 45pt, true)
+/select = 3
+</text>
+
+
+<text thanks>
+/ items = directions
+/ position = (50%, 50%)
+/ halign = center
+/ valign = center
+/ area = (1000, 25)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 25pt, true)
+/select = 6
+</text>
+
+<text welcome>
+/ items = directions
+/ position = (50%, 50%)
+/ halign = center
+/ valign = center
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 25pt, true)
+/select = 9
+</text>
+
+
+#Fixation cross stimuli
+<shape cross1>
+/color = (255, 255, 255)
+/ shape = rectangle
+/ size = (100, 5)
+/ position = (50%,50%)
+</shape>
+
+<shape cross2>
+/color = (255, 255, 255)
+/ shape = rectangle
+/ size = (5, 100)
+/ position = (50%,50%)
+</shape>
+
+
+#Used to achieve erase feature in trials
+<shape rectangle_black1>
+/ color = (0,0,0)
+/ shape = rectangle
+/ size = (2000, 1000)
+</shape>
+
+<shape rectangle_blue>
+/ color =(0, 76, 153)
+/ shape = rectangle
+/ size = (1075, 768)
+/ position = (50%, 50%)
+</shape>
+
+<shape rectangle_green>
+/ color = (0, 153, 0)
+/ shape = rectangle
+/ size = (1075, 768)
+/ position = (50%, 50%)
+</shape>
+
+<picture negprerun>
+/items = negpicsprerun
+/select  = noreplacenorepeat
+/position = (50%, 50%)
+/resetinterval = 1
+</picture>
+
+<picture neuprerun>
+/items = neupicsprerun
+/select  = noreplacenorepeat
+/position = (50%, 50%)
+/resetinterval = 1
+</picture>
+
+<text welcomeprerun>
+/ items = directions
+/ position = (50%, 50%)
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 25pt, true)
+/select = 5
+</text>
+
+<text thanksprerun>
+/ items = directions
+/ position = (50%, 50%)
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 25pt, true)
+/select = 8
+</text>
+
+
+
+<text run_story_negative_text>
+/ items = run_story_negative
+/ position = (50%, 50%)
+/ select  = sequence
+/ resetinterval = 3
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1000, 768)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 35pt, true)
+</text>
+
+<text run_story_negative_options_text>
+/ items = run_story_negative_options
+/ position = (50%, 50%)
+/ select  = sequence
+/ resetinterval = 3
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1000, 768)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 35pt, true)
+</text>
+
+<text autobio_text_react>
+/ items = ("REACT")
+/ position = (50%, 50%)
+/ select  = sequence
+/ resetinterval = 1
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1000, 768)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (0, 153, 0)
+/ fontstyle = ("Arial", 45pt, true)
+</text>
+
+<text autobio_text_reframe>
+/ items = ("REFRAME")
+/ position = (50%, 50%)
+/ select  = sequence
+/ resetinterval = 1
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1000, 768)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (0, 76, 153)
+/ fontstyle = ("Arial", 45pt, true)
+</text>
+
+
+<text autobio_text_read>
+/ items = ("READ")
+/ position = (50%, 50%)
+/ select  = sequence
+/ resetinterval = 1
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1000, 768)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (0, 153, 0)
+/ fontstyle = ("Arial", 45pt, true)
+</text>
+
+<text get_ready>
+/ items = ("GET READY")
+/ position = (50%, 50%)
+/ select  = sequence
+/ resetinterval = 1
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1000, 768)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 35pt, true)
+</text>
+
+<text run_story_neutral_text>
+/ items = run_story_neutral
+/ position = (50%, 50%)
+/ select  = sequence
+/ resetinterval = 3
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1000, 768)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 35pt, true)
+</text>
+
+<text run_story_neutral_options_text>
+/ items = run_story_neutral_options
+/ position = (50%, 50%)
+/ select  = sequence
+/ resetinterval = 3
+/ halign = center
+/ valign = center
+/ vjustify = center
+/ area = (1000, 768)
+/ txbgcolor = (0, 0, 0)
+/ txcolor = (255, 255, 255)
+/ fontstyle = ("Arial", 35pt, true)
+</text>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	TRIALS
+**************************************************************************************************************
+**************************************************************************************************************
+
+Note: this trial presents the picture for a predetermined duration (values.imageviewduration)
+and then sequnce goes to "action" trial. After that "survey page" shows and then the participant is asked to relax.
+stimulustimes = [0 = pse; 0 = rectangle_black1; 0 = trigger_usb1,trigger_usb2,trigger_usb3;  0= cross1,cross2]
+
+
+/stimulustimes = [ 0= cross1,cross2,trigger_usb1-3]...put scanner stuff here.
+/stimulustimes = [ 0= cross1,cross2, trigger_usb1,trigger_usb2,trigger_usb3]
+#fixation cross : before each run
+<trial preruncross>
+/stimulustimes = [ 0= cross1,cross2]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.negcounter=0;values.neucounter=0;values.trialcount=0; values.attcounter=0;values.deccounter=0 ;]
+/trialduration = 12000
+/showmousecursor = false
+/ontrialend= [ values.trialelapsedtime = trial.preruncross.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
+</trial>
+
+<trial preruncrossprerun>
+/stimulustimes = [ 0= cross1,cross2]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.negcounter=0;values.neucounter=0;values.trialcount=0; values.attcounter=0;values.deccounter=0 ;]
+/trialduration = 4000
+/showmousecursor = false
+/ontrialend= [ values.trialelapsedtime = trial.preruncross.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
+</trial>
+
+#fixation cross : after each run
+<trial postruncross>
+/stimulusframes = [ 1 = rectangle_black1; 2= cross1,cross2]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime]
+/trialduration = 10000 
+/showmousecursor = false
+/ontrialend= [ values.trialelapsedtime = trial.postruncross.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
+</trial>
+
+
+#iti or jitter is chosen afer a user has rated an image i.e provided the response from negative pic or neutral pic trials. It's
+duration is chosen randomly from a set of predefined values possible for each run (list currentjitter1)
+<trial iti>
+/stimulusframes = [ 1=rectangle_black1;2=cross1,cross2]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime;  values.currentjitter = list.curentjitter1.nextvalue * 1000 ]
+/timeout = values.currentjitter 
+/ontrialend = [values.trialelapsedtime = trial.iti.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
+/showmousecursor = false
+</trial>
+
+<trial lookneutral>
+/pretrialpause = 16.6666666667 * 3
+/stimulusframes = [1=look;120=rectangle_black1;]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter2.nextvalue * 1000]
+/timeout = 2000 + values.currentinterjitter + (16.6666666667 * 3 )
+/ontrialend = [values.trialelapsedtime = trial.lookneutral.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
+/showmousecursor = false
+/branch = [trial.picneutral]
+</trial>
+
+<trial picneutral>
+/pretrialpause = 16.6666666667 * 3
+/stimulusframes = [1=rectangle_green;2=neu]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; ]
+/timeout = 10000 +  (16.6666666667 * 3 )
+/ontrialend = [values.trialelapsedtime = trial.picneutral.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
+/showmousecursor = false
+</trial>
+
+<trial looknegative>
+/pretrialpause = 16.666666666766666667 * 3
+/stimulusframes = [1=look;120=rectangle_black1;]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter2.nextvalue * 1000]
+/timeout = 2000 + values.currentinterjitter + (16.6666666667 * 3 )
+/ontrialend = [values.trialelapsedtime = trial.looknegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.currentpictype = "look"]
+/showmousecursor = false
+/branch = [trial.picnegative]
+</trial>
+
+
+
+<trial decnegative>
+/pretrialpause = 16.6666666667 * 3
+/stimulusframes = [1=decrease;120=rectangle_black1;]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter2.nextvalue * 1000]
+/timeout = 2000 + values.currentinterjitter + (16.6666666667 * 3 )
+/ontrialend = [values.trialelapsedtime = trial.decnegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.currentpictype = "decrease"]
+/showmousecursor = false
+/branch = [trial.picnegative]
+</trial>
+
+<trial picnegative>
+/pretrialpause = 16.6666666667 * 3
+/stimulusframes = [2=neg;]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; ]
+/ontrialbegin = [ if (values.currentpictype == "decrease") trial.picnegative.insertstimulusframe(shape.rectangle_blue,1) ]
+/ontrialbegin = [ if (values.currentpictype == "look") trial.picnegative.insertstimulusframe(shape.rectangle_green,1) ]
+/timeout = 10000 +  (16.6666666667 * 3 )
+/ontrialend = [values.trialelapsedtime = trial.picnegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
+/showmousecursor = false
+</trial>
+
+<trial rateimage>
+/ pretrialpause = 16.6666666667 * 2
+/ stimulusframes = [1= scale_original]
+/ ontrialbegin = [values.trialcurrenttime = script.currenttime]
+/ beginresponsetime = 0
+/ responsemode = free
+/ responsemessage = ("1",scale_1,0)
+/ responsemessage = ("2",scale_2,0)
+/ responsemessage = ("3",scale_3,0)
+/ responsemessage = ("4",scale_4,0)
+/ responsemessage = ("5",scale_5,0)
+/ inputdevice= keyboard
+/ validresponse = ("1","2","3","4","5")
+/ trialduration = 4000 + ( 16.6666666667 * 2)
+/ ontrialend = [values.trialelapsedtime = trial.rateimage.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.response1 = trial.rateimage.response - 1 ; values.trialcount = values.trialcount + 1]
+/ branch = [ if ( values.trialcount < 24 ) trial.iti]
+/ showmousecursor = false
+</trial>
+
+#ready to start run screen. waits for space response to move on to the next trial
+<trial welcomet>
+/ stimulusframes = [1=welcome]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; values.trialcount=0]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/showmousecursor = false
+/ ontrialend = [values.trialelapsedtime = trial.welcomet.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
+/branch = [trial.trigger]
+</trial>
+
+
+<trial trigger>
+/stimulusframes = [1= trigger_usb1,trigger_usb2,trigger_usb3]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; values.trialcount=0]
+/showmousecursor = false
+/timeout = 500
+/ ontrialend = [values.trialelapsedtime = trial.welcomet.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
+</trial>
+
+#thanks for particpation in experiment screen
+<trial thankst>
+/ stimulusframes = [1=thanks]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/inputdevice = keyboard
+/validresponse = (" ")
+/showmousecursor = false
+/ ontrialend = [values.trialelapsedtime = trial.thankst.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
+</trial>
+
+
+Pre-run Trails
+
+<trial itiprerun>
+/stimulustimes = [ 0=rectangle_black1;1=cross1,cross2]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime;  values.currentjitter = 4000 ]
+/timeout = values.currentjitter 
+/ontrialend = [values.trialelapsedtime = trial.iti.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
+/showmousecursor = false
+/recorddata = false
+</trial>
+
+<trial lookneutralprerun>
+/ pretrialpause = 16.66 * 3
+/stimulustimes = [0=look;2000=rectangle_black1;]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = 1000]
+/ontrialbegin = [trial.lookneutralprerun.insertstimulusframe(picture.neuprerun, 131)]
+/ontrialbegin = [ trial.lookneutralprerun.insertstimulusframe(shape.rectangle_green,130) ]
+/timeout = 12000 + values.currentinterjitter + (16.66 * 3 )
+/ontrialend = [values.trialelapsedtime = trial.lookneutralprerun.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
+/showmousecursor = false
+</trial>
+
+<trial looknegativeprerun>
+/ pretrialpause = 16.66 * 3
+/stimulustimes = [0=look;2000=rectangle_black1;]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = 1000]
+/ontrialbegin = [trial.looknegativeprerun.insertstimulusframe(picture.negprerun, 131) ]
+/ontrialbegin = [ trial.looknegativeprerun.insertstimulusframe(shape.rectangle_green,130) ]
+/timeout = 12000 + values.currentinterjitter + (16.66 * 3 )
+/ontrialend = [values.trialelapsedtime = trial.looknegativeprerun.elapsedtime;values.scriptelaspedtime = script.elapsedtime ]
+/showmousecursor = false
+</trial>
+
+<trial decnegativeprerun>
+/ pretrialpause = 16.66 * 3
+/stimulustimes = [0=decrease;2000=rectangle_black1;]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = 1000]
+/ontrialbegin = [trial.decnegativeprerun.insertstimulusframe(picture.negprerun, 131) ]
+/ontrialbegin = [ trial.decnegativeprerun.insertstimulusframe(shape.rectangle_blue,130) ]
+/timeout = 12000 + values.currentinterjitter + (16.66 * 3 )
+/ontrialend = [values.trialelapsedtime = trial.decnegativeprerun.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
+/showmousecursor = false
+</trial>
+
+<trial rateimageprerun>
+/ pretrialpause = 16.66 * 2
+/ stimulustimes = [0= scale_original]
+/ ontrialbegin = [values.trialcurrenttime = script.currenttime]
+/ beginresponsetime = 0
+/ responsemode = free
+/ responsemessage = ("1",scale_1,0)
+/ responsemessage = ("2",scale_2,0)
+/ responsemessage = ("3",scale_3,0)
+/ responsemessage = ("4",scale_4,0)
+/ responsemessage = ("5",scale_5,0)
+/ inputdevice= keyboard
+/ validresponse = ("1","2","3","4","5")
+/ trialduration = 4000 + ( 16.66 * 2)
+/ ontrialend = [values.trialelapsedtime = trial.rateimage.elapsedtime; values.scriptelaspedtime = script.elapsedtime; ]
+/ branch = [ trial.itiprerun]
+/ showmousecursor = false
+/ recorddata = false
+</trial>
+
+<trial welcometp>
+/ stimulusframes = [1=welcomeprerun]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/showmousecursor = false
+/ ontrialend = [values.trialelapsedtime = trial.welcometp.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
+</trial>
+
+#thanks for particpation in pre-run trial
+<trial thanksp>
+/ stimulusframes = [1=thanksprerun]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/inputdevice = keyboard
+/validresponse = (" ", 28)
+/showmousecursor = false
+/ ontrialend = [values.trialelapsedtime = trial.thankst.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
+</trial>
+
+
+
+
+<trial get_readyt>
+/ stimulusframes = [1=get_ready;240=rectangle_black1]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; values.storycounter = 0 ]
+/showmousecursor = false
+/ ontrialend = [values.trialelapsedtime = trial.thankst.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
+/ timeout = 5000;
+</trial>
+
+<trial storynegative>
+/stimulusframes = [1=run_story_negative_text;240=rectangle_black1]
+/ontrialbegin = [values.storycounter = values.storycounter  + 1 ]
+/timeout = 4500
+/branch = [ if (values.storycounter < 8 ) trial.storynegative else trial.rateimagestory]
+</trial>
+
+<trial storyneutral>
+/stimulusframes = [1=run_story_neutral_text;240=rectangle_black1]
+/ontrialbegin = [values.storycounter = values.storycounter  + 1 ]
+/timeout = 4500
+/branch = [ if (values.storycounter < 3 ) trial.storyneutral else trial.rateimagestory]
+</trial>
+
+
+<trial rateimagestory>
+/ pretrialpause = 16.6666666667 * 2
+/ stimulusframes = [1= scale_original]
+/ ontrialbegin = [values.trialcurrenttime = script.currenttime; values.storycounter=0]
+/ beginresponsetime = 0
+/ responsemode = free
+/ responsemessage = ("1",scale_1,0)
+/ responsemessage = ("2",scale_2,0)
+/ responsemessage = ("3",scale_3,0)
+/ responsemessage = ("4",scale_4,0)
+/ responsemessage = ("5",scale_5,0)
+/ inputdevice= keyboard
+/ validresponse = ("1","2","3","4","5")
+/ trialduration = 4000 + ( 16.6666666667 * 2)
+/ ontrialend = [values.trialelapsedtime = trial.rateimage.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.response1 = trial.rateimage.response - 1 ; ]
+/ showmousecursor = false
+</trial>
+
+<trial NSBstory1instr>
+/pretrialpause = 16.6666666667 * 3
+/stimulusframes = [120=rectangle_black1]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter2.nextvalue * 1000; if(list.autobio_instr.nextvalue == "REACT") values.instrtype = "REACT" else values.instrtype ="REFRAME"]
+/ontrialbegin = [ if (values.instrtype == "REFRAME") trial.NSBstory1instr.insertstimulusframe(text.autobio_text_reframe,1) ]
+/ontrialbegin = [ if (values.instrtype == "REACT") trial.NSBstory1instr.insertstimulusframe(text.autobio_text_react,1) ]
+/timeout = 2000 + values.currentinterjitter + (16.6666666667 * 3 )
+/showmousecursor = false
+/branch = [trial.NSBstory1]
+</trial>
+
+<trial NSBstory1>
+/pretrialpause = 16.6666666667 * 3
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/ontrialbegin = [ if (values.instrtype == "REFRAME") trial.NSBstory1.insertstimulusframe(picture.rectangle_blue_side,1) ]
+/ontrialbegin = [ if (values.instrtype == "REACT") trial.NSBstory1.insertstimulusframe(picture.rectangle_green_side,1) ]
+/ontrialbegin = [ trial.NSBstory1.insertstimulusframe(text.run_story_negative_options_text,2) ]
+/timeout = 8000 + (16.6666666667 * 3 )
+/showmousecursor = false
+/branch = [trial.NSBrating]
+</trial>
+
+<trial Neustory1instr>
+/pretrialpause = 16.6666666667 * 3
+/stimulusframes = [1=autobio_text_read;120=rectangle_black1]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter2.nextvalue * 1000]
+/timeout = 2000 + values.currentinterjitter + (16.6666666667 * 3 )
+/showmousecursor = false
+/branch = [trial.Neustory1]
+</trial>
+
+<trial Neustory1>
+/pretrialpause = 16.6666666667 * 3
+/stimulusframes = [1=rectangle_green_side;2=run_story_neutral_options_text]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
+/timeout = 8000 + (16.6666666667 * 3 )
+/showmousecursor = false
+/branch = [trial.NSBrating]
+</trial>
+
+
+<trial NSBrating>
+/ pretrialpause = 16.6666666667 * 2
+/ stimulusframes = [1= scale_original]
+/ ontrialbegin = [values.trialcurrenttime = script.currenttime]
+/ beginresponsetime = 0
+/ responsemode = free
+/ responsemessage = ("1",scale_1,0)
+/ responsemessage = ("2",scale_2,0)
+/ responsemessage = ("3",scale_3,0)
+/ responsemessage = ("4",scale_4,0)
+/ responsemessage = ("5",scale_5,0)
+/ inputdevice= keyboard
+/ validresponse = ("1","2","3","4","5")
+/ trialduration = 4000 + ( 16.6666666667 * 2)
+/ ontrialend = [values.trialelapsedtime = trial.rateimage.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.response1 = trial.rateimage.response - 1 ; values.trialcount = values.trialcount + 1]
+/ branch = [ if ( values.trialcount < 24 ) trial.iti]
+/ showmousecursor = false
+</trial>
+
+
+
+
+
+*************3333333333333333*************************************************************************************************
+**************************************************************************************************************
+	BLOCKS
+**************************************************************************************************************
+**************************************************************************************************************
+
+Note: presents the stimuli in random order (randomization is controlled by negtive,neutral pic trials);
+
+
+<block PreRun>
+/trials = [ 1 = welcometp; 2 =preruncrossprerun;
+
+3,7 = decnegativeprerun;
+5 = lookneutralprerun;
+9 = looknegativeprerun; 
+4,6,8,10= rateimageprerun;
+
+11 = thanksp]
+</block>
+
+Run1: Contains 4 warm up images. It contains 28 images of a pre-assigned quasi-random selection
+<block Run1>
+/trials = [1 = welcomet; 2=preruncross;
+
+3,9,19,25,33,39,41,47=looknegative;
+5,13,15,23,27,31,35,43=lookneutral;
+7,11,17,21,29,37,45,49=decnegative;
+4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50=rateimage;
+
+51=postruncross]
+
+</block>
+
+Run2: Contains 24 images of a pre-assigned quasi-random selection
+<block Run2>
+/trials = [1 = welcomet; 2=preruncross;
+
+7,15,19,25,27,35,41,45=looknegative;
+3,9,11,17,23,29,33,39=lookneutral;
+5,13,21,31,37,43,47,49=decnegative;
+4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50=rateimage;
+
+51=postruncross]
+
+</block>
+
+Run3: Contains 24 images of a pre-assigned quasi-random selection
+<block Run3>
+/trials = [1 = welcomet; 2=preruncross;
+
+3,19,23,31,33,35,43,45=looknegative;
+5,13,21,27,37,41,47,49=lookneutral;
+7,9,11,15,17,25,29,39=decnegative;
+4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50=rateimage;
+
+51=postruncross]
+
+</block>
+
+<block thanksb>
+/ trials = [1=thankst]
+</block>
+
+
+
+#FIX THIS SEQUENCE 8 NSBs required.
+<block bio1>
+/trials = [ 1=welcomet;  
+
+2=get_readyt;3=storynegative; 4-11= NSBstory1instr; 
+12 =get_readyt; 13 = storyneutral; 14-17 = neustory1instr; 
+18 = get_readyt; 19 = storynegative; 20-27=NSBstory1instr; 
+28= get_readyt; 29 = storyneutral; 30-33 = neustory1instr]
+
+</block>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EXPERIMENT
+**************************************************************************************************************
+**************************************************************************************************************
+<expt prerun>
+/blocks = [ 1 = PreRun]
+/onexptend = [values.completed = 1]
+/branch = [ if ( trial.thanksp.response == 28 ) expt.prerun]
+</expt>
+
+<expt run>
+/ blocks = [ 1 = Run1 ; 2 = Run2 ; 3= Run3 ; 4=bio1; 5= bio1; 6= bio1; 7=thanksb]
+/ onexptend = [values.completed = 1]
+</expt>
+
+xpt autobio>
+/blocks = [1=bio1; 2=bio1; 3= bio1; 4=thanksb ]
+/ onexptend = [values.completed = 1]
+</expt>
+**************************************************************************************************************
+**************************************************************************************************************
+												End of Script
+**************************************************************************************************************
+**************************************************************************************************************

@@ -1,0 +1,23 @@
+date	time	subject	trialcode	trialnum	values.trialcurrenttime	latency	values.response	values.stimulusitem	values.stimulusnumber	values.currentinstrtype	values.currentjitter	values.currentinterjitter
+010915	23:38:27	1	welcomet	1	23:38:32	725	0	0	0	0	0	0
+010915	23:38:27	1	trigger	2	23:38:33	500	0	0	0	0	0	0
+010915	23:38:27	1	get_readyt	3	23:38:33	1017	0	0	0	0	0	0
+010915	23:38:27	1	storynegative	4	23:38:33	517	0	In one of my graduate classes	1	0	0	0
+010915	23:38:27	1	storynegative	5	23:38:33	517	0	we were assigned a group presentation	2	0	0	0
+010915	23:38:27	1	storynegative	6	23:38:33	517	0	I was given a part that I did not understand	3	0	0	0
+010915	23:38:27	1	storynegative	7	23:38:33	517	0	This was very worrisome for me	4	0	0	0
+010915	23:38:27	1	storynegative	8	23:38:33	517	0	I got very hot and uncomfortable	5	0	0	0
+010915	23:38:27	1	storynegative	9	23:38:33	517	0	I stumbled over my words	6	0	0	0
+010915	23:38:27	1	storynegative	10	23:38:33	517	0	I went through things as quickly as I could	7	0	0	0
+010915	23:38:27	1	storynegative	11	23:38:33	517	0	I tried to hide how nervous I was	8	0	0	0
+010915	23:38:27	1	ratestory	12	23:39:15	1111	4	N/A	8	0	0	0
+010915	23:38:27	1	NSBstoryinstr	13	23:39:19	2267	4	N/A	8	REACT	0	2250
+010915	23:38:27	1	NSBstory	14	23:39:23	7984	4	I CAN'T DO THIS	1	REACT	0	2250
+010915	23:38:27	1	rateAAT	15	23:39:32	4000	-1	I CAN'T DO THIS	1	REACT	0	2250
+010915	23:38:27	1	itistory	16	23:39:36	1984	-1	I CAN'T DO THIS	1	REACT	2000	2250
+010915	23:38:27	1	NSBstoryinstr	17	23:39:38	1517	-1	N/A	1	REFRAME	2000	1500
+010915	23:38:27	1	NSBstory	18	23:39:41	7984	-1	OTHERS WILL JUDGE ME	2	REFRAME	2000	1500
+010915	23:38:27	1	rateAAT	19	23:39:49	1124	3	OTHERS WILL JUDGE ME	2	REFRAME	2000	1500
+010915	23:38:27	1	itistory	20	23:39:53	984	3	OTHERS WILL JUDGE ME	2	REFRAME	1000	1500
+010915	23:38:27	1	NSBstoryinstr	21	23:39:54	2017	3	N/A	2	REACT	1000	2000
+010915	23:38:27	1	NSBstory	22	23:39:58	491	3	I LOOK LIKE AN IDIOT	3	REACT	1000	2000

@@ -1,0 +1,9 @@
+date	time	subject	blockcode	blocknum	trialcode	trialnum	values.trialcurrenttime	latency	values.response	values.stimulusitem	values.stimulusnumber	values.currentinstrtype	values.currentjitter	values.currentinterjitter
+011015	23:11:50	1	PRACTICE	1	welcometp	1	23:11:55	1068	0	0	0	0	0	0
+011015	23:11:50	1	PRACTICE	1	practicecross	2	23:11:56	4000	0	0	0	0	0	0
+011015	23:11:50	1	PRACTICE	1	decnegativepractice	3	23:12:00	10834	0	0	0	0	0	1000
+011015	23:11:50	1	PRACTICE	1	lookneutralpractice	6	23:12:21	10834	0	0	0	0	4000	1000
+011015	23:11:50	1	PRACTICE	1	decnegativepractice	9	23:12:43	10834	0	0	0	0	4000	1000
+011015	23:11:50	1	PRACTICE	1	looknegativepractice	12	23:13:04	10834	0	0	0	0	4000	1000
+011015	23:11:50	1	PRACTICE	1	thanksp	15	23:13:25	1051	0	0	0	0	4000	1000
+011015	23:11:50	1	THANKSB	2	thankst	1	23:13:26	1051	0	*THANKS MESSAGE*	0	0	4000	1000

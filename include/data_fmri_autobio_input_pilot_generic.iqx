@@ -1,0 +1,199 @@
+﻿
+
+--------------Negative  ---------------
+
+<item run_story_negative>
+/1 =  "In one of my graduate classes"
+/2 = "we were assigned a group presentation"
+/3 = "I was given a part that I did not understand"
+/4 = "This was very worrisome for me"
+/5 = "I got very hot and uncomfortable"
+/6 = "I stumbled over my words"
+/7 = "I went through things as quickly as I could"
+/8 = "I tried to hide how nervous I was"
+
+
+/9 =  "It was New Year's Eve"
+/10 = "We were all heading to a party"
+/11 = "I bought a friend with me"
+/12 = "We were having a good time"
+/13 = "Suddently the host of the party yelled"
+/14 = "He told me to leave"
+/15 = "I felt embarrased for being there"
+/16 = "I felt anxious to leave the room"
+
+
+/17 =  "There's a probleme with one of the customers"
+/18 = "I'm selected to go to Maryland with Dan"
+/19 = "to repair some parts and answer why this happened."
+/20 = "I arrive to repair the parts"
+/21 = "The buyers and engineers are all there."
+/22 = "They are standing over my shoulder"
+/23 = "while I'm trying to check the parts"
+/24 = "Being there in the first place is hard!"
+
+
+/25 =  "I'm out to dinner with my family"
+/26 = "We wait forever to be seated"
+/27 = "We finally all get seated"
+/28 = "And for some reason I get that feeling"
+/29 = "I feel embarrased and uncomforable"
+/30 = "I turn all red "
+/31 = "I talk very little if at all"
+/32 = "I feel like I'm all by myself"
+
+/33 =  "I'm at a social gathering in college"
+/34 = "I feel excluded"
+/35 = "I'm clearly not in a group"
+/36 = "I hold on to a drink so my hands won't dangle"
+/37 = "I stand closer to a wall"
+/38 = "My back is against the wall"
+/39 = "I try my best to avoid any eye contact"
+/40 = "I'm so out of place."
+
+
+/41 =  "I'm at a party with my mom and dad"
+/42 = "I feel out o fplace"
+/43 = "I feel compared to kids from respectable families"
+/44 = "I don't dress right"
+/45 = "I don't wear my hair right"
+/46 = "I don't know how to talk properly"
+/47 = "Maybe if I don't move, people won't even see me"
+/48 = "I absolutely want to get out of here"
+</item>
+
+
+<item run_story_negative_options>
+/1 =  "I CAN'T DO THIS"
+/2 = "OTHERS WILL JUDGE ME"
+/3 = "I LOOK LIKE AN IDIOT"
+/4 = "I AM SEEN AS PATHETIC"
+/5 = "I SOUND UNPREPARED"
+/6 = "PEOPLE THINK I'M STUPID"
+/7 = "I FEEL AWKWARD"
+/8 = "I FEEL I'M STUPID"
+
+/9 =  "I DID SOMETHING WRONG"
+/10 = "I'M NOT GOOD AT SOCIAL GATHERINGS"
+/11 = "HE IS ANGRY AT ME"
+/12 = "IT IS MY FAULT"
+/13 = "NO ONE LIKES ME"
+/14 = "I'M A FAILURE"
+/15 = "I WON'T GET ANYWHERE"
+/16 = "I FEEL AWKWARD"
+
+
+/17 =  "I HATE IT WHEN OTHERS WATCH ME WORK"
+/18 = "I WISH IT WAS MUCH EASIER"
+/19 = "I LOOK LIKE AN IDIOT"
+/20 = "THERE IS SOMETHING WRONG WITH ME"
+/21 = "I'M GOOD AT WHAT I DO, WHY DO I FEEL THIS"
+/22 = "THESE PEOPLE THINK I AM INCOMPETENT"
+/23 = "I FEEL AWKWARD"
+/24 = "I FEEL WRONG"
+
+/26 =  "WHY IS THIS HAPPENING"
+/27 = "LET'S HURRY UP AND GO"
+/28 = "I MAKE MY WIFE FEEL EMABARRASSED"
+/29 = "I'M TOO OLD TO BE THIS WAY"
+/30 = "MY FAMILY WONDERS WHAT'S WRONG WITH ME"
+/31 = "PEOPLE THINK I'M AN IDIOT"
+/32 = "I FEEL AWKWARD"
+/33 = "I LOOK LIKE AN IDIOT"
+
+
+/34 =  "I'M A FREAK"
+/35 = "I'M NOT A POPULAR PERSON"
+/36 = "I'M ANTI-SOCIAL"
+/37 = "I'LL NEVER CHANGE"
+/38 = "PEOPLE FEEL SORRY FOR ME"
+/39 = "PEOPLE DON' WANT TO TALK TO ME"
+/40 = "I FEEL AWKWARD"
+/41 = "I'M STUPID"
+
+
+/42 =  "I'M UGLY"
+/43 = "I'M NOT PRESENTABLE"
+/44 = "I DON'T BELONG"
+/45 = "I'M PITFUL"
+/46 = "I'M A DISGRACE"
+/47 = "PEOPLE LOOK DOWN ON ME"
+/48 = "I FEEL STUPID"
+/49 = "I FEEL AWKWARD"
+
+</item>
+
+
+
+---------------Neutral  --------------
+<item run_story_neutral>
+/1 =  "I pull into the parking lot"
+/2 = "And find a parking spot"
+/3 = "I put the car into park"
+
+
+/4 =  "I open the closet door"
+/5 = "And pull out a pair of shoes"
+/6 = "I loosen the laces"
+
+/7 = "I open the washer door"
+/8 = "I grab the clothes and towels"
+/9 = "And put them into the washer"
+
+/10 =  "I take a bowl"
+/11 = "from the kitchen cabinet"
+/12 = "and pour in some oatmeal"
+
+
+
+/13 =  "I pick up the kettle"
+/14= "Remove the lid from the kettle"
+/15 = "Add water to the kettle"
+
+/16 =  "I pick up my face cleanser"
+/17 = "I squirt some into my palm"
+/18 = "I put some onto my cheeks with my fingers"
+</item>
+
+<item run_story_neutral_options>
+/1 =  "I TAKE THE KEY OUT OF IGNITION"
+/2 = "I OPEN THE CAR DOOR"
+/3 = "I STEP OUT OF THE CAR"
+/4 = "I CLOSE THE CAR DOOR"
+
+/5 =  "ONE BY ONE"
+/6 = "I TIGHTEN THE LACES"
+/7 = "AND PULL STRINGS UP"
+/8 = "I TIE MY STRINGS"
+
+/9 =  "I GRAB THE DETERGENT AND ADD IT"
+/10 = "I TURN ON THE WATER"
+/11 = "AND CLOSE THE WASHER LID"
+/12 = "I PUSH THE START BUTTON"
+
+/13 =  "ADD SOME WATER"
+/14 = "AND PLACE IT IN MICROWAVE"
+/15 = "TO HEAT FOR TWO MINUTES"
+/16 = "TAKE OUT OF MICROWAVE"
+
+/17 =  "PUT THE LID BACK ON"
+/18 = "PUT IT ON THE STOVE"
+/19 = "TURN ON THE STOVE"
+/20 = "HEAT FOR 2 MINUTES"
+
+/16 =  "AND SPREAD IT OVER MY FACE"
+/17 = "RINSWE WITH WATER"
+/18 = "THEN WIPE DRY WITH MY FACE TOWEL"
+/19 = "PUT TOWEL BACK"
+
+</item>
+---------------------------------------------------------
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,83 @@
+﻿--------------Neutral ----------------
+
+<item run_story_neutral>
+/1 =  "I get my bag"
+/2 = "I open the front door"
+/3 = "I lock the front door"
+</item>
+
+<item run_story_neutral_options>
+/1 =  "I TAKE THE KEY OUT OF LOCK"
+/2 = "I PUT MY BAG ON MY SHOULDER"
+/3 = "I WALK TOWARDS MY CAR"
+/4 = "I OPEN THE CAR DOOR"
+</item>
+
+
+--------------Negative  ---------------
+
+<item run_story_negative>
+/1 =  "There was a party after-work"
+/2 = "All my co-workers were there"
+/3 = "We were having a fun time"
+/4 = "Suddenly I tripped and spilled my drink"
+/5 = "Everyone started laughing at me"
+/6 = "I realized my pants were wet"
+/7 = "I felt humiliated"
+/8 = "I felt embarrased for being there"
+
+
+/9 =  "I was tired and sleepy from last night"
+/10 = "I couldn't keep my eyes open at work"
+/11 = "I dozed off on my keyboard"
+/12 = "My boss caught me sleeping and yelled"
+/13 = "Other people heard the yelling"
+/14 = "He told me to go home"
+/15 = "I felt embarrased"
+/16 = "I left the office"
+
+
+/17 = "I was at the grocery store"
+/18 = "I bought a few items and left"
+/19 = "A clerk came running behind me"
+/20 = "He accused me of not paying for the drink in my hand"
+/21 = "I realized I forgot to pay for the drink"
+/22 = "I turned all red"
+/23 = "I felt embarrassed"
+/24 = "I felt uncomfortable as people stared at me"
+
+</item>
+
+
+<item run_story_negative_options>
+/1 = "PEOPLE THINK I'M STUPID"
+/2 = "I DON'T BELONG HERE"
+/3 = "I LOOK LIKE AN IDIOT"
+/4 = "I AM SEEN AS PATHETIC"
+/5 = "IT IS MY FAULT"
+/6 = "I AM A FAILURE"
+/7 = "THERE IS SOMETHING WRONG WITH ME"
+/8 = "I'M NOT GOOD AT SOCIAL GATHERINGS"
+
+
+/9 = "HE IS ANGRY AT ME"
+/10 = "IT IS MY FAULT"
+/11 = "NO ONE WILL LIKE ME"
+/12 = "I'M A FAILURE"
+/13 =  "I DID SOMETHING WRONG"
+/14 = "I WISH IT WAS MUCH EASIER"
+/15 = "THERE IS SOMETHING WRONG WITH ME"
+/16 = "I'M AN IDIOT"
+
+
+/17 = "I HATE IT WHEN OTHERS WATCH ME LIKE THIS"
+/18 = "I WANT TO RUN AWAY"
+/19 = "I LOOK LIKE AN IDIOT"
+/20 = "THERE IS SOMETHING WRONG WITH ME"
+/21 = "I AM NOT A THIEF, WHY DO I FEEL THIS"
+/22 = "THESE PEOPLE THINK I AM A LOOSER"
+/23 = "IT IS MY FAULT"
+/24 = "I HATE MYSELF"
+
+
+</item>
