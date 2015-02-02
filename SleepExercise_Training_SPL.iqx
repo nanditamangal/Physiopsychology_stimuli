@@ -94,7 +94,7 @@ TRIALS
 #fixation cross : before each run
 <trial preruncross>
 /stimulusframes = [ 1= cross1,cross2]
-/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.negcounter=0;values.neucounter=0;values.trialcount=0; values.attcounter=0;values.reframecounter=0 ;]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.negcounter=0;values.neucounter=0;values.trialcount=0; values.attcounter=0;values.refcounter=0 ;]
 /trialduration = 4000
 /showmousecursor = false
 /ontrialend= [ values.trialelapsedtime = trial.preruncross.elapsedtime;values.scriptelaspedtime = script.elapsedtime]

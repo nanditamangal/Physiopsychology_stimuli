@@ -94,7 +94,7 @@ TRIALS
 #fixation cross : before each run
 <trial preruncross>
 /stimulusframes = [ 1= cross1,cross2]
-/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.negcounter=0;values.neucounter=0;values.trialcount=0; values.attcounter=0;values.reframecounter=0 ;]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.negcounter=0;values.neucounter=0;values.trialcount=0; values.attcounter=0;values.refcounter=0 ;]
 /trialduration = 4000
 /showmousecursor = false
 /ontrialend= [ values.trialelapsedtime = trial.preruncross.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
@@ -182,7 +182,7 @@ duration is set to 3 seconds.
 #trial which shows a "REFRAME" instruction for 2 seconds and calls the picnegative trial.
 <trial reframenegative>
 /pretrialpause = 16.6666666667 * 3
-/stimulusframes = [1=reframerease;120=rectangle_black1;]
+/stimulusframes = [1=reframe;120=rectangle_black1;]
 /ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter2.nextvalue * 1000]
 /timeout = 2000 + values.currentinterjitter + (16.6666666667 * 3 )
 /ontrialend = [values.trialelapsedtime = trial.reframenegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.currentinstrtype = "reframerease"]
@@ -193,7 +193,7 @@ duration is set to 3 seconds.
 #trial which shows a "REFRAME" instruction untile a SPACE response is received.
 <trial reframenegative_wait>
 /pretrialpause = 16.6666666667 * 3
-/stimulusframes = [1=reframerease]
+/stimulusframes = [1=reframe]
 /ontrialbegin = [values.trialcurrenttime = script.currenttime; ]
 / inputdevice= keyboard
 / validresponse = (" ")
@@ -366,7 +366,7 @@ trial rateimage>
 
 #training reminder
 <trial instructions3t>
-/ stimulusframes = [1=reframerease;2=instructions3]
+/ stimulusframes = [1=reframe;2=instructions3]
 /ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
 / inputdevice= keyboard
 / validresponse = (" ")

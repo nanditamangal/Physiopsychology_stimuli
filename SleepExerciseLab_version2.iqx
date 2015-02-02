@@ -210,7 +210,7 @@ PICTURE PRACTICE TRIALS : 5 Negative and Neutral pictures shown for practice bef
 #cross image shown for 4 seconds at start of practice.
 <trial practicecross>
 /stimulustimes = [ 0= cross1,cross2,trigger_practicecross;8=trigger_0]
-/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.negcounter=0;values.neucounter=0;values.trialcount=0; values.attcounter=0;values.reframecounter=0 ;]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.negcounter=0;values.neucounter=0;values.trialcount=0; values.attcounter=0;values.refcounter=0 ;]
 /trialduration = 4000
 /showmousecursor = false
 /ontrialend= [ values.trialelapsedtime = trial.practicecross.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
@@ -253,7 +253,7 @@ PICTURE PRACTICE TRIALS : 5 Negative and Neutral pictures shown for practice bef
 #inter-jitter in between practice images is fixed at 1 second.
 <trial reframenegativepractice>
 / pretrialpause = 16.66 * 3
-/stimulustimes = [0=reframerease,trigger_practicereframeneg;130=trigger_0;2000=rectangle_black1;]
+/stimulustimes = [0=reframe,trigger_practicereframeneg;130=trigger_0;2000=rectangle_black1;]
 /ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = 1000]
 /ontrialbegin = [trial.reframenegativepractice.insertstimulusframe(shape.PPTmark, 132)]
 /ontrialbegin = [trial.reframenegativepractice.insertstimulusframe(picture.negpractice, 131) ]
@@ -414,7 +414,7 @@ Thanks
 #fixation cross : before each run
 <trial preruncross>
 /stimulustimes = [ 0= cross1,cross2,trigger_startcross;7=trigger_0]
-/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.negcounter=0;values.neucounter=0;values.trialcount=0; values.attcounter=0;values.reframecounter=0 ;]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.negcounter=0;values.neucounter=0;values.trialcount=0; values.attcounter=0;values.refcounter=0 ;]
 /trialduration = 12000
 /showmousecursor = false
 /ontrialend= [ values.trialelapsedtime = trial.practicecross.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
@@ -486,7 +486,7 @@ duration is chosen randomly from a set of predefined values possible for each ru
 #stimulusframes have been used (instead of stimulus times) to keep the timing as consistent as possible for each run.
 <trial reframenegative>
 /pretrialpause = 16.6666666667 * 3
-/stimulusframes = [1=reframerease,trigger_reframereaseinstr;120=rectangle_black1;9=trigger_0]
+/stimulusframes = [1=reframe,trigger_reframereaseinstr;120=rectangle_black1;9=trigger_0]
 /ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter2.nextvalue * 1000]
 /timeout = 2000 + values.currentinterjitter + (16.6666666667 * 3 )
 /ontrialend = [values.trialelapsedtime = trial.reframenegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.currentinstrtype = "REFRAME-NEGATIVE"]
@@ -501,7 +501,7 @@ duration is chosen randomly from a set of predefined values possible for each ru
 /pretrialpause = 16.6666666667 * 3
 /stimulusframes = [3=PPTmark;10=trigger_0]
 /ontrialbegin = [values.trialcurrenttime = script.currenttime; ]
-/ontrialbegin = [ if (values.currentinstrtype == "REFRAME-NEGATIVE") {trial.picnegative.insertstimulusframe(shape.rectangle_blue,1); trial.picnegative.insertstimulusframe(port.trigger_reframereaseneg,2); trial.picnegative.insertstimulusframe(picture.reframeneglab,2); values.stimulusitem =  picture.reframeneglab.currentitem ; values.stimulusnumber =  picture.reframeneglab.currentitemnumber;}]
+/ontrialbegin = [ if (values.currentinstrtype == "REFRAME-NEGATIVE") {trial.picnegative.insertstimulusframe(shape.rectangle_blue,1); trial.picnegative.insertstimulusframe(port.trigger_reframereaseneg,2); trial.picnegative.insertstimulusframe(picture.refneglab,2); values.stimulusitem =  picture.refneglab.currentitem ; values.stimulusnumber =  picture.refneglab.currentitemnumber;}]
 /ontrialbegin = [ if (values.currentinstrtype == "REACT-NEGATIVE") {trial.picnegative.insertstimulusframe(shape.rectangle_green,1); trial.picnegative.insertstimulusframe(port.trigger_reactneg,2); trial.picnegative.insertstimulusframe(picture.reactneglab,2); values.stimulusitem =  picture.reactneglab.currentitem ; values.stimulusnumber =  picture.reactneglab.currentitemnumber;}]
 /timeout = 10000 +  (16.6666666667 * 3 )
 /ontrialend = [values.trialelapsedtime = trial.picnegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
