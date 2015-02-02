@@ -70,9 +70,9 @@ resetinterval is zero: wait for all items to be selected before a reset.
 /scriptelapsedtime:	    stores the cumulative script time elapsed thus far (used for data file)
 /repsonse1:				stores the rate reponse
 /trialcount:            stores the current trial count (total 24). We skip iti on 24th trial
-/currentpictype:		stores the current trial's image action  look or decrease.
+/currentpictype:		stores the current trial's image action  react or reframe.
 /attcounter:			stores the number of times "attend" has been shown in the 18 trials for each run.
-/deccounter:			stores the number of timse "decrease" has been shown in the 18 trials for each run.
+/refcounter:			stores the number of timse "reframe" has been shown in the 18 trials for each run.
 /negcounter:			stores the number of times negative images have been shown in the 18 trials for each run.
 /neucounter:            stores the number of times neutral images have been shown in the 18 trials for each run.
 /currentjitter:			stores the current random jitter/iti chosen. Total 23 itis for 24 trials for each run.
@@ -89,7 +89,7 @@ resetinterval is zero: wait for all items to be selected before a reset.
 /trialcount = 0
 /currentinstrtype = 0
 /attcounter = 0
-/deccounter = 0
+/refcounter = 0
 /negcounter = 0
 /neucounter = 0
 /currentjitter = 0

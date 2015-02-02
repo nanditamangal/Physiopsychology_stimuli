@@ -94,7 +94,7 @@ TRIALS
 #fixation cross : before each run
 <trial preruncross>
 /stimulusframes = [ 1= cross1,cross2]
-/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.negcounter=0;values.neucounter=0;values.trialcount=0; values.attcounter=0;values.deccounter=0 ;]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.negcounter=0;values.neucounter=0;values.trialcount=0; values.attcounter=0;values.reframecounter=0 ;]
 /trialduration = 4000
 /showmousecursor = false
 /ontrialend= [ values.trialelapsedtime = trial.preruncross.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
@@ -112,25 +112,25 @@ duration is set to 3 seconds.
 /showmousecursor = false
 </trial>
 
-#trial which shows a "LOOK" instruction for 2 seconds and calls the picneutral trial.
-<trial lookneutral>
+#trial which shows a "REACT" instruction for 2 seconds and calls the picneutral trial.
+<trial reactneutral>
 /pretrialpause = 16.6666666667 * 3
-/stimulusframes = [1=look;120=rectangle_black1;]
+/stimulusframes = [1=react;120=rectangle_black1;]
 /ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter2.nextvalue * 1000]
 /timeout = 2000 + values.currentinterjitter + (16.6666666667 * 3 )
-/ontrialend = [values.trialelapsedtime = trial.lookneutral.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
+/ontrialend = [values.trialelapsedtime = trial.reactneutral.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
 /showmousecursor = false
 /branch = [trial.picneutral]
 </trial>
 
-#trial which shows a "LOOK" instruction and upon a SPACE response calls the picneutral_wait trial.
-<trial lookneutral_wait>
+#trial which shows a "REACT" instruction and upon a SPACE response calls the picneutral_wait trial.
+<trial reactneutral_wait>
 /pretrialpause = 16.6666666667 * 3
-/stimulusframes = [1=look]
+/stimulusframes = [1=react]
 /ontrialbegin = [values.trialcurrenttime = script.currenttime; ]
 / inputdevice= keyboard
 / validresponse = (" ")
-/ontrialend = [values.trialelapsedtime = trial.lookneutral.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
+/ontrialend = [values.trialelapsedtime = trial.reactneutral.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
 /showmousecursor = false
 /branch = [trial.picneutral_wait]
 </trial>
@@ -156,48 +156,48 @@ duration is set to 3 seconds.
 /showmousecursor = false
 </trial>
 
-#trial which shows a "LOOK" instruction for 2 seconds and calls the picnegative trial.
-<trial looknegative>
+#trial which shows a "REACT" instruction for 2 seconds and calls the picnegative trial.
+<trial reactnegative>
 /pretrialpause = 16.666666666766666667 * 3
-/stimulusframes = [1=look;120=rectangle_black1;]
+/stimulusframes = [1=react;120=rectangle_black1;]
 /ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter2.nextvalue * 1000]
 /timeout = 2000 + values.currentinterjitter + (16.6666666667 * 3 )
-/ontrialend = [values.trialelapsedtime = trial.looknegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.currentinstrtype = "look"]
+/ontrialend = [values.trialelapsedtime = trial.reactnegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.currentinstrtype = "react"]
 /showmousecursor = false
 /branch = [trial.picnegative]
 </trial>
 
-#trial which shows a "LOOK" instruction and upon a SPACE response calls the picnegative_wait trial.
-<trial looknegative_wait>
+#trial which shows a "REACT" instruction and upon a SPACE response calls the picnegative_wait trial.
+<trial reactnegative_wait>
 /pretrialpause = 16.666666666766666667 * 3
-/stimulusframes = [1=look]
+/stimulusframes = [1=react]
 /ontrialbegin = [values.trialcurrenttime = script.currenttime; ]
 / inputdevice= keyboard
 / validresponse = (" ")
-/ontrialend = [values.trialelapsedtime = trial.looknegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.currentinstrtype = "look"]
+/ontrialend = [values.trialelapsedtime = trial.reactnegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.currentinstrtype = "react"]
 /showmousecursor = false
 /branch = [trial.picnegative_wait]
 </trial>
 
-#trial which shows a "DECREASE" instruction for 2 seconds and calls the picnegative trial.
-<trial decnegative>
+#trial which shows a "REFRAME" instruction for 2 seconds and calls the picnegative trial.
+<trial reframenegative>
 /pretrialpause = 16.6666666667 * 3
-/stimulusframes = [1=decrease;120=rectangle_black1;]
+/stimulusframes = [1=reframe;120=rectangle_black1;]
 /ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter2.nextvalue * 1000]
 /timeout = 2000 + values.currentinterjitter + (16.6666666667 * 3 )
-/ontrialend = [values.trialelapsedtime = trial.decnegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.currentinstrtype = "decrease"]
+/ontrialend = [values.trialelapsedtime = trial.reframenegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.currentinstrtype = "reframe"]
 /showmousecursor = false
 /branch = [trial.picnegative]
 </trial>
 
-#trial which shows a "DECREASE" instruction untile a SPACE response is received.
-<trial decnegative_wait>
+#trial which shows a "REFRAME" instruction untile a SPACE response is received.
+<trial reframenegative_wait>
 /pretrialpause = 16.6666666667 * 3
-/stimulusframes = [1=decrease]
+/stimulusframes = [1=reframe]
 /ontrialbegin = [values.trialcurrenttime = script.currenttime; ]
 / inputdevice= keyboard
 / validresponse = (" ")
-/ontrialend = [values.trialelapsedtime = trial.decnegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.currentinstrtype = "decrease"]
+/ontrialend = [values.trialelapsedtime = trial.reframenegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.currentinstrtype = "reframe"]
 /showmousecursor = false
 /branch = [trial.picnegative_wait]
 </trial>
@@ -207,8 +207,8 @@ duration is set to 3 seconds.
 /pretrialpause = 16.6666666667 * 3
 /stimulusframes = [2=negtrainspl;]
 /ontrialbegin = [values.trialcurrenttime = script.currenttime; ]
-/ontrialbegin = [ if (values.currentinstrtype == "decrease") trial.picnegative.insertstimulusframe(shape.rectangle_blue,1) ]
-/ontrialbegin = [ if (values.currentinstrtype == "look") trial.picnegative.insertstimulusframe(shape.rectangle_green,1) ]
+/ontrialbegin = [ if (values.currentinstrtype == "reframe") trial.picnegative.insertstimulusframe(shape.rectangle_blue,1) ]
+/ontrialbegin = [ if (values.currentinstrtype == "react") trial.picnegative.insertstimulusframe(shape.rectangle_green,1) ]
 /timeout = 10000 +  (16.6666666667 * 3 )
 /ontrialend = [values.trialelapsedtime = trial.picnegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
 /showmousecursor = false
@@ -219,8 +219,8 @@ duration is set to 3 seconds.
 /pretrialpause = 16.6666666667 * 3
 /stimulusframes = [2=negtrainspl;]
 /ontrialbegin = [values.trialcurrenttime = script.currenttime; ]
-/ontrialbegin = [ if (values.currentinstrtype == "decrease") trial.picnegative_wait.insertstimulusframe(shape.rectangle_blue,1) ]
-/ontrialbegin = [ if (values.currentinstrtype == "look") trial.picnegative_wait.insertstimulusframe(shape.rectangle_green,1) ]
+/ontrialbegin = [ if (values.currentinstrtype == "reframe") trial.picnegative_wait.insertstimulusframe(shape.rectangle_blue,1) ]
+/ontrialbegin = [ if (values.currentinstrtype == "react") trial.picnegative_wait.insertstimulusframe(shape.rectangle_green,1) ]
 / inputdevice= keyboard
 / validresponse = (" ")
 /ontrialend = [values.trialelapsedtime = trial.picnegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
@@ -342,7 +342,7 @@ trial rateimage>
 
 #training reminder
 <trial instructions2t>
-/ stimulusframes = [1=look;2=instructions2]
+/ stimulusframes = [1=react;2=instructions2]
 /ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
 / inputdevice= keyboard
 / validresponse = (" ")
@@ -351,7 +351,7 @@ trial rateimage>
 
 #training reminder
 <trial instructions3t>
-/ stimulusframes = [1=decrease;2=instructions3]
+/ stimulusframes = [1=reframe;2=instructions3]
 /ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
 / inputdevice= keyboard
 / validresponse = (" ")
@@ -464,18 +464,18 @@ Simulates a regular experiment with 3 timed images and 3 timed rating scales.
 5=welcomet_1; 
 6= preruncross;
 
-7 = looknegative_wait;
-8 = decnegative_wait;
-9 = decnegative_wait;
+7 = reactnegative_wait;
+8 = reframenegative_wait;
+9 = reframenegative_wait;
 10 = thankst_1;
 
 11 = welcomet_1;
 
-12 = lookneutral_wait;
-13 = decnegative_wait;
-15 = looknegative_wait;
-17 = decnegative_wait;
-19 = decnegative_wait;
+12 = reactneutral_wait;
+13 = reframenegative_wait;
+15 = reactnegative_wait;
+17 = reframenegative_wait;
+19 = reframenegative_wait;
 
 12, 14, 16, 18, 20= rateimage;
 21 = try_1;
@@ -486,18 +486,18 @@ Simulates a regular experiment with 3 timed images and 3 timed rating scales.
 </block>
 
 <block Train2>
-/trials = [1,3=decnegative_wait; 2,4=rateimage]
+/trials = [1,3=reframenegative_wait; 2,4=rateimage]
 </block>
 
 <block Train3>
 / trials = [1=welcomet_2;
 
-2 = decnegative;
-4 = looknegative;
-6 = decnegative;
-8 = decnegative;
-10 = lookneutral;
-12 = decnegative;
+2 = reframenegative;
+4 = reactnegative;
+6 = reframenegative;
+8 = reframenegative;
+10 = reactneutral;
+12 = reframenegative;
 
 3,5,7,9,11,13 = rateimage;
 
