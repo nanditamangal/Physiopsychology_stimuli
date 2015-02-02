@@ -393,7 +393,7 @@ trial rateimage>
 
 #training reminder
 <trial instructions6t>
-/ stimulusframes = [1=autobio_text_read;2=instructions6]
+/ stimulusframes = [1=autobio_text_react;2=instructions6]
 /ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
 / inputdevice= keyboard
 / validresponse = (" ")
@@ -663,7 +663,7 @@ trial rateAAT>
 #trial to provie Netural instructions with no time limits (Press Space to continue). There are 4 negative self belief options in a single story.
 <trial AATneutralinstr>
 /pretrialpause = 16.6666666667 * 3
-/stimulusframes = [1=autobio_text_read;120=rectangle_black1]
+/stimulusframes = [1=autobio_text_react;120=rectangle_black1]
 /ontrialbegin = [ values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter2.nextvalue * 1000]
 /timeout = 1000 + values.currentinterjitter + (16.6666666667 * 3 )
 /showmousecursor = false
@@ -683,7 +683,7 @@ trial rateAAT>
 #trial to provie Neutral instructions with no time limits (Press Space to continue). There are 4 neutral options in a single story.
 <trial AATneutralinstr_wait>
 /pretrialpause = 16.6666666667 * 3
-/stimulusframes = [1=autobio_text_read]
+/stimulusframes = [1=autobio_text_react]
 /ontrialbegin = [ values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter2.nextvalue * 1000]
 / inputdevice= keyboard
 / validresponse = (" ")

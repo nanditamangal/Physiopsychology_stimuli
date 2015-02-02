@@ -170,19 +170,7 @@ to do while you are viewing the picture.~n~nPress SPACE to continue"
 / fontstyle = ("Arial", 35pt, true)
 </text>
 
-<text autobio_text_react>
-/ items = ("REACT")
-/ position = (50%, 50%)
-/ select  = sequence
-/ resetinterval = 1
-/ halign = center
-/ valign = center
-/ vjustify = center
-/ area = (1000, 768)
-/ txbgcolor = (0, 0, 0)
-/ txcolor = (0, 153, 0)
-/ fontstyle = ("Arial", 45pt, true)
-</text>
+
 
 <text autobio_text_reframe>
 / items = ("REFRAME")
@@ -199,8 +187,8 @@ to do while you are viewing the picture.~n~nPress SPACE to continue"
 </text>
 
 
-<text autobio_text_read>
-/ items = ("READ")
+<text autobio_text_react>
+/ items = ("REACT")
 / position = (50%, 50%)
 / select  = sequence
 / resetinterval = 1

@@ -695,12 +695,12 @@ trial ratestory>fre
 #stimulusframes have been used (instead of stimulus times) to keep the timing as consistent as possible for each run.
 <trial AATneutralinstr>
 /pretrialpause = 16.6666666667 * 3
-/stimulusframes = [1=autobio_text_read;120=rectangle_black1]
+/stimulusframes = [1=autobio_text_react;120=rectangle_black1]
 /ontrialbegin = [ values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter3.nextvalue * 1000]
 /timeout = 2000 + values.currentinterjitter + (16.6666666667 * 3 )
 /showmousecursor = false
 /branch = [trial.AATneutralstatement]
-/ontrialend = [values.currentinstrtype = "READ";  values.stimulusitem =  "*INSTRUCTION*" ; values.stimulusnumber =  0; values.response=0]
+/ontrialend = [values.currentinstrtype = "REACT";  values.stimulusitem =  "*INSTRUCTION*" ; values.stimulusnumber =  0; values.response=0]
 </trial>
 
 #trial to provide Netural story. There are 4 neutral story options in a single story
