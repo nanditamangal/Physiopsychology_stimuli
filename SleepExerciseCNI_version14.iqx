@@ -60,7 +60,7 @@ response1:						the participant's response (rate image response)
 
 <data >
 / separatefiles = true
-/ file = "SleepExercise_fmri_rawdata.iqdat"
+/ file = "SLEEP_session2_CNI_picture_autobio_rawdata_pilot.iqdat"
 / columns = [date, time, subject, blockcode, blocknum, trialcode, trialnum, values.trialcurrenttime,  latency, values.response, values.stimulusitem, values.stimulusnumber values.currentinstrtype;values.currentjitter,values.currentinterjitter]
 </data>
 
@@ -77,7 +77,7 @@ script.elapsedtime:				time it took to run script (in ms)
 
 
 <summarydata >
-/ file = "SleepExercise_fmri_summary.iqdat"
+/ file = "SLEEP_session2_CNI_picture_autobio_summary_pilot.iqdat"
 /columns = [script.startdate, script.currenttime, script.subjectid, script.groupid, script.elapsedtime, values.completed]
 </summarydata>
 

@@ -60,7 +60,7 @@ response1:						the participant's response (rate image response)
 
 <data >
 / separatefiles = true
-/ file = "SleepExercise_lab_SPL_rawdata.iqdat"
+/ file = "SLEEP_session1_SPL_picture_pilot.iqdat"
 / columns = [date, time, subject, blockcode, blocknum, trialcode, trialnum, values.trialcurrenttime,  latency, values.response, values.stimulusitem, values.stimulusnumber values.currentinstrtype;values.currentjitter,values.currentinterjitter]
 </data>
 
@@ -77,7 +77,7 @@ script.elapsedtime:				time it took to run script (in ms)
 
 
 <summarydata >
-/ file = "SleepExercise_lab_SPL_summary.iqdat"
+/ file = "SLEEP_session1_SPL_picture_summary_pilot.iqdat"
 /columns = [script.startdate, script.currenttime, script.subjectid, script.groupid, script.elapsedtime, values.completed]
 </summarydata>
 
@@ -298,7 +298,7 @@ trial ratepicturepractice>
 / monkeyresponse = ("1","2","3","4","5")
 / timeout = 4000 + ( 16.6666666667 * 2) 
 / showmousecursor = false
-/ontrialend = [ values.stimulusitem =  "*RATING SCALE PRACTICE*" ; values.stimulusnumber =  0]
+/ontrialend = [ values.stimulusitem =  "*RATING SCALE PRACTICE*" ; values.stimulusnumber =  0; values.response = trial.ratepicturepractice.response - 1]
 / branch = [ if( values.response != -1) trial.ratepicturepractice_inputcorrect else trial.itipractice]
 </trial>
 

@@ -60,7 +60,7 @@ response1:						the participant's response (rate image response)
 
 <data >
 / separatefiles = true
-/ file = "SleepExercise_training_SPL_rawdata.iqdat"
+/ file = "SLEEP_session1_SPL_TRAINING_picture_pilot.iqdat"
 / columns = [date, time, subject,  blockcode, blocknum, trialcode, trialnum,  values.trialcurrenttime,  latency, values.response, , values.currentinstrtype;values.currentjitter,values.currentinterjitter]
 </data>
 
@@ -77,7 +77,7 @@ script.elapsedtime:				time it took to run script (in ms)
 
 
 <summarydata >
-/ file = "SleepExercise_training_SPL_summary.iqdat"
+/ file = "SLEEP_session1_SPL_TRAINING_picture_summary_pilot.iqdat"
 /columns = [script.startdate, script.currenttime, script.subjectid, script.groupid, script.elapsedtime, values.completed]
 </summarydata>
 
@@ -378,7 +378,7 @@ trial rateimage>
 
 #training reminder
 <trial instructions6t>
-/ stimulusframes = [1=autobio_text_read;2=instructions6]
+/ stimulusframes = [1=autobio_text_react;2=instructions6]
 /ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
 / inputdevice= keyboard
 / validresponse = (" ")
