@@ -1,0 +1,33 @@
+﻿<text a>
+/ items = ("A1", "A2")
+/ position = (50%, 48%)
+</text>
+
+<text b>
+/ items = ("B1", "B2")
+/ position = (50%, 52%)
+</text>
+
+<list mylist>
+/ items = ("a", "a", "b", "b")
+</list>
+
+<trial mytrial>
+/ ontrialbegin = [if(list.mylist.nextvalue=="a") trial.mytrial.insertstimulusframe(text.a,1);]
+/ ontrialbegin = [if(list.mylist.nextvalue=="b") trial.mytrial.insertstimulusframe(text.b,1);]
+/ validresponse = (57)
+</trial>
+
+<block myblock>
+/ trials = [1-4=mytrial]
+</block>
+
+<data>
+/ columns = [trialnum trialcode stimulusitem stimulusitem]
+/ separatefiles = true
+</data>
+
+
+/ columns = [trialnum trialcode stimulusitem stimulusitem]
+/ separatefiles = true
+</data> - See more at: http://www.millisecond.com/forums/Post.aspx?PageIndex=1&Task=PostTopicReply&ParentID=15456#sthash.HUAWD2H5.dpuf

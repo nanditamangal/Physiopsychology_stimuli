@@ -246,21 +246,21 @@ Note: these picture elements (neg,neu) control the selection of the to be presen
 /items = reactnegpics
 /select  = noreplacenorepeat
 /position = (50%, 50%)
-/resetinterval = 3
+/resetinterval = 5
 </picture>
 
 <picture refneg>
 /items = refnegpics
 /select  = noreplacenorepeat
 /position = (50%, 50%)
-/resetinterval = 3
+/resetinterval = 5
 </picture>
 
 <picture negtrainspl>
 /items = negpicstrainspl
 /select  = noreplacenorepeat
 /position = (50%, 50%)
-/resetinterval = 3
+/resetinterval = 5
 </picture>
 
 
@@ -268,21 +268,21 @@ Note: these picture elements (neg,neu) control the selection of the to be presen
 /items = negpicstraincni
 /select  = noreplacenorepeat
 /position = (50%, 50%)
-/resetinterval = 3
+/resetinterval = 5
 </picture>
 
 <picture reactneglab>
 /items = reactnegpicslab
 /select  = noreplacenorepeat
 /position = (50%, 50%)
-/resetinterval = 3
+/resetinterval = 5
 </picture>
 
 <picture refneglab>
 /items = refnegpicslab
 /select  = noreplacenorepeat
 /position = (50%, 50%)
-/resetinterval = 3
+/resetinterval = 5
 </picture>
 
 
@@ -290,14 +290,14 @@ Note: these picture elements (neg,neu) control the selection of the to be presen
 /items = neupics
 /select  = noreplacenorepeat
 /position = (50%, 50%)
-/resetinterval = 3
+/resetinterval = 5
 </picture>
 
 <picture neutrainspl>
 /items = neupicstrainspl
 /select  = noreplacenorepeat
 /position = (50%, 50%)
-/resetinterval = 3
+/resetinterval = 5
 </picture>
 
 
@@ -305,14 +305,14 @@ Note: these picture elements (neg,neu) control the selection of the to be presen
 /items = neupicstraincni
 /select  = noreplacenorepeat
 /position = (50%, 50%)
-/resetinterval = 3
+/resetinterval = 5
 </picture>
 
 <picture neulab>
 /items = neupicslab
 /select  = noreplacenorepeat
 /position = (50%, 50%)
-/resetinterval = 3
+/resetinterval = 5
 </picture>
 
 
@@ -426,4 +426,12 @@ Note: image based scale and scale_1 to scale_5 response messages.
 /resetinterval = 1
 </picture>
 
+
+<item ITEM_canvas>
+</item>
+
+<picture PIC_canvas>
+/ items = ITEM_canvas
+/ position = (50%, 50%)
+</picture>
 
