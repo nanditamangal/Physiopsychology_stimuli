@@ -8,27 +8,27 @@ Editable Instructions
 
 <item directions>
 /1 =  "REACT"
-/2 = "Ready to begin.~n~nPress SPACE to start.~n~nPress SPACE to go to next step."
+/2 = "Ready to begin.~n~nPress SPACE to start.~n~nPress SPACE to go to next block."
 /3 = "REFRAME"
 /4 = "Rate the negative effect you felt from the image:"
 /5 = "PRACTICE~n~nReady to begin. Press SPACE to start"
-/6 = "Thanks for your participation! Please wait for the experimenter."
-/7 = "Ready to begin. Press SPACE to start~n~nRemember all pictures,ratings are now timed."
+/6 = "Thanks for your participation! Press SPACE to end."
+/7 = "Ready to begin. Press SPACE to start~n~nRemember all pictures, ratings are now timed."
 /8 = "Great Job!~n~nPress ENTER to try again.~n~nPress SPACE to continue."
 /9 = "Ready to begin. Press SPACE to start."
 /10 = "In this task you are going to see a series of pictures. Some pictures might make you feel quite 
 negative, while others won't make you feel much at all.~nBefore each picture, you will see an instruction that tells you what we want you 
 to do while you are viewing the picture.~n~nPress SPACE to continue"
-/11 = "Look at the picture and allow yourself to respond to it naturally.~n~nPress SPACE to continue"
-/12 = "Think of something to tell yourself about the picture that makes you feel less negative.~n~nPress SPACE to continue"
+/11 = "Look at the picture and allow yourself to react to it naturally.~n~nPress SPACE to continue"
+/12 = "Reinterpret the picture so it is less negative for you.~n~nPress SPACE to continue"
 /13 = "After each picture is presented, please rate how negative you feel on a 1-5 scale.~n~nYou have only 4 seconds to rate a picture.~n~nPress SPACE to continue"
-/14 = "Great Job!~n~nNow you will see a rating scale in addition to instructions and pictures."
+/14 = "Great Job!~n~nNow you will see a rating scale in addition to instructions and pictures.~n~nLets try a rating scale.~n~nRate on a 1-5 scale.~n~nYou only have 4 seconds to rate.~n~nPress SPACE to continue."
 /15 = "In this task you will be presented with descriptions of your life situations, one sentence at a time.~n~nDo your best to RE-EXPERIENCE thoughts and feelings related to the situaion.~n~n Really see the situation in your mind's eye and connect with what happened to you at the time of the situation."
-/16 = "Press SPACE to continue"
+/16 = "Just read the statement"
 /17 = "Let yourself feel the sting of the negative belief. Consider how this statement reflects something true about you.~n~nDo not try to control, regulate or change anything about your experience."
 /18 = "Actively re-interpet the BELIEF in a way that helps you to reframe any negative emotions or reactions."
 /19 = "Great Job!~n~nPress ENTER to try a few more negatives.~n~nPRESS SPACE to continue."
-/20 = "Ready to move to next step. Please wait for the experimenter before you begin."
+/20 = "Ready to move to next block. Please wait for the experimenter before you begin."
 /21 = "Thanks for your participation. Please wait for the experimenter."
 </item>
 
@@ -364,11 +364,11 @@ to do while you are viewing the picture.~n~nPress SPACE to continue"
 
 <text thanks_1>
 / items = directions
-/ position = (50%, 30%)
+/ position = (50%, 50%)
 / halign = center
 / valign = center
 / vjustify = center
-/ area = (600, 250)
+/ area = (1024, 768)
 / txbgcolor = (0, 0, 0)
 / txcolor = (255, 255, 255)
 / fontstyle = ("Arial", 25pt, true)

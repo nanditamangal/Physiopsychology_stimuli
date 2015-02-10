@@ -393,7 +393,7 @@ trial rateimage>
 
 #training reminder
 <trial instructions6t>
-/ stimulusframes = [2=instructions6]
+/ stimulusframes = [1=autobio_text_react;2=instructions6]
 /ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
 / inputdevice= keyboard
 / validresponse = (" ")
@@ -424,7 +424,7 @@ trial rateimage>
 / stimulusframes = [1=thanks]
 /ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
 /inputdevice = keyboard
-/validresponse = (49)
+/validresponse = (" ")
 /showmousecursor = false
 / ontrialend = [values.trialelapsedtime = trial.thankst.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
 </trial>
@@ -828,7 +828,7 @@ Simulates a regular experiment with 1 timed negative story and timed rating scal
 **************************************************************************************************************
 **************************************************************************************************************
 <expt trainexpt1>
-/blocks = [ 1 = Train1]
+/blocks = [ 1 = Train3]
 /onexptend = [values.completed = 1]
 </expt>
 
@@ -842,11 +842,7 @@ Simulates a regular experiment with 1 timed negative story and timed rating scal
 <expt trainexpt3>
 /blocks = [ 1 = Train3]
 /onexptend = [values.completed = 1]
-/branch = [ if ( trial.thanksp.response == 28 ) expt.trainexpt3 ]
-</expt>
-
-<expt trainexpt4>
-/blocks = [ 1 = thanksb]
+/branch = [ if ( trial.thanksp.response == 28 ) expt.trainexpt3]
 </expt>
 
 

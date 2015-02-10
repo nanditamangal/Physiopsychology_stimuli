@@ -1,0 +1,14 @@
+date	time	subject	blockcode	blocknum	trialcode	trialnum	values.trialcurrenttime	latency	values.response	values.currentinstrtype	values.currentjitter	values.currentinterjitter
+020615	13:32:33	1	Train1	1	instructions1t	1	13:32:43	1395	0	0	0	0
+020615	13:32:33	1	Train1	1	instructions2t	2	13:32:45	522	0	0	0	0
+020615	13:32:33	1	Train1	1	instructions3t	3	13:32:45	355	0	0	0	0
+020615	13:32:33	1	Train1	1	instructions4t	4	13:32:46	820	0	0	0	0
+020615	13:32:33	1	Train1	1	welcomet_1	5	13:32:46	546	0	0	0	0
+020615	13:32:33	1	Train1	1	preruncross	6	13:32:47	4000	0	0	0	0
+020615	13:32:33	1	Train1	1	reactnegative_wait	7	13:32:51	633	0	react	0	0
+020615	13:32:33	1	Train1	1	picnegative_wait	8	13:32:52	461	0	react	0	0
+020615	13:32:33	1	Train1	1	reframenegative_wait	9	13:32:52	344	0	reframe	0	0
+020615	13:32:33	1	Train1	1	picnegative_wait	10	13:32:53	391	0	reframe	0	0
+020615	13:32:33	1	Train1	1	reframenegative_wait	11	13:32:53	325	0	reframe	0	0
+020615	13:32:33	1	Train1	1	picnegative_wait	12	13:32:54	309	0	reframe	0	0
+020615	13:32:33	1	Train1	1	thankst_1	13	13:32:54	8135	0	reframe	0	0

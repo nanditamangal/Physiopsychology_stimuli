@@ -61,7 +61,7 @@ response1:						the participant's response (rate image response)
 <data >
 / separatefiles = true
 / file = "SleepExercise_fmri_rawdata.iqdat"
-/ columns = [date, time, subject, blockcode, blocknum, trialcode, trialnum, values.trialcurrenttime,  latency, values.response, values.stimulusitem, values.stimulusnumber values.currentinstrtype;values.currentjitter,values.currentinterjitter]
+/ columns = [date, time, subject, blockcode, blocknum, trialcode, trialnum, values.trialcurrenttime,  latency, values.response, values.stimulusitem, values.stimulusnumber , values.currentinstrtype;values.currentjitter,values.currentinterjitter]
 </data>
 
 

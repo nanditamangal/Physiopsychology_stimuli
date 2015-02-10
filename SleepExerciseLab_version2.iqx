@@ -129,7 +129,7 @@ TRIGGERS : Issue a trigger to the physio software to start. Issue triggers to ma
 </port>
 
 ###183###
-<port trigger_reframereaseneg>
+<port trigger_reframeneg>
 /items=("10110111")
 /port=lpt1
 </port>
@@ -225,12 +225,12 @@ PICTURE PRACTICE TRIALS : 5 Negative and Neutral pictures shown for practice bef
 /ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = 1000]
 /ontrialbegin = [trial.reactneutralpractice.insertstimulusframe(shape.PPTmark, 132)]
 /ontrialbegin = [ trial.reactneutralpractice.insertstimulusframe(shape.rectangle_green,130) ]
-/ontrialbegin = [trial.reactneutralpractice.insertstimulusframe(picture.neupractice, 131)]
+/ontrialbegin = [trial.reactneutralpractice.insertstimulusframe(picture.neupracticespl, 131)]
 /ontrialbegin = [ trial.reactneutralpractice.insertstimulusframe(shape.rectangle_green,130) ]
 /timeout = 12000 + values.currentinterjitter + (16.66 * 3 )
 /ontrialend = [values.trialelapsedtime = trial.reactneutralpractice.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
 /showmousecursor = false
-/ontrialend = [ values.stimulusitem =  picture.neupractice.currentitem ; values.stimulusnumber =  picture.neupractice.currentitemnumber;values.currentinstrtype = "REACT-NEUTRAL-PRACTICE"]
+/ontrialend = [ values.stimulusitem =  picture.neupracticespl.currentitem ; values.stimulusnumber =  picture.neupracticespl.currentitemnumber;values.currentinstrtype = "REACT-NEUTRAL-PRACTICE"]
 </trial>
 
 #trail which shows a "REACT" instruction followed by negative image.
@@ -240,12 +240,12 @@ PICTURE PRACTICE TRIALS : 5 Negative and Neutral pictures shown for practice bef
 /stimulustimes = [0=react,trigger_practicereactneg;130=trigger_0;2000=rectangle_black1;]
 /ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = 1000]
 /ontrialbegin = [trial.reactnegativepractice.insertstimulusframe(shape.PPTmark, 132)]
-/ontrialbegin = [trial.reactnegativepractice.insertstimulusframe(picture.negpractice, 131) ]
+/ontrialbegin = [trial.reactnegativepractice.insertstimulusframe(picture.negpracticespl, 131) ]
 /ontrialbegin = [ trial.reactnegativepractice.insertstimulusframe(shape.rectangle_green,130) ]
 /timeout = 12000 + values.currentinterjitter + (16.66 * 3 )
 /ontrialend = [values.trialelapsedtime = trial.reactnegativepractice.elapsedtime;values.scriptelaspedtime = script.elapsedtime ]
 /showmousecursor = false
-/ontrialend = [ values.stimulusitem =  picture.negpractice.currentitem ; values.stimulusnumber =  picture.negpractice.currentitemnumber;values.currentinstrtype = "REACT-NEGATIVE-PRACTICE"]
+/ontrialend = [ values.stimulusitem =  picture.negpracticespl.currentitem ; values.stimulusnumber =  picture.negpracticespl.currentitemnumber;values.currentinstrtype = "REACT-NEGATIVE-PRACTICE"]
 </trial>
 
 
@@ -256,12 +256,12 @@ PICTURE PRACTICE TRIALS : 5 Negative and Neutral pictures shown for practice bef
 /stimulustimes = [0=reframe,trigger_practicereframeneg;130=trigger_0;2000=rectangle_black1;]
 /ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = 1000]
 /ontrialbegin = [trial.reframenegativepractice.insertstimulusframe(shape.PPTmark, 132)]
-/ontrialbegin = [trial.reframenegativepractice.insertstimulusframe(picture.negpractice, 131) ]
+/ontrialbegin = [trial.reframenegativepractice.insertstimulusframe(picture.negpracticespl, 131) ]
 /ontrialbegin = [ trial.reframenegativepractice.insertstimulusframe(shape.rectangle_blue,130) ]
 /timeout = 12000 + values.currentinterjitter + (16.66 * 3 )
 /ontrialend = [values.trialelapsedtime = trial.reframenegativepractice.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
 /showmousecursor = false
-/ontrialend = [ values.stimulusitem =  picture.negpractice.currentitem ; values.stimulusnumber =  picture.negpractice.currentitemnumber;values.currentinstrtype = "REFRAME-NEGATIVE-PRACTICE"]
+/ontrialend = [ values.stimulusitem =  picture.negpracticespl.currentitem ; values.stimulusnumber =  picture.negpracticespl.currentitemnumber;values.currentinstrtype = "REFRAME-NEGATIVE-PRACTICE"]
 </trial>
 
 
@@ -437,7 +437,7 @@ Thanks
 duration is chosen randomly from a set of predefined values possible for each run (list currentjitter1)
 <trial itipicture>
 /stimulusframes = [ 1=rectangle_black1;2=cross1,cross2,trigger_iti;10=trigger_0]
-/ontrialbegin = [ values.trialcurrenttime = script.currenttime;  values.currentjitter = list.curentjitter1.nextvalue * 1000 ]
+/ontrialbegin = [ values.trialcurrenttime = script.currenttime;  values.currentjitter = list.curentjitter5.nextvalue * 1000 ]
 /timeout = values.currentjitter 
 /ontrialend = [values.trialelapsedtime = trial.itipicture.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
 /showmousecursor = false
@@ -449,7 +449,7 @@ duration is chosen randomly from a set of predefined values possible for each ru
 <trial reactneutral>
 /pretrialpause = 16.6666666667 * 3
 /stimulusframes = [1=react,trigger_reactinstr;9=trigger_0;120=rectangle_black1;]
-/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter2.nextvalue * 1000]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = 400]
 /timeout = 2000 + values.currentinterjitter + (16.6666666667 * 3 )
 /ontrialend = [values.trialelapsedtime = trial.reactneutral.elapsedtime; values.scriptelaspedtime = script.elapsedtime;values.currentinstrtype = "REACT-NEUTRAL"]
 /showmousecursor = false
@@ -466,7 +466,7 @@ duration is chosen randomly from a set of predefined values possible for each ru
 /timeout = 10000 +  (16.6666666667 * 3 )
 /ontrialend = [values.trialelapsedtime = trial.picneutral.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
 /showmousecursor = false
-/ontrialend = [ values.stimulusitem =  picture.neu.currentitem ; values.stimulusnumber =  picture.neu.currentitemnumber; values.response=0;]
+/ontrialend = [ values.stimulusitem =  picture.neulab.currentitem ; values.stimulusnumber =  picture.neulab.currentitemnumber; values.response=0;]
 </trial>
 
 #trial which shows a "REACT" instruction for 2 seconds and calls the picnegative trial.
@@ -474,7 +474,7 @@ duration is chosen randomly from a set of predefined values possible for each ru
 <trial reactnegative>
 /pretrialpause = 16.666666666766666667 * 3
 /stimulusframes = [1=react,trigger_reactinstr;120=rectangle_black1;9=trigger_0]
-/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter2.nextvalue * 1000]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = 400]
 /timeout = 2000 + values.currentinterjitter + (16.6666666667 * 3 )
 /ontrialend = [values.trialelapsedtime = trial.reactnegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.currentinstrtype = "REACT-NEGATIVE"]
 /showmousecursor = false
@@ -487,7 +487,7 @@ duration is chosen randomly from a set of predefined values possible for each ru
 <trial reframenegative>
 /pretrialpause = 16.6666666667 * 3
 /stimulusframes = [1=reframe,trigger_reframereaseinstr;120=rectangle_black1;9=trigger_0]
-/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = list.curentjitter2.nextvalue * 1000]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; values.currentinterjitter = 400]
 /timeout = 2000 + values.currentinterjitter + (16.6666666667 * 3 )
 /ontrialend = [values.trialelapsedtime = trial.reframenegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.currentinstrtype = "REFRAME-NEGATIVE"]
 /showmousecursor = false
@@ -501,12 +501,14 @@ duration is chosen randomly from a set of predefined values possible for each ru
 /pretrialpause = 16.6666666667 * 3
 /stimulusframes = [3=PPTmark;10=trigger_0]
 /ontrialbegin = [values.trialcurrenttime = script.currenttime; ]
-/ontrialbegin = [ if (values.currentinstrtype == "REFRAME-NEGATIVE") {trial.picnegative.insertstimulusframe(shape.rectangle_blue,1); trial.picnegative.insertstimulusframe(port.trigger_reframereaseneg,2); trial.picnegative.insertstimulusframe(picture.refneglab,2); values.stimulusitem =  picture.refneglab.currentitem ; values.stimulusnumber =  picture.refneglab.currentitemnumber;}]
-/ontrialbegin = [ if (values.currentinstrtype == "REACT-NEGATIVE") {trial.picnegative.insertstimulusframe(shape.rectangle_green,1); trial.picnegative.insertstimulusframe(port.trigger_reactneg,2); trial.picnegative.insertstimulusframe(picture.reactneglab,2); values.stimulusitem =  picture.reactneglab.currentitem ; values.stimulusnumber =  picture.reactneglab.currentitemnumber;}]
+/ontrialbegin = [ if (values.currentinstrtype == "REFRAME-NEGATIVE") {trial.picnegative.insertstimulusframe(shape.rectangle_blue,1); trial.picnegative.insertstimulusframe(port.trigger_reframeneg,2); trial.picnegative.insertstimulusframe(picture.refneglab,2); }]
+/ontrialbegin = [ if (values.currentinstrtype == "REACT-NEGATIVE") {trial.picnegative.insertstimulusframe(shape.rectangle_green,1); trial.picnegative.insertstimulusframe(port.trigger_reactneg,2); trial.picnegative.insertstimulusframe(picture.reactneglab,2); }]
 /timeout = 10000 +  (16.6666666667 * 3 )
 /ontrialend = [values.trialelapsedtime = trial.picnegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
 /showmousecursor = false
-/ontrialend = [  values.response=0]
+/ontrialend = [ if (values.currentinstrtype == "REFRAME-NEGATIVE") { values.stimulusitem =  picture.refneglab.currentitem ; values.stimulusnumber =  picture.refneglab.currentitemnumber;}]
+/ontrialend = [ if (values.currentinstrtype == "REACT-NEGATIVE") { values.stimulusitem =  picture.reactneglab.currentitem ; values.stimulusnumber =  picture.reactneglab.currentitemnumber;}]
+/ontrialend = [  values.response=0; trial.picnegative.resetstimulusframes()]
 </trial>
 
 

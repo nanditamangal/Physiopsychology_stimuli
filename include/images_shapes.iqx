@@ -17,31 +17,31 @@ Editable Stimuli: Negative and Neutral images
 /7 = "images_neu/cni/187.jpg"
 /8 = "images_neu/cni/350.jpg"
 /9 = "images_neu/cni/373.jpg"
-/10 = "images_neu/cni/7006.bmp"
-/11 = "images_neu/cni/7034.jpg"
-/12 = "images_neu/cni/7038.jpg"
+/10 = "images_neu/cni/7006.jpg"
+/11 = "images_neu/cni/Animals_127_h.jpg"
+/12 = "images_neu/cni/140.jpg"
 /13 = "images_neu/cni/7080.jpg"
-/14 = "images_neu/cni/7090.jpg"
+/14 = "images_neu/cni/Objects_311_h.jpg"
 /15 = "images_neu/cni/7185.jpg"
-/16 = "images_neu/cni/Faces_216_h.jpg"
-/17 = "images_neu/cni/neu_7003_Disk.jpg"
+/16 = "images_neu/cni/Faces_180_h.jpg"
+/17 = "images_neu/cni/Objects_230_h.jpg"
 /18 = "images_neu/cni/neu_7014_Scissors.jpg"
 /19 = "images_neu/cni/neu_7045_Zipper.jpg"
 /20 = "images_neu/cni/neu_7077_Stove.jpg"
 /21 = "images_neu/cni/Objects_089_h.jpg"
-/22 = "images_neu/cni/Objects_210_h.jpg"
+/22 = "images_neu/cni/Landscapes_076_h.jpg"
 /23 = "images_neu/cni/Objects_247_h.jpg"
 /24 = "images_neu/cni/Objects_296_h.jpg"
 </item>
 
 <item refnegpics>
-/1 = "images_neg/cni/reframe/209.jpg"
+/1 = "images_neg/cni/reframe/Faces_021_h.jpg"
 /2 = "images_neg/cni/reframe/222.jpg"
 /3 = "images_neg/cni/reframe/241.jpg"
-/4 = "images_neg/cni/reframe/1050.bmp"
+/4 = "images_neg/cni/reframe/1050.jpg"
 /5 = "images_neg/cni/reframe/9341.jpg"
 /6 = "images_neg/cni/reframe/9810.jpg"
-/7 = "images_neg/cni/reframe/Animals_013_h.jpg"
+/7 = "images_neg/cni/reframe/326.jpg"
 /8 = "images_neg/cni/reframe/Animals_019_h.jpg"
 /9 = "images_neg/cni/reframe/Animals_024_h.jpg"
 /10 = "images_neg/cni/reframe/Animals_042_h.jpg"
@@ -64,7 +64,7 @@ Editable Stimuli: Negative and Neutral images
 <item reactnegpics>
 /1 = "images_neg/cni/react/213.jpg"
 /2 = "images_neg/cni/react/228.jpg"
-/3 = "images_neg/cni/react/9440.jpg"
+/3 = "images_neg/cni/react/People_232_h.jpg"
 /4 = "images_neg/cni/react/Animals_012_h.jpg"
 /5 = "images_neg/cni/react/Animals_038_h.jpg"
 /6 = "images_neg/cni/react/Animals_041_h.jpg"
@@ -77,11 +77,11 @@ Editable Stimuli: Negative and Neutral images
 /13 = "images_neg/cni/react/Objects_006_h.jpg"
 /14 = "images_neg/cni/react/Objects_007_h.jpg"
 /15 = "images_neg/cni/react/Objects_132_h.jpg"
-/16 = "images_neg/cni/react/Objects_153_h.jpg"
+/16 = "images_neg/cni/react/Objects_144_h.jpg"
 /17 = "images_neg/cni/react/People_001_h.jpg"
 /18 = "images_neg/cni/react/People_017_h.jpg"
-/19 = "images_neg/cni/react/Animals_038_h.jpg"
-/20 = "images_neg/cni/react/People_085_h.jpg"
+/19 = "images_neg/cni/react/231.jpg"
+/20 = "images_neg/cni/react/Objects_145_h.jpg"
 /21 = "images_neg/cni/react/People_140_h.jpg"
 /22 = "images_neg/cni/react/People_142_h.jpg"
 /23 = "images_neg/cni/react/People_212_h.jpg"
@@ -95,17 +95,17 @@ Editable Stimuli: Negative and Neutral images
 <item neupicslab>
 /1 = "images_neu/spl/114.jpg"
 /2 = "images_neu/spl/138.jpg"
-/3 = "images_neu/spl/142.jpg"
+/3 = "images_neu/spl/134.jpg"
 /4 = "images_neu/spl/162.jpg"
-/5 = "images_neu/spl/177.jpg"
+/5 = "images_neu/spl/161.jpg"
 /6 = "images_neu/spl/186.jpg"
 /7 = "images_neu/spl/356.jpg"
 /8 = "images_neu/spl/6150.jpg"
-/9 = "images_neu/spl/7000.jpg"
+/9 = "images_neu/spl/178.jpg"
 /10 = "images_neu/spl/7002.jpg"
-/11 = "images_neu/spl/7009.bmp"
+/11 = "images_neu/spl/7009.jpg"
 /12 = "images_neu/spl/7041.jpg"
-/13 = "images_neu/spl/7211.jpg"
+/13 = "images_neu/spl/144.jpg"
 /14 = "images_neu/spl/7233.jpg"
 /15 = "images_neu/spl/LA_Neu_Objects_Spoon_7004.jpg"
 /16 = "images_neu/spl/Landscapes_091_h.jpg"
@@ -121,7 +121,7 @@ Editable Stimuli: Negative and Neutral images
 
 <item reactnegpicslab>
 /1 = "images_neg/spl/react/215.jpg"
-/2 = "images_neg/spl/react/227.jpg"
+/2 = "images_neg/spl/react/243.jpg"
 /3 = "images_neg/spl/react/232.jpg"
 /4 = "images_neg/spl/react/254.jpg"
 /5 = "images_neg/spl/react/2683.jpg"
@@ -130,15 +130,15 @@ Editable Stimuli: Negative and Neutral images
 /8 = "images_neg/spl/react/3160.jpg"
 /9 = "images_neg/spl/react/9561.jpg"
 /10 = "images_neg/spl/react/Animals_060_h.jpg"
-/11 = "images_neg/spl/react/Faces_164_h.jpg"
+/11 = "images_neg/spl/react/224.jpg"
 /12 = "images_neg/spl/react/Faces_284_h.jpg"
 /13 = "images_neg/spl/react/LA_Neg_Animals_SpiderCloseUp_1205.jpg"
 /14 = "images_neg/spl/react/Objects_001_h.jpg"
-/15 = "images_neg/spl/react/Objects_011_h.jpg"
-/16 = "images_neg/spl/react/Objects_120_h.jpg"
-/17 = "images_neg/spl/react/Objects_157_h.jpg"
-/18 = "images_neg/spl/react/Objects_283_h.jpg"
-/19 = "images_neg/spl/react/People_003_h.jpg"
+/15 = "images_neg/spl/react/LA_Neg_Food_MoldyBread.jpg"
+/16 = "images_neg/spl/react/Objects_154_h.jpg"
+/17 = "images_neg/spl/react/9342.jpg"
+/18 = "images_neg/spl/react/People_022_h.jpg"
+/19 = "images_neg/spl/react/People_023_h.jpg"
 /20 = "images_neg/spl/react/People_058_h.jpg"
 /21 = "images_neg/spl/react/People_147_h.jpg"
 /22 = "images_neg/spl/react/People_214_h.jpg"
@@ -149,7 +149,7 @@ Editable Stimuli: Negative and Neutral images
 <item refnegpicslab>
 /1 = "images_neg/spl/reframe/214.jpg"
 /2 = "images_neg/spl/reframe/219.jpg"
-/3 = "images_neg/spl/reframe/2095.jpg"
+/3 = "images_neg/spl/reframe/225.jpg"
 /4 = "images_neg/spl/reframe/8485.jpg"
 /5 = "images_neg/spl/reframe/9041.jpg"
 /6 = "images_neg/spl/reframe/9253.jpg"
@@ -174,31 +174,49 @@ Editable Stimuli: Negative and Neutral images
 </item>
 
 #Practice images.
-<item negpicspractice>
-/1 = "images_neg/practice/233.jpg"
-/2 = "images_neg/practice/Animals_045_h.jpg"
-/3 = "images_neg/practice/Objects_285_h.jpg"
+<item negpicspracticespl>
+/1 = "images_neg/practice/spl/Animals_27_h.jpg"
+/2 = "images_neg/practice/spl/People_125_h.jpg"
+/3 = "images_neg/practice/spl/People_129_h.jpg"
+</item>
+
+<item negpicspracticecni>
+/1 = "images_neg/practice/cni/People_145_h.jpg"
+/2 = "images_neg/practice/cni/People_239_h.jpg"
+/3 = "images_neg/practice/cni/People_009_h.jpg"
 </item>
 
 #Practice images.
-<item neupicspractice>
-/1 = "images_neu/practice/5870.jpg"
+<item neupicspracticespl>
+/1 = "images_neu/practice/spl/Objects_312_h.jpg"
+</item>
+
+<item neupicspracticecni>
+/1 = "images_neu/practice/cni/Objects_237_h.jpg"
 </item>
 
 #Training images.
 <item neupicstrainspl>
-/1 = "images_neu/train/spl/5020.jpg"
-/2 = "images_neu/train/spl/5711.jpg"
-/3 = "images_neu/train/spl/1602.jpg"
+/1 = "images_neu/train/spl/Objects_246_h.jpg"
+/2 = "images_neu/train/spl/336.jpg"
 </item>
 
 #Training images.
 <item negpicstrainspl>
-/1 = "images_neg/train/spl/2683.jpg"
-/2 = "images_neg/train/spl/3300.jpg"
-/3 = "images_neg/train/spl/8485.jpg"
-/4 = "images_neg/train/spl/7359.jpg"
-/5 = "images_neg/train/spl/9290.jpg"
+/1 = "images_neg/train/spl/Faces_367_h.jpg"
+/2 = "images_neg/train/spl/Objects_328_h.jpg"
+/3 = "images_neg/train/spl/Animals_045_h.jpg"
+/4 = "images_neg/train/spl/Objects_012_h.jpg"
+/5 = "images_neg/train/spl/Objects_126_h.jpg"
+/6 = "images_neg/train/spl/Objects_285_h.jpg"
+/7 = "images_neg/train/spl/People_033_h.jpg"
+/8 = "images_neg/train/spl/People_228_h.jpg"
+/9 = "images_neg/train/spl/Animals_53_h.jpg"
+/10 = "images_neg/train/spl/Faces_372_h.jpg"
+/11 = "images_neg/train/spl/Landscapes_005_h.jpg"
+/12 = "images_neg/train/spl/Animals_207_h.jpg"
+/13 = "images_neg/train/spl/People_137_h.jpg"
+/14 = "images_neg/train/spl/9320.jpg"
 </item>
 
 #Training images.
@@ -412,26 +430,32 @@ Note: image based scale and scale_1 to scale_5 response messages.
 </shape>
 
 
-<picture negpractice>
-/items = negpicspractice
+<picture negpracticespl>
+/items = negpicspracticespl
 /select  = noreplacenorepeat
 /position = (50%, 50%)
 /resetinterval = 1
 </picture>
 
-<picture neupractice>
-/items = neupicspractice
+<picture neupracticespl>
+/items = neupicspracticespl
 /select  = noreplacenorepeat
 /position = (50%, 50%)
 /resetinterval = 1
 </picture>
 
-
-<item ITEM_canvas>
-</item>
-
-<picture PIC_canvas>
-/ items = ITEM_canvas
-/ position = (50%, 50%)
+<picture negpracticecni>
+/items = negpicspracticecni
+/select  = noreplacenorepeat
+/position = (50%, 50%)
+/resetinterval = 1
 </picture>
+
+<picture neupracticecni>
+/items = neupicspracticecni
+/select  = noreplacenorepeat
+/position = (50%, 50%)
+/resetinterval = 1
+</picture>
+
 

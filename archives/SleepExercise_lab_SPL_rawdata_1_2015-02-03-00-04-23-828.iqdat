@@ -1,0 +1,5 @@
+date	time	subject	blockcode	blocknum	trialcode	trialnum	values.trialcurrenttime	latency	values.response	values.stimulusitem	values.stimulusnumber	values.currentinstrtype	values.currentjitter	values.currentinterjitter
+020215	16:04:23	1	PRACTICE1	1	welcometp	1	16:04:37	6079	0	*WELCOME PRACTICE MESSAGE*	0	0	0	0
+020215	16:04:23	1	PICTURERUN1	1	welcomet	1	16:04:43	9553	0	*WELCOME MESSAGE*	0	0	0	0
+020215	16:04:23	1	PICTURERUN2	2	welcometlab	1	16:04:53	9706	0	*WELCOME MESSAGE*	0	0	0	0
+020215	16:04:23	1	PICTURERUN2	2	preruncross	2	16:05:03	2245	0	*CROSS*	0	0	0	0

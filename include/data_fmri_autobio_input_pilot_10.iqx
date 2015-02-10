@@ -1,0 +1,199 @@
+﻿
+
+--------------Negative  ---------------
+
+<item run_story_negative>
+/1 =  "It is Saturday at 1 AM."
+/2 = "I am trying to sleep."
+/3 = "People are drinking upstairs."
+/4 = "They make loud noises."
+/5 = "I try to sleep but can't."
+/6 = "I went up to tell them to quiet down."
+/7 = "They didn't quiet down."
+/8 = "I go upstairs to ask again."
+
+
+/9 =  "I will play in a band at a basketball game."
+/10 = "Our driver didn't care."
+/11 = "He said he couldn't make it the day of the gig."
+/12 = "I had to drive and"
+/13 = "Move everything myself."
+/14 = "We were a man short."
+/15 = "Most of the band didn't show up."
+/16 = "Until after we loaded everything."
+
+
+/17 =  "It is the Fourth of July."
+/18 = "I am trying to sleep."
+/19 = "There is a party in the common room."
+/20 = "They are playing loud music"
+/21 = "And making loud noises."
+/22 = "I tried to down out the noise."
+/23 = "I got up and grabbed my sleeping bag."
+/24 = "I slept on the couch."
+
+
+/25 =  "I will perform tonight."
+/26 = "My band agree to show up at a certain time."
+/27 = "I show up on time."
+/28 = "Two others were on time also."
+/29 = "We start to load gear."
+/30 = "We move the gear upstairs "
+/31 = "And into the cars."
+/32 = "The three of us did most of the work."
+
+/33 =  "I volunteer to play drums"
+/34 = "For a ‘black tie' dinner."
+/35 = "I have never played with the other musicians."
+/36 = "I was less experienced and"
+/37 = "Less musical than the others."
+/38 = "The other members treated me callously."
+/39 = "They spurn my attempts at conversations."
+/40 = "They avoid me."
+
+
+/41 =  "I am at LAX."
+/42 = "There have been delays."
+/43 = "They forced me to reroute my flights."
+/44 = "I am flustered."
+/45 = "I need to know where my suitcase is.:"
+/46 = "They told me there is nothing I can do."
+/47 = "I am tired."
+/48 = "They seem uninterested in helping me"
+</item>
+
+
+<item run_story_negative_options>
+/1 =  "I WANT TO GIVE THEM A TOUNGE LASHING"
+/2 = "I WANT TO BREAK A WINDOW "
+/3 = "I WANT TO PUNCH MY PILLOW"
+/4 = "I WANT TO CRAWL INSIDE A QUIET HOLE"
+/5 = "OTHERS AREN'T WORTH THE TROUBLE"
+/6 = "PEOPLE ARE INCONSIDERATE"
+/7 = "OTHERS ARE SELF-CENTERED"
+/8 = "I WANT OTHERS TO LEAVE ME ALONE"
+
+/9 =  "OTHERS DO NOT FOLLOW ON THEIR COMMITMENTS"
+/10 = "I FELT LIKE GRINDING MY TEETH"
+/11 = "I WANT TO BLOW OFF THE GROUP"
+/12 = "I FELT LIKE GIVING UP ON THE GIG"
+/13 = "I WANT TO REPRIMAND THE OTHER GROUP MEMBERS"
+/14 = "I WANT TO TELL THE DRIVER TO SHAPE UP"
+/15 = "OTHERS ARE SELF-CENTERED"
+/16 = "NO ONE ELSE WANTS TO DO WHAT IS NECESSARY"
+
+
+/17 =  "I WANT TO TURN MY HEARING OFF"
+/18 = "I WANT TO BREAK THEIR SPEAKERS"
+/19 = "I WANT TO PUNCH THE WALL"
+/20 = "I WANT TO RUN AND NEVER STOP"
+/21 = "I'M NOT NEARLY AS FUN OR BOISTEROUS AS OTHERS"
+/22 = "I SHOULD BE HAVING FUN WITH THEM"
+/23 = "OTHERS ARE INCONSIDERATE"
+/24 = "I WANTED TO CRAWL IN A DARK, QUIET CAVE"
+
+/26 =  "I WANT TO CRY OUT IN EXASPERATION"
+/27 = "I WANT TO THROW MY ARMS UP"
+/28 = "I WANT TO GRIND MY TEETH"
+/29 = "I WANT TO BALL UP MY FISTS"
+/30 = "OTHERS DON'T CARE ABOUT THE GROUP"
+/31 = "IF I DON'T TAKE RESPONSIBILITY, NOBODY ELSE WILL"
+/32 = "OTHERS DON'T FOLLOW UP ON COMMITMENTS"
+/33 = "NO ONE ELSE TAKES RESPONSIBILITY"
+
+
+/34 =  "I WANT TO THROW MY DRUM STICKS"
+/35 = "THE OTHER BAND MEMBERS DON'T LIKE ME"
+/36 = "I WANT TO IMPRESS THE OTHER BAND MEMBERS"
+/37 = "MY DORMMATES THINK BADLY OF MY PLAYING"
+/38 = "OTHER MUSICIANS TREAT ME UNFAIRLY" 
+/39 = "I'M NOT GOOD ENOUGH TO PLAY"
+/40 = "I LET MY FRIEND DOWN"
+/41 = " I AM NOT GOING TO BE INVITED BACK"
+
+
+/42 =  "I WANT TO SHOUT AT HER"
+/43 = "I WANT TO STORM PAST HER AND FIND MY BAG"
+/44 = "SHE SHOULD BE MORE SYMPATHETIC"
+/45 = "I WANT TO ESCAPE THE AIRPORT"
+/46 = "I WANT TO TELEPORT HOME"
+/47 = "NO ONE CARES IF THE SYSTEM IS BROKEN"
+/48 = "THE WORLD DOESN'T CARE ABOUT ME"
+/49 = "OTHERS ARE UNKIND"
+
+</item>
+
+
+
+---------------Neutral  --------------
+<item run_story_neutral>
+/1 =  "I open my bag"
+/2 = "And take out my laptop"
+/3 = "I walk over to my desk"
+
+
+/4 =  "I collect all the recycling"
+/5 = "and place it into the bin"
+/6 = "I remove the recycle bin"
+
+/7 = "I walk down the stairs"
+/8 = "And get my bike"
+/9 = "I reach for my keys"
+
+/10 =  "A stack of books"
+/11 = "are sitting on my desk"
+/12 = "I pick up the stack"
+
+
+
+/13 =  "I pick up my toothbrush"
+/14= "I put toothpaste"
+/15 = "on the brush"
+
+/16 =  "I open the washer door"
+/17 = "I grab the clothes"
+/18 = "and towels"
+</item>
+
+<item run_story_neutral_options>
+/1 =  "AND PLACE MY"
+/2 = "LAPTOP ON IT"
+/3 = "I PLUG IN THE CHARGER"
+/4 = "AND OPEN MY LAPTOP"
+
+/5 =  "AND PLACE IT BY THE DOOR"
+/6 = "I TAKE THE BIN"
+/7 = "TO THE CONTAINER"
+/8 = "OUTSIDE THE HOUSE"
+
+/9 =  "AND FIND THEM"
+/10 = "I UNLOCK MY BIKE"
+/11 = "I PUT THE LOCK"
+/12 = "AND MY KEYS AWAY"
+
+/13 =  "WALK OVER"
+/14 = "TO THE SHELF"
+/15 = "AND ARRANGE THE BOOKS"
+/16 = "SO THAT THEY ARE UPRIGHT"
+
+/17 =  "I BRUSH MY TEETH"
+/18 = "FOR TWO MINUTES"
+/19 = "I RINSE MY MOUTH"
+/20 = "I PUT MY TOOTHBRUSH AWAY"
+
+/16 =  "AND PUT THEM INTO THE WASHER"
+/17 = "I GRAB THE DETERGENT AND ADD IT"
+/18 = "I TURN ON THE WATER"
+/19 = "AND CLOSE THE WASHER LID"
+
+</item>
+---------------------------------------------------------
+
+
+
+
+
+
+
+
+

@@ -32,6 +32,15 @@ Editable Sequences
 / resetinterval = 1
 </list>
 
+
+#used for jitter (post rating) as a pre-assigned skewed distribution for auto-bio
+<list curentjitter5>
+/ items = (3,3.5,4)
+/ selectionmode = random
+/ resetinterval = 1
+</list>
+
+
 #sequence for negative self instructions
 <list autobio_instr>
 / items = ("REACT","REFRAME","REACT","REFRAME","REACT","REFRAME","REACT","REFRAME")

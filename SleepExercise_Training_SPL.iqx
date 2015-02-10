@@ -248,6 +248,45 @@ trial rateimage>
 </trial>
 
 
+<trial rateimage_practice>
+/ pretrialpause = 16.6666666667 * 2
+/ stimulusframes = [1= scale_original]
+/ ontrialbegin = [values.trialcurrenttime = script.currenttime]
+/ beginresponsetime = 0
+/ responsemode = free
+/ inputdevice= keyboard
+/ validresponse = ("1","2","3","4","5")
+/ monkeyresponse = ("1","2","3","4","5")
+/ timeout = 4000 + ( 16.6666666667 * 2) 
+/ ontrialend = [values.response = trial.rateimage_practice.response - 1 ; ]
+/ showmousecursor = false
+/ branch = [ if( values.response != -1) trial.rateimage_inputcorrectpractice]
+</trial>
+
+
+#trail which allows a user to rate the image.
+<trial rateimage_inputcorrectpractice>
+/ ontrialbegin = [values.trialcurrenttime = script.currenttime]
+/ ontrialbegin = [ if (values.response == 1) trial.rateimage_inputcorrectpractice.insertstimulusframe(picture.scale_1,1)]
+/ ontrialbegin = [ if (values.response == 2) trial.rateimage_inputcorrectpractice.insertstimulusframe(picture.scale_2,1)]
+/ ontrialbegin = [ if (values.response == 3) trial.rateimage_inputcorrectpractice.insertstimulusframe(picture.scale_3,1)]
+/ ontrialbegin = [ if (values.response == 4) trial.rateimage_inputcorrectpractice.insertstimulusframe(picture.scale_4,1)]
+/ ontrialbegin = [ if (values.response == 5) trial.rateimage_inputcorrectpractice.insertstimulusframe(picture.scale_5,1)]
+/ beginresponsetime = 0
+/ responsemode = free
+/ responsemessage = ("1",scale_1,0)
+/ responsemessage = ("2",scale_2,0)
+/ responsemessage = ("3",scale_3,0)
+/ responsemessage = ("4",scale_4,0)
+/ responsemessage = ("5",scale_5,0)
+/ inputdevice= keyboard
+/ validresponse = ("1","2","3","4","5")
+/ monkeyresponse = ("1","2","3","4","5")
+/ ontrialend = [ if(trial.rateimage_inputcorrectpractice.response !=0) values.response = trial.rateimage_inputcorrectpractice.response -1 ;]
+/ trialduration = 4000 + ( 16.6666666667 * 2) - trial.rateimage_practice.latency ;
+/ showmousecursor = false
+</trial>
+
 <trial rateimage>
 / pretrialpause = 16.6666666667 * 2
 / stimulusframes = [1= scale_original]
@@ -422,6 +461,7 @@ trial rateimage>
 /validresponse = (" ")
 /showmousecursor = false
 / ontrialend = [values.trialelapsedtime = trial.thankst.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
+/branch = [ trial.rateimage_practice]
 </trial>
 
 

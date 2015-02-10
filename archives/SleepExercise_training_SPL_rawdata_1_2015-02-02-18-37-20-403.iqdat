@@ -1,0 +1,5 @@
+date	time	subject	blockcode	blocknum	trialcode	trialnum	values.trialcurrenttime	latency	values.response	values.currentinstrtype	values.currentjitter	values.currentinterjitter
+020215	10:37:20	1	Train1	1	instructions1t	1	10:37:31	1566	0	0	0	0
+020215	10:37:20	1	Train1	1	instructions2t	2	10:37:33	2537	0	0	0	0
+020215	10:37:20	1	Train1	1	instructions3t	3	10:37:35	1189	0	0	0	0
+020215	10:37:20	1	Train1	1	instructions4t	4	10:37:36	1024	0	0	0	0
