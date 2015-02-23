@@ -313,6 +313,23 @@ trial rateimage>
 / showmousecursor = false
 </trial>
 
+#trial allows user to rate with no time limit.
+<trial rateimage_wait>
+/ pretrialpause = 16.6666666667 * 2
+/ stimulusframes = [1= scale_original]
+/ ontrialbegin = [values.trialcurrenttime = script.currenttime]
+/ responsemessage = ("1",scale_1,1500)
+/ responsemessage = ("2",scale_2,1500)
+/ responsemessage = ("3",scale_3,1500)
+/ responsemessage = ("4",scale_4,1500)
+/ responsemessage = ("5",scale_5,1500)
+/ inputdevice= keyboard
+/ validresponse = ("1","2","3","4","5")
+/ ontrialend = [values.trialelapsedtime = trial.rateimage.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.response = trial.rateimage_wait.response - 1 ; ]
+/ showmousecursor = false
+</trial>
+
+
 <trial rateimage>
 / pretrialpause = 16.6666666667 * 2
 / stimulusframes = [1= scale_original]
@@ -531,20 +548,23 @@ Simulates a regular experiment with 3 timed images and 3 timed rating scales.
 6= preruncross;
 
 7 = reactnegative_wait;
-8 = reframenegative_wait;
 9 = reframenegative_wait;
-10 = thankst_1;
+11 = reframenegative_wait;
 
-11 = welcomet_1;
+8,10,12=rateimage_wait;
 
-12 = reactneutral_wait;
-13 = reframenegative_wait;
-15 = reactnegative_wait;
+13 = thankst_1;
+
+14 = welcomet_1;
+
+15 = reactneutral_wait;
 17 = reframenegative_wait;
-19 = reframenegative_wait;
+19 = reactnegative_wait;
+21 = reframenegative_wait;
+23 = reframenegative_wait;
 
-12, 14, 16, 18, 20= rateimage;
-21 = try_1;
+16, 18, 20, 22, 24= rateimage;
+25 = try_1;
 
 ]
 /onblockend = [ values.train_negatives = 0 ]
