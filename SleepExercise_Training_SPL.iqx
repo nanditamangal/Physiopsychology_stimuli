@@ -202,6 +202,18 @@ duration is set to 3 seconds.
 /branch = [trial.picnegative_wait]
 </trial>
 
+#trial which shows a "REFRAME" instruction untile a SPACE response is received.
+<trial reframenegative_wait_optional>
+/pretrialpause = 16.6666666667 * 3
+/stimulusframes = [1=reframe]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/ontrialend = [values.trialelapsedtime = trial.reframenegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime; values.currentinstrtype = "reframe"]
+/showmousecursor = false
+/branch = [trial.picnegative_wait_optional]
+</trial>
+
 #trial which displays the negative image for 10 seconds.
 <trial picnegative>
 /pretrialpause = 16.6666666667 * 3
@@ -218,6 +230,20 @@ duration is set to 3 seconds.
 <trial picnegative_wait>
 /pretrialpause = 16.6666666667 * 3
 /stimulusframes = [2=negtrainspl;]
+/ontrialbegin = [values.trialcurrenttime = script.currenttime; ]
+/ontrialbegin = [ if (values.currentinstrtype == "reframe") trial.picnegative_wait.insertstimulusframe(shape.rectangle_blue,1) ]
+/ontrialbegin = [ if (values.currentinstrtype == "react") trial.picnegative_wait.insertstimulusframe(shape.rectangle_green,1) ]
+/ inputdevice= keyboard
+/ validresponse = (" ")
+/ontrialend = [values.trialelapsedtime = trial.picnegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
+/showmousecursor = false
+</trial>
+
+
+#trial which displays the negative image (optional training) until a SPACE response is received.
+<trial picnegative_wait_optional>
+/pretrialpause = 16.6666666667 * 3
+/stimulusframes = [2=negtrainsploptional;]
 /ontrialbegin = [values.trialcurrenttime = script.currenttime; ]
 /ontrialbegin = [ if (values.currentinstrtype == "reframe") trial.picnegative_wait.insertstimulusframe(shape.rectangle_blue,1) ]
 /ontrialbegin = [ if (values.currentinstrtype == "react") trial.picnegative_wait.insertstimulusframe(shape.rectangle_green,1) ]
@@ -526,7 +552,7 @@ Simulates a regular experiment with 3 timed images and 3 timed rating scales.
 </block>
 
 <block Train2>
-/trials = [1,3=reframenegative_wait; 2,4=rateimage]
+/trials = [1,3=reframenegative_wait_optional; 2,4=rateimage]
 </block>
 
 <block Train3>

@@ -219,7 +219,8 @@ trial ratepicturepractice>
 / monkeyresponse = ("1","2","3","4","5")
 / timeout = 4000 + ( 16.6666666667 * 2) 
 / showmousecursor = false
-/ontrialend = [ values.stimulusitem =  "*RATING SCALE PRACTICE*" ; values.stimulusnumber =  0]
+/ ontrialend = [values.response = trial.ratepicturepractice.response - 1 ]
+/ ontrialend = [ values.stimulusitem =  "*RATING SCALE PRACTICE*" ; values.stimulusnumber =  0]
 / branch = [ if( values.response != -1) trial.ratepicturepractice_inputcorrect else trial.itipractice]
 </trial>
 

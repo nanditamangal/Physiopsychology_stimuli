@@ -197,26 +197,33 @@ Editable Stimuli: Negative and Neutral images
 
 #Training images.
 <item neupicstrainspl>
-/1 = "images_neu/train/spl/Objects_246_h.jpg"
-/2 = "images_neu/train/spl/336.jpg"
+/1 = "images_neu/train/spl/336.jpg"
+/2 = "images_neu/train/spl/Objects_246_h.jpg"
 </item>
 
 #Training images.
 <item negpicstrainspl>
 /1 = "images_neg/train/spl/Faces_367_h.jpg"
-/2 = "images_neg/train/spl/Objects_328_h.jpg"
+/2 = "images_neg/train/spl/233.jpg"
 /3 = "images_neg/train/spl/Animals_045_h.jpg"
-/4 = "images_neg/train/spl/Objects_012_h.jpg"
+
+/4 = "images_neg/train/spl/Objects_328_h.jpg"
 /5 = "images_neg/train/spl/Objects_126_h.jpg"
 /6 = "images_neg/train/spl/Objects_285_h.jpg"
 /7 = "images_neg/train/spl/People_033_h.jpg"
-/8 = "images_neg/train/spl/People_228_h.jpg"
-/9 = "images_neg/train/spl/Animals_53_h.jpg"
-/10 = "images_neg/train/spl/Faces_372_h.jpg"
-/11 = "images_neg/train/spl/Landscapes_005_h.jpg"
-/12 = "images_neg/train/spl/Animals_207_h.jpg"
-/13 = "images_neg/train/spl/People_137_h.jpg"
-/14 = "images_neg/train/spl/9320.jpg"
+
+
+/8 = "images_neg/train/spl/Faces_372_h.jpg"
+/9 = "images_neg/train/spl/Landscapes_005_h.jpg"
+/10 = "images_neg/train/spl/Animals_207_h.jpg"
+/11 = "images_neg/train/spl/People_137_h.jpg"
+/12 = "images_neg/train/spl/9320.jpg"
+
+</item>
+
+<item negpicstrainsploptional>
+/1 = "images_neg/train/spl/People_228_h.jpg"
+/2 = "images_neg/train/spl/Animals_53_h.jpg"
 </item>
 
 #Training images.
@@ -276,15 +283,21 @@ Note: these picture elements (neg,neu) control the selection of the to be presen
 
 <picture negtrainspl>
 /items = negpicstrainspl
-/select  = noreplacenorepeat
+/select  = sequence
 /position = (50%, 50%)
 /resetinterval = 5
 </picture>
 
+<picture negtrainsploptional>
+/items = negpicstrainsploptional
+/select  = sequence
+/position = (50%, 50%)
+/resetinterval = 5
+</picture>
 
 <picture negtraincni>
 /items = negpicstraincni
-/select  = noreplacenorepeat
+/select  = sequence
 /position = (50%, 50%)
 /resetinterval = 5
 </picture>
@@ -313,7 +326,7 @@ Note: these picture elements (neg,neu) control the selection of the to be presen
 
 <picture neutrainspl>
 /items = neupicstrainspl
-/select  = noreplacenorepeat
+/select  = sequence
 /position = (50%, 50%)
 /resetinterval = 5
 </picture>
@@ -321,7 +334,7 @@ Note: these picture elements (neg,neu) control the selection of the to be presen
 
 <picture neutraincni>
 /items = neupicstraincni
-/select  = noreplacenorepeat
+/select  = sequence
 /position = (50%, 50%)
 /resetinterval = 5
 </picture>
