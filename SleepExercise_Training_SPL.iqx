@@ -235,7 +235,6 @@ duration is set to 3 seconds.
 /ontrialbegin = [ if (values.currentinstrtype == "react") trial.picnegative_wait.insertstimulusframe(shape.rectangle_green,1) ]
 / inputdevice= keyboard
 / validresponse = (" ")
-/ontrialend = [values.trialelapsedtime = trial.picnegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
 /showmousecursor = false
 </trial>
 
@@ -245,11 +244,10 @@ duration is set to 3 seconds.
 /pretrialpause = 16.6666666667 * 3
 /stimulusframes = [2=negtrainsploptional;]
 /ontrialbegin = [values.trialcurrenttime = script.currenttime; ]
-/ontrialbegin = [ if (values.currentinstrtype == "reframe") trial.picnegative_wait.insertstimulusframe(shape.rectangle_blue,1) ]
-/ontrialbegin = [ if (values.currentinstrtype == "react") trial.picnegative_wait.insertstimulusframe(shape.rectangle_green,1) ]
+/ontrialbegin = [ if (values.currentinstrtype == "reframe") trial.picnegative_wait_optional.insertstimulusframe(shape.rectangle_blue,1) ]
+/ontrialbegin = [ if (values.currentinstrtype == "react") trial.picnegative_wait_optional.insertstimulusframe(shape.rectangle_green,1) ]
 / inputdevice= keyboard
 / validresponse = (" ")
-/ontrialend = [values.trialelapsedtime = trial.picnegative.elapsedtime; values.scriptelaspedtime = script.elapsedtime]
 /showmousecursor = false
 </trial>
 
@@ -491,7 +489,8 @@ trial rateimage>
 / stimulusframes = [1=thanks]
 /ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
 /inputdevice = keyboard
-/validresponse = (" ")
+/validresponse = (49)
+/monkeyresponse = (49)
 /showmousecursor = false
 / ontrialend = [values.trialelapsedtime = trial.thankst.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
 </trial>
@@ -513,7 +512,8 @@ trial rateimage>
 / stimulusframes = [1=thankstraining]
 /ontrialbegin = [ values.trialcurrenttime = script.currenttime; ]
 /inputdevice = keyboard
-/validresponse = (" ", 28)
+/validresponse = (49)
+/monkeyresponse = (49)
 /showmousecursor = false
 / ontrialend = [values.trialelapsedtime = trial.thankst.elapsedtime;values.scriptelaspedtime = script.elapsedtime]
 </trial>
@@ -592,10 +592,6 @@ Simulates a regular experiment with 3 timed images and 3 timed rating scales.
 ]
 </block>
 
-
-<block thanksb>
-/ trials = [1=thankst]
-</block>
 
 
 
