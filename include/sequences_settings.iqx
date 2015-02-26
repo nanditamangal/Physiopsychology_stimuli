@@ -35,7 +35,7 @@ Editable Sequences
 
 #used for jitter (post rating) as a pre-assigned skewed distribution for auto-bio
 <list curentjitter5>
-/ items = (3,3.5,4)
+/ items = (4,4.5,5)
 / selectionmode = random
 / resetinterval = 1
 </list>

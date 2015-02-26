@@ -741,20 +741,22 @@ Simulates a regular experiment with 3 timed images and 3 timed rating scales.
 6= preruncross;
 
 7 = reactnegative_wait;
-8 = reframenegative_wait;
 9 = reframenegative_wait;
-10 = thankst_1;
+11 = reframenegative_wait;
 
-11 = welcomet_1;
+8,10,12= rateimage_wait;
 
-12 = reactneutral_wait;
-13 = reframenegative_wait;
-15 = reactnegative_wait;
+13 = thankst_1;
+
+14 = welcomet_1;
+
+15 = reactneutral_wait;
 17 = reframenegative_wait;
-19 = reframenegative_wait;
+19 = reactnegative_wait;
+21 = reframenegative_wait;
+23 = reframenegative_wait;
 
-12, 14, 16, 18, 20= rateimage;
-21 = try_1;
+16, 18, 20, 22, 24= rateimage;
 
 ]
 </block>
@@ -828,7 +830,7 @@ Simulates a regular experiment with 1 timed negative story and timed rating scal
 **************************************************************************************************************
 **************************************************************************************************************
 <expt trainexpt1>
-/blocks = [ 1 = Train3]
+/blocks = [ 1 = Train1]
 /onexptend = [values.completed = 1]
 </expt>
 

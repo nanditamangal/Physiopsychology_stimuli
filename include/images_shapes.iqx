@@ -228,18 +228,24 @@ Editable Stimuli: Negative and Neutral images
 
 #Training images.
 <item neupicstraincni>
-/1 = "images_neu/train/cni/5020.jpg"
-/2 = "images_neu/train/cni/5711.jpg"
-/3 = "images_neu/train/cni/1602.jpg"
+/1 = "images_neu/train/cni/2880.jpg"
+/2 = "images_neu/train/cni/7000.jpg"
 </item>
 
 #Training images.
 <item negpicstraincni>
-/1 = "images_neg/train/cni/2683.jpg"
-/2 = "images_neg/train/cni/3300.jpg"
-/3 = "images_neg/train/cni/8485.jpg"
-/4 = "images_neg/train/cni/7359.jpg"
-/5 = "images_neg/train/cni/9290.jpg"
+/1 = "images_neg/train/cni/Faces_290_h.jpg"
+/2 = "images_neg/train/cni/Faces_007_h.jpg"
+/3 = "images_neg/train/cni/9101.jpg"
+/4 = "images_neg/train/cni/People_038_h.jpg"
+/5 = "images_neg/train/cni/People_235_h.jpg"
+/6 = "images_neg/train/cni/Landscapes_004_h.jpg"
+/7 = "images_neg/train/cni/235.jpg"
+/8 = "images_neg/train/cni/People_235_h.jpg"
+/9 = "images_neg/train/cni/Objects_011_h.jpg"
+/10 = "images_neg/train/cni/Animals_048_h.jpg"
+/11 = "images_neg/train/cni/Landscapes_022_h.jpg"
+/12 = "images_neg/train/cni/Faces_272_h.jpg"
 </item>
 
 
